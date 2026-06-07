@@ -1,0 +1,50 @@
+baseURL = "https://dbollo-t.github.io/"
+languageCode = "es-ar"
+title = "Club del Ford T de Argentina"
+theme = "mainroad"
+
+[params]
+  description = "Primer Club del Ford T de Argentina"
+  copyright = "Club del Ford T de Argentina"
+  opengraph = true
+  readmore = true
+  authorbox = false
+  pager = true
+  post_meta = ["date", "categories"]
+  dateformat = "2 January, 2006"
+
+  [params.logo]
+    title = "Club Ford T Argentina"
+    subtitle = "Primer Club del Ford T de Argentina"
+
+  [params.sidebar]
+    home = "right"
+    list = "right"
+    single = false
+    widgets = ["search", "recent", "categories"]
+
+  [params.highlight]
+    color = "#8B0000"
+
+[menu]
+  [[menu.main]]
+    name = "El Club"
+    url = "/el-club/"
+    weight = 1
+  [[menu.main]]
+    name = "Técnica"
+    url = "/tecnica/"
+    weight = 2
+  [[menu.main]]
+    name = "Historia"
+    url = "/historia/"
+    weight = 3
+  [[menu.main]]
+    name = "Galería"
+    url = "/galeria/"
+    weight = 4
+  [[menu.main]]
+    name = "Contacto"
+    url = "/contacto/"
+    weight = 5
+Fijate que el color #8B0000 es rojo oscuro profundo, como te gusta. Hacé commit y avisame.Sonnet 4.6 Bajo
