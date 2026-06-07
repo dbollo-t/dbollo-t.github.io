@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+      - name: Download Mainroad theme
+        run: git clone https://github.com/Vimux/Mainroad themes/mainroad
       - name: Build
         run: hugo --minify
       - name: Upload artifact
