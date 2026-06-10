@@ -1,8 +1,8 @@
-yaml- id: recent_posts
-  translation: "Artículos recientes"
+recent_posts:
+  other: "Artículos recientes"
 
-- id: categories
-  translation: "Categorías"
+categories:
+  other: "Categorías"
 
-- id: search
-  translation: "Buscar"
+search:
+  other: "Buscar"
