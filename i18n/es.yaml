@@ -1,0 +1,8 @@
+yaml- id: recent_posts
+  translation: "Artículos recientes"
+
+- id: categories
+  translation: "Categorías"
+
+- id: search
+  translation: "Buscar"
