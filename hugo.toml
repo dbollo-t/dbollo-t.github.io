@@ -13,18 +13,6 @@ theme = "mainroad"
   post_meta = ["date", "categories"]
   dateformat = "2 January, 2006"
   highlightColor = "#8B0000"
-  [params.widgets]
-  recent_num = 5
-  categories_counter = false
-
-[languages.es]
-  languageName = "Español"
-
-[params.sidebar]
-  home = "right"
-  list = "right"
-  single = false
-  widgets = ["search", "recent", "categories"]
 
 [params.logo]
   title = "Club Ford T Argentina"
@@ -35,6 +23,10 @@ theme = "mainroad"
   list = "right"
   single = false
   widgets = ["search", "recent", "categories"]
+
+[params.widgets]
+  recent_num = 5
+  categories_counter = false
 
 [[menu.main]]
   name = "El Club"
