@@ -1,8 +1,8 @@
-recent_posts:
-  other: "Artículos recientes"
+- id: recent_articles
+  translation: "Artículos recientes"
 
-categories:
-  other: "Categorías"
+- id: categories
+  translation: "Categorías"
 
-search:
-  other: "Buscar"
+- id: search
+  translation: "Buscar"
