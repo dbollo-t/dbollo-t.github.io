@@ -1,6 +1,6 @@
 ---
 title: "La Carta de Turín"
-date: 2010-12-02
+date: 2020-12-02
 description: "Documento de la FIVA sobre preservación y restauración de vehículos históricos"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/carta-de-turin/"
@@ -75,4 +75,32 @@ Todo equipamiento moderno de seguridad cuya instalación es requerida por ley, d
 
 **Artículo 10**
 
-Todas las modificaciones requeridas ulteriormente por las razones que sean, deberían respetar la estructura y apariencia originales. Sería ideal que estas modificaciones fueran siempre reversibles, y que todas las piezas importantes sustituidas en este proceso pudieran conservarse para
+Todas las modificaciones requeridas ulteriormente por las razones que sean, deberían respetar la estructura y apariencia originales. Sería ideal que estas modificaciones fueran siempre reversibles, y que todas las piezas importantes sustituidas en este proceso pudieran conservarse para permitir su reutilización o que sirvieran de referencia para los componentes originales.
+
+**Artículo 11**
+
+Cada etapa en la conservación o la restauración de un vehículo histórico debería ser planificada sistemáticamente y documentada generosamente en el curso del proyecto. Los informes escritos y las fotografías tomadas en el curso del proyecto deberían conservarse como mínimo durante la vida del vehículo.
+
+**Artículo 12**
+
+Todas las infraestructuras y organizaciones implicadas en la preservación, conservación, restauración, reparación y utilización de los vehículos históricos, deben tomar medidas apropiadas para proteger sus registros y archivos.
+
+**Artículo 13**
+
+Las autoridades gubernamentales y las agencias internacionales y nacionales deberían reconocer las organizaciones o asociaciones sin ánimo de lucro implicadas en la preservación de los vehículos históricos y de su contexto tangible e intangible como instituciones culturales y asignarles el estatus de organizaciones caritativas.
+
+**Artículo 14**
+
+Las instituciones, tal como se han definido en esta Carta, implicadas en la preservación y la transmisión de los conocimientos necesarios para la preservación y utilización de los vehículos históricos deberían ser reconocidos como organismos culturales de protección financiados por los fondos apropiados.
+
+**Artículo 15**
+
+Las colecciones que contengan documentos, planos, etc. relativos a los vehículos históricos, y accesibles para la investigación, deberían estar reconocidos como parte del patrimonio cultural y protegidos como propiedad cultural de acuerdo con las convenciones internacionales concernientes.
+
+*El Grupo de Trabajo de la Carta de Turín, 27 de septiembre de 2010. Gundula Tutt, Rainer Hindrischet, Yves Campion, Thomas Kholer*
+
+---
+
+*Ojalá estos documentos se difundan entre todos nosotros y nos ayuden a 'relacionarnos' mejor con nuestros queridos trastos.*
+
+*Sergio Romagosa*
