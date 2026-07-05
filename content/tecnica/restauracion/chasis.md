@@ -62,4 +62,10 @@ Otro detalle es la cabeza cuadrada del tornillo central de ambos elásticos, que
 
 Un detalle a tener en cuenta son las aceiteras que llevan los elásticos, las que es posible aún encontrar en comercios especializados o pedirlas al exterior. Al colocarlas, verificar que la perforación de los bujes permita el paso del aceite hasta los pernos.
 
-[Volver a la introducción](/tecnica/restauracion/introduccion/)
+## Capítulos de esta guía
+
+- [Introducción](/tecnica/restauracion/introduccion/)
+- [A desarmar](/tecnica/restauracion/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/chasis/)
+- [Motor y Transmisión](/tecnica/restauracion/motor/)
+- [Carrocería](/tecnica/restauracion/carroceria/)
