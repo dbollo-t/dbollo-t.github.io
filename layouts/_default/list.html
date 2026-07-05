@@ -5,13 +5,14 @@
   {{ end }}
 
   {{ if .Sections }}
-  <ul>
-    {{ range .Sections }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a>
-      {{ with .Description }} — {{ . }}{{ end }}
-    </li>
-    {{ end }}
-  </ul>
+  {{ range .Sections }}
+  <article class="post">
+    <header class="post__header">
+      <h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </header>
+  </article>
+  {{ end }}
   {{ end }}
 
   {{ range .RegularPages }}
