@@ -4,6 +4,7 @@ date: 2010-12-02
 description: "Todos los modelos T fueron negros — historia y técnica de la pintura del Ford T"
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/pintura-modelos-t/"
+pager: false
 ---
 
 *Trabajo original: "ALL MODEL T'S WERE BLACK", autor: Trent Boggess. Publicado en la Model T Encyclopedia del Model T Ford Club of America. Traducido para el Primer Club del Ford T de Argentina por José Fernandez Pernas.*
