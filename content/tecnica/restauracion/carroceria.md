@@ -69,4 +69,10 @@ Descontando de que tenemos convenientemente restaurado el armazón de la capota,
 
 Es relativamente fácil dada su simplicidad. Si deseamos mantener un mínimo de originalidad, deberemos adquirir el ramillete de cables nuevos, ya que es muy notable y desmerece nuestro trabajo el utilizar los cables modernos de plástico. Al encargar los cables, asegúrese de poseer todas las fijaciones para los mismos, las que son de muy bajo precio pero permiten un acabado perfecto de la instalación.
 
-[Volver a la introducción](/tecnica/restauracion/introduccion/)
+## Capítulos de esta guía
+
+- [Introducción](/tecnica/restauracion/introduccion/)
+- [A desarmar](/tecnica/restauracion/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/chasis/)
+- [Motor y Transmisión](/tecnica/restauracion/motor/)
+- [Carrocería](/tecnica/restauracion/carroceria/)
