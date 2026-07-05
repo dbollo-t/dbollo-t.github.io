@@ -64,8 +64,8 @@ Un detalle a tener en cuenta son las aceiteras que llevan los elásticos, las qu
 
 ## Capítulos de esta guía
 
-- [Introducción](/tecnica/restauracion/introduccion/)
-- [A desarmar](/tecnica/restauracion/desarmar/)
-- [Chasis y Elásticos](/tecnica/restauracion/chasis/)
-- [Motor y Transmisión](/tecnica/restauracion/motor/)
-- [Carrocería](/tecnica/restauracion/carroceria/)
+- [Introducción](/tecnica/restauracion/guia/introduccion/)
+- [A desarmar](/tecnica/restauracion/guia/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/guia/chasis/)
+- [Motor y Transmisión](/tecnica/restauracion/guia/motor/)
+- [Carrocería](/tecnica/restauracion/guia/carroceria/)
