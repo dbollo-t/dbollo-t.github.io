@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="main__content">
+  {{ if .Content }}
+  <div class="content">{{ .Content }}</div>
+  {{ end }}
+
+  {{ if .Sections }}
+  <div class="subsections">
+    <ul>
+      {{ range .Sections }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ with .Description }}<br><small>{{ . }}</small>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{ range .Pages }}
+  <article class="post">
+    <header class="post__header">
+      <h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <div class="post__meta">{{ .Date.Format "2 January, 2006" }}</div>
+    </header>
+    {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+    <a href="{{ .Permalink }}">Leer más</a>
+  </article>
+  {{ end }}
+</div>
+{{ end }}
