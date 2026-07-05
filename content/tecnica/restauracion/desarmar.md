@@ -93,4 +93,10 @@ Por último, se sacan las tuercas del cojinete delantero y se extrae el tren del
 
 **Por fin estamos al final del comienzo!** Tenemos delante un flaco y acerado chasis sobre caballetes que será la base de nuestra restauración.
 
-[Volver a la introducción](/tecnica/restauracion/introduccion/)
+## Capítulos de esta guía
+
+- [Introducción](/tecnica/restauracion/introduccion/)
+- [A desarmar](/tecnica/restauracion/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/chasis/)
+- [Motor y Transmisión](/tecnica/restauracion/motor/)
+- [Carrocería](/tecnica/restauracion/carroceria/)
