@@ -46,6 +46,10 @@ theme = "mainroad"
   url = "/galeria/"
   weight = 4
 [[menu.main]]
+  name = "Noticias"
+  url = "/posts/"
+  weight = 5
+[[menu.main]]
   name = "Contacto"
   url = "/contacto/"
-  weight = 5
+  weight = 6
