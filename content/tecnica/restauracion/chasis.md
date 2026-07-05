@@ -1,6 +1,7 @@
 ---
 title: "La apasionante restauración de un T — Chasis y Elásticos"
 date: 2005-02-23
+pager: false
 description: "Guía de restauración del Ford T — Chasis, elásticos y comienzo del armado"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/chasis/"
