@@ -1,6 +1,7 @@
 ---
 title: "La apasionante restauración de un T — A desarmar"
 date: 2005-02-24
+pager: false
 description: "Guía de restauración del Ford T — Cómo desarmar el auto"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/desarmar/"
