@@ -91,4 +91,10 @@ Con todos los elementos listos (ruedas, tren delantero y trasero, chasis, motor 
 
 Completado el "langostín" tenemos la batalla casi ganada. Nos queda la carrocería, tapizado y capota.
 
-[Volver a la introducción](/tecnica/restauracion/introduccion/)
+## Capítulos de esta guía
+
+- [Introducción](/tecnica/restauracion/introduccion/)
+- [A desarmar](/tecnica/restauracion/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/chasis/)
+- [Motor y Transmisión](/tecnica/restauracion/motor/)
+- [Carrocería](/tecnica/restauracion/carroceria/)
