@@ -1,6 +1,7 @@
 ---
 title: "La apasionante restauración de un T — Carrocería"
 date: 2005-02-21
+pager: false
 description: "Guía de restauración del Ford T — Carrocería, pintura, tapizado y capota"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/carroceria/"
