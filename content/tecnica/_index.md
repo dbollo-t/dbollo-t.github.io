@@ -1,4 +1,4 @@
 ---
-title: "Tecnica"
-description: "Información técnica sobre el Ford T - restauración y publicaciones"
+title: "Restauración"
+description: "Guías y consejos de restauración del Ford T"
 ---
