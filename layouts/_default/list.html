@@ -5,18 +5,16 @@
   {{ end }}
 
   {{ if .Sections }}
-  <div class="subsections">
-    <ul>
-      {{ range .Sections }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ with .Description }}<br><small>{{ . }}</small>{{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </div>
+  <ul>
+    {{ range .Sections }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ with .Description }} — {{ . }}{{ end }}
+    </li>
+    {{ end }}
+  </ul>
   {{ end }}
 
-  {{ range .Pages }}
+  {{ range .RegularPages }}
   <article class="post">
     <header class="post__header">
       <h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
