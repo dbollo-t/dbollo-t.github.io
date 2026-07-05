@@ -1,6 +1,7 @@
 ---
 title: "La apasionante restauración de un T — Introducción"
 date: 2005-02-25
+pager: false
 description: "Guía de restauración del Ford T por Daniel Bollo — Introducción y consejos previos"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/introduccion/"
