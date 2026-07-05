@@ -47,9 +47,8 @@ Un buen consejo para quienes vayan a encarar una restauración es no fijarse tie
 
 ## Capítulos de esta guía
 
-- [A desarmar](/tecnica/restauracion/desarmar/)
-- [Chasis y Elásticos](/tecnica/restauracion/chasis/)
-- [Motor y Transmisión](/tecnica/restauracion/motor/)
-- [Carrocería](/tecnica/restauracion/carroceria/)
-
--
+- [Introducción](/tecnica/restauracion/guia/introduccion/)
+- [A desarmar](/tecnica/restauracion/guia/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/guia/chasis/)
+- [Motor y Transmisión](/tecnica/restauracion/guia/motor/)
+- [Carrocería](/tecnica/restauracion/guia/carroceria/)
