@@ -1,6 +1,7 @@
 ---
 title: "La apasionante restauración de un T — Motor y Transmisión"
 date: 2005-02-22
+pager: false
 description: "Guía de restauración del Ford T — Motor, radiador y transmisión"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/motor/"
