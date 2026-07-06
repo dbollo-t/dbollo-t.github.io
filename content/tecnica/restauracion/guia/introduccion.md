@@ -10,7 +10,7 @@ url: "/tecnica/restauracion/guia/introduccion/"
 **por Daniel Bollo**
 
 *"La urgencia por llegar no nos debe privar del placer del viaje"*
-
+![El Caminante](/images/restauracion/index_htm_3bc01217.jpg)
 Esta guía está dirigida a aquellos que por fin poseen el paradigma del automóvil. Por algo, luego de un largo proceso de selección del que participaron cientos de expertos, el modelo T fue designado el "Auto del Siglo": en su concepción reúne las características que luego marcarían el desarrollo de la industria mecánica del siglo XX.
 
 Además de estas características, el modelo "T" es sin duda el auto ideal para restaurar por tres razones: simplicidad, accesibilidad e información.
@@ -40,7 +40,7 @@ El hecho de encarar uno mismo la tarea de restauración será no solamente benef
 El nivel de detalle de las tareas a realizar que se describen en este documento está pensado para quién disfruta realizando tareas mecánicas, aún cuando no sea un mecánico avezado. El "T" fue diseñado en una época que no existía una gran red de talleres mecánicos; en realidad, la gran mayoría de los talleres mecánicos nacieron por y después del "T". Mi profesión de Contador Público está muy lejos de la mecánica, sin embargo me divierte tanto o más repararlo y mantenerlo que manejarlo.
 
 El objetivo de este documento no es abarcar todas las operaciones necesarias para cada tarea, paso a paso, sino referirnos a los problemas más frecuentes que encontraremos en la tarea de restauración y aportar algunos consejos sobre tareas delicadas. Para obtener un detalle exhaustivo de las tareas se deberá recurrir al "Libro de Servicio Ford", libro al que haremos referencia permanente, ya que lo consideramos imprescindible para la correcta restauración del modelo T.
-
+![Ford T en restauración](/images/restauracion/index_htm_m337426e3.jpg)
 Antes de comenzar con las tareas específicas de restauración, es IMPRESCINDIBLE conseguir la mayor cantidad de información bibliográfica del Ford T, especialmente el manual "Servicio Ford", publicación disponible también en castellano que indica como desarmar y armar completamente un Ford T con gran cantidad de fotos, y el libro de Bruce McCalley "Model T Ford", donde podremos encontrar detallada cada parte de la carrocería, con cientos de fotografías y comentarios.
 
 Un buen consejo para quienes vayan a encarar una restauración es no fijarse tiempos ni tener apuro para terminar la tarea. **La receta es: sin prisa pero sin pausa. Disfrutemos no solo del producto final sino del proceso para lograrlo.** Tengamos siempre presente lo siguiente: **La calidad de nuestro trabajo no se medirá por el tiempo que nos insumió la tarea sino por la calidad del producto que logramos.**
