@@ -73,5 +73,6 @@ Es relativamente fácil dada su simplicidad. Si deseamos mantener un mínimo de 
 - [Introducción](/tecnica/restauracion/guia/introduccion/)
 - [A desarmar](/tecnica/restauracion/guia/desarmar/)
 - [Chasis y Elásticos](/tecnica/restauracion/guia/chasis/)
+- [Las ruedas, Tren delantero y Tren trasero](/tecnica/restauracion/guia/ruedas/)
 - [Motor y Transmisión](/tecnica/restauracion/guia/motor/)
 - [Carrocería](/tecnica/restauracion/guia/carroceria/)
