@@ -4,6 +4,7 @@ date: 2010-05-01
 description: "Recopilación de trucos y soluciones prácticas para el Ford T"
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/trucos-y-manas/"
+pager: false
 ---
 
 *Recopilados por Daniel Bollo*
