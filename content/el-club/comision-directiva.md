@@ -4,6 +4,7 @@ date: 2010-03-29
 description: "Autoridades del Primer Club del Ford T de Argentina"
 categories: ["El Club"]
 url: "/el-club/comision-directiva/"
+pager: false
 ---
 
 **Presidente:** Alfredo Oscar Civalero
