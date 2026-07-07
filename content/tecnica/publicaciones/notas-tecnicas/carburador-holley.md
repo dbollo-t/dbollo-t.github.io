@@ -4,6 +4,7 @@ date: 2010-04-26
 description: "Traducción del manual del carburador Holley modelo NH para Ford T"
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/carburador-holley/"
+pager: false
 ---
 
 **Modelo NH**
