@@ -4,6 +4,7 @@ date: 2010-10-03
 description: "Galería de fotos del XIV Encuentro Internacional del Ford T"
 categories: ["Noticias"]
 url: "/posts/anteriores/fotos-xiv-encuentro/"
+pager: false
 ---
 
 Las fotos del XIV Encuentro Internacional del Ford T están disponibles en nuestra galería de Flickr.
