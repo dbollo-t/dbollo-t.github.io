@@ -4,6 +4,7 @@ date: 2010-04-26
 description: "Consejos prácticos para viajes largos en Ford T"
 categories: ["Historia"]
 url: "/historia/viajes/consejos-para-locos/"
+pager: false
 ---
 
 **por Daniel Bollo**
