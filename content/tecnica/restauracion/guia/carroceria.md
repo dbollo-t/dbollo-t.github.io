@@ -4,6 +4,7 @@ date: 2005-02-21
 description: "Guía de restauración del Ford T — Carrocería, pintura, tapizado y capota"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/carroceria/"
+pager: false
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*
