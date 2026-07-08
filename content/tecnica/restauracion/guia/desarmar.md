@@ -18,7 +18,7 @@ Nuestro objetivo será desarmar "científicamente" el auto para su posterior res
 Para encarar un buen trabajo y con la seguridad de que el Ford va a quedar en el mismo estado con que salió de la fábrica, sólo cabe desmantelarlo y dejar el chasis pelado para partir desde ese punto. Aunque el coche en cuestión esté aparentemente en buenas condiciones, conviene hacerlo para poder realizar una buena inspección, eventuales reparaciones y proteger todo de la corrosión, sobre todo en los puntos de contacto entre carrocería y chasis.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/restauracion/desarmar_htm_mccb1b6a.jpg" alt="El taller de restauración" style="width: 100%;">
+  <img src="/images/desarmar_htm_mccb1b6a.jpg" alt="El taller de restauración" style="width: 100%;">
 </figure>
 
 En esta primera tarea hay que tener en cuenta el lugar donde va a quedar definitivamente el "fordcito". Debe ser un lugar luminoso o con buena luz artificial y en lo posible se debe poder circular alrededor del coche. No debemos olvidar que al sacar la carrocería de su lugar sobre el chasis vamos a necesitar exactamente el doble espacio. Disponer de un foso es una ayuda inestimable lo mismo que algún sistema de aparejos, que simplificarán las tareas de armado y desarmado.
@@ -50,7 +50,7 @@ Para encarar este proceso de desarme damos algunas indicaciones:
 **- Piezas difíciles:** Cuando una pieza no sale es siempre por un motivo y forzándola o golpeándola sólo conseguiremos romperla. Hay que estudiar las causas del agarrotamiento y aplicar las técnicas adecuadas. Donde se pueda utilizar, es mejor la sierra o el disco para cortar bulones clavados. El uso de la llama es muy peligroso, teniendo en cuenta que en muchos casos existe madera en la carrocería.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/restauracion/desarmar_htm_m7048501c.png" alt="Fotografiando el desarme" style="width: 100%;">
+  <img src="/images/desarmar_htm_m7048501c.png" alt="Fotografiando el desarme" style="width: 100%;">
 </figure>
 
 **- Fotografiar todo antes y durante el desarme con el máximo detalle posible:** Esto tiene dos objetivos: servirnos de guía al momento del armado y revalorizar todo el trabajo que se hizo sobre el auto. Recuerde: como con su hijo, si no le saca una foto en este momento, no tendrá otra oportunidad, así que tenga la máquina lista en cada etapa de la restauración.
@@ -82,7 +82,7 @@ Si el coche conserva el tapizado original, convendrá dejarlo en su lugar para s
 El manipuleo y desarme de los elementos sujetos al chasis: motor, trasmisión, suspensiones, etc., se ve agradablemente facilitado una vez que la carrocería fue removida.
 
 <figure style="float: right; margin: 0 0 1em 1em; max-width: 300px;">
-  <img src="/images/restauracion/desarmar_htm_54cf2d4b.png" alt="Mesa para el motor" style="width: 100%;">
+  <img src="/images/desarmar_htm_54cf2d4b.png" alt="Mesa para el motor" style="width: 100%;">
 </figure>
 
 Es importante contar con una buena mesita metálica con ruedas lo suficientemente robustas, para poner allí el motor una vez separado del chasis. Tenerlo a una determinada altura cómoda para manipularlo es fundamental.
@@ -108,7 +108,7 @@ Por último, se sacan las tuercas del cojinete delantero y se extrae el tren del
 **¡Por fin estamos al final del comienzo!** Tenemos delante un flaco y acerado chasis sobre caballetes que será la base de nuestra restauración.
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/restauracion/desarmar_htm_m5caa9d2e.jpg" alt="El chasis pelado" style="max-width: 100%;">
+  <img src="/images/desarmar_htm_m5caa9d2e.jpg" alt="El chasis pelado" style="max-width: 100%;">
 </figure>
 
 ## Capítulos de esta guía
