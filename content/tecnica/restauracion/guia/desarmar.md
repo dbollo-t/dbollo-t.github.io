@@ -5,7 +5,6 @@ pager: false
 description: "Guía de restauración del Ford T — Cómo desarmar el auto"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/desarmar/"
-pager: false
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*
