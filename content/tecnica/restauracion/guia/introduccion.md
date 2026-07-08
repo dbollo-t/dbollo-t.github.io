@@ -7,9 +7,13 @@ url: "/tecnica/restauracion/guia/introduccion/"
 pager: false
 ---
 
-**por Daniel Bollo**
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 180px;">
+  <img src="/images/restauracion/bollo.jpg" alt="Daniel Bollo" style="width: 100%;">
+</figure>
 
 *"La urgencia por llegar no nos debe privar del placer del viaje"*
+
+**por Daniel Bollo**
 
 Esta guía está dirigida a aquellos que por fin poseen el paradigma del automóvil. Por algo, luego de un largo proceso de selección del que participaron cientos de expertos, el modelo T fue designado el "Auto del Siglo": en su concepción reúne las características que luego marcarían el desarrollo de la industria mecánica del siglo XX.
 
@@ -32,6 +36,10 @@ Nuestro apego a la originalidad debe prevenirnos de los dos extremos que siempre
 El Ford T fue un auto democrático: permitió a gran cantidad de personas acceder a la movilidad, dado su bajo costo y robustez y lo sigue siendo hoy día, ya que sus poseedores no pertenecen a una elite económica, sino que, como la mayoría de socios y simpatizantes de nuestro Club, restauran y mantienen sus autos aún sacrificando algunos otros gastos familiares.
 
 Soy hombre de una sola mujer y un solo auto. No será tan divertido como otras alternativas, pero me permite dedicarme totalmente a ellos. Con esto quiero hacer hincapié en la concentración de esfuerzos que nos permite el hecho de tener un sólo objetivo. Si contáramos con muchos recursos, es posible encarar más de un proyecto de restauración al mismo tiempo, pero si este no fuera el caso, los tiempos se prolongarán indefinidamente y los resultados no serán los esperados.
+
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 300px;">
+  <img src="/images/restauracion/bollo2.jpg" alt="El Caminante en restauración" style="width: 100%;">
+</figure>
 
 El hecho de encarar uno mismo la tarea de restauración será no solamente beneficioso por el ahorro de dinero que eso significa, sino también porque el dueño de la pieza por restaurar toma un íntimo conocimiento con los mecanismos, experiencia que rendirá sus frutos en forma mediata. Por otro lado soy un convencido que la dedicación y el amor que uno pone en estas tareas, compensa ampliamente nuestra inexperiencia en mecánica. Lo importante es saber cuales son nuestros límites, y superados estos, saber llevarlo a un buen taller esperando que tengan ese mismo cariño por nuestros queridos fierros. En Córdoba, ese cariño lo encontré en el taller de Daniel Misano.
 
