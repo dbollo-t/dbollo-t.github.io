@@ -53,3 +53,5 @@ theme = "mainroad"
   name = "Contacto"
   url = "/contacto/"
   weight = 6
+  [markup.goldmark.renderer]
+  unsafe = true
