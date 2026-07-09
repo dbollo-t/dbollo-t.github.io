@@ -20,12 +20,12 @@ Antes de discutir los detalles de la sincronización de la chispa, vamos a exami
 ## El distribuidor
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/imagen1.jpg" alt="Distribuidor y rodillo original Ford" style="width: 100%;">
+  <img src="/images/Imagen1.png" alt="Distribuidor y rodillo original Ford" style="width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 1 — Distribuidor y rodillo original Ford. Foto cortesía de Steve Coniff.</figcaption>
 </figure>
 
 <figure style="float: right; margin: 0 0 1em 1em; max-width: 300px;">
-  <img src="/images/imagen2.jpg" alt="Leyenda Ford en el distribuidor y el rodillo" style="width: 100%;">
+  <img src="/images/Imagen2.png" alt="Leyenda Ford en el distribuidor y el rodillo" style="width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 2 — Leyenda Ford en el distribuidor y el rodillo. Foto cortesía de Steve Coniff.</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ La Figura 1 muestra un distribuidor original Ford y su rodillo. Es importante re
 El distribuidor tiene cuatro segmentos metálicos conductores montados en un aislante a intervalos igualmente espaciados alrededor de la circunferencia interior de la caja. Cada segmento conductor tiene un tornillo de aislamiento que se extiende fuera de la caja formando un terminal de tornillo con tuerca donde se conecta el cableado que conecta a la caja de bobinas. El rodillo del distribuidor está montado en el extremo del árbol de levas, fijado con un pequeño perno y retenido por una tuerca. El paso del rodillo sobre la superficie interior de la caja del distribuidor, conecta la masa del motor a cada segmento conductor a medida que gira, completando así el circuito eléctrico para cada bobina.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/imagen3.jpg" alt="Distribuidor montado en el motor con herramienta de ajuste" style="width: 100%;">
+  <img src="/images/Imagen3.png" alt="Distribuidor montado en el motor con herramienta de ajuste" style="width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 3 — Distribuidor montado en el motor, usando la herramienta original Ford para su ajuste. Foto cortesía de Steve Coniff.</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ La Figura 3 muestra el distribuidor montado en el motor y la herramienta de ajus
 La salida del magneto es una señal de corriente alterna de voltaje, frecuencia y corriente variables, con ocho ciclos completos para cada revolución del cigüeñal. El voltaje varía, en el rango normal de velocidad del motor, desde un mínimo de 4 voltios a un máximo de más de 30 voltios, con capacidad de corriente suficiente para operar la bobina. Los dieciséis picos positivos y negativos de esta señal están separados por 22,5 grados de revolución del cigüeñal.
 
 <figure style="float: right; margin: 0 0 1em 1em; max-width: 300px;">
-  <img src="/images/imagen4.jpg" alt="Dibujo del volante T-701-C" style="width: 100%;">
+  <img src="/images/Imagen4.png" alt="Dibujo del volante T-701-C" style="width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 4 — Dibujo del volante (T-701-C). De la colección del Centro de Investigación en el Museo Henry Ford y Greenfield Village.</figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Es importante entender que el funcionamiento correcto de los contactos (platinos
 Para responder fiable y consistentemente a los impulsos de corriente individuales del magneto y mantener la sincronización precisa del encendido, los contactos de la bobina deben ser ajustados cuidadosamente. La única manera de ajustar correctamente los contactos es mediante el uso de un probador de bobinas manual (a manivela).
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/imagen5.png" alt="Diagrama simplificado de los componentes del encendido del Modelo T" style="max-width: 100%;">
+  <img src="/images/Imagen5.png" alt="Diagrama simplificado de los componentes del encendido del Modelo T" style="max-width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 5 — Diagrama simplificado de los componentes del encendido del Modelo T. Ilustración de George W. Hobbs y Ben G. Consoliver.</figcaption>
 </figure>
 
@@ -72,14 +72,14 @@ La Figura 5 es un diagrama simplificado de los diversos componentes de ignición
 ## Sincronización del encendido — Operación con batería
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 250px;">
-  <img src="/images/imagen6.jpg" alt="Rueda graduada montada en el cigüeñal con puntero" style="width: 100%;">
+  <img src="/images/Imagen6.png" alt="Rueda graduada montada en el cigüeñal con puntero" style="width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 6 — Rueda graduada montada en el cigüeñal, con puntero. Foto cortesía de Steve Coniff.</figcaption>
 </figure>
 
 La figura 6 muestra el método utilizado para realizar las mediciones de grados anular. Se montó una rueda graduada en el extremo del cigüeñal con un puntero fijo que apuntaba a la escala. Se tomó el Punto Muerto Superior (PMS) del primer cilindro, la rueda graduada se colocó con el marcador apuntando a "0" grados y se fijó para que la interrelación no cambiara cuando el cigüeñal girara.
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/imagen7.png" alt="Diagrama de sincronización del encendido – Operación con batería" style="max-width: 100%;">
+  <img src="/images/Imagen7.jpg" alt="Diagrama de sincronización del encendido – Operación con batería" style="max-width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 7 — Diagrama de sincronización del encendido – Operación con batería. Dibujo CAD cortesía de John Regan.</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ Cuando se opera con batería, la bobina de encendido vibra continuamente, produc
 ## Sincronización del encendido — Operación con magneto
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/imagen8.png" alt="Diagrama de sincronización del encendido – Operación con Magneto" style="max-width: 100%;">
+  <img src="/images/Imagen8.jpg" alt="Diagrama de sincronización del encendido – Operación con Magneto" style="max-width: 100%;">
   <figcaption style="font-size: 0.85em; font-style: italic;">Figura 8 — Diagrama de sincronización del encendido – Operación con Magneto. Dibujo CAD cortesía de John Regan.</figcaption>
 </figure>
 
