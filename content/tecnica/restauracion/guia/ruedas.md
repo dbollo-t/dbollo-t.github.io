@@ -15,6 +15,10 @@ Las ruedas junto al radiador, son características fundamentales del modelo T, e
 
 ## Las ruedas
 
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 250px;">
+  <img src="/images/ruedas-td-tt_htm_m6a312af0.jpg" alt="Rueda de rayos del Ford T" style="width: 100%;">
+</figure>
+
 Si el modelo fuera anterior a 1919, la única opción es la rueda con talón, una pieza de gran valor histórico. Si fuera posterior, el sistema habitual era el de llanta desmontable.
 
 Si se tratara de este último caso, deberemos arenar las llantas y luego zincarlas, ya que era la terminación que llevaban.
@@ -29,9 +33,10 @@ Para el ajuste se debe primeramente desarmar la rueda a partir de los seis torni
 
 Si hiciera falta el reemplazo de algunos rayos, hay buenos carpinteros que pueden hacerlos nuevos. Algunos proveedores:
 
-1. Chacarita de René Massini, TE (03404) 420371. San Carlos Centro, Santa Fe.
-2. Old Car — Miguel Luis Rivas: Ladines 4035, Cap. Federal. (011) 45028335.
-3. Rayos de madera nuevos: Sergio Moro, La Castellana s/n, 5168, Valle Hermoso, Córdoba.
+1. Victor Ruatta, TE (351)5229678, Córdoba
+2. Chacarita de René Massini, TE (03404) 420371. San Carlos Centro, Santa Fe.
+3. Old Car — Miguel Luis Rivas: Ladines 4035, Cap. Federal. (011) 45028335
+4. Rayos de madera nuevos: Sergio Moro, La Castellana s/n, 5168, Valle Hermoso, Córdoba.
 
 Aprovechando que tenemos los rayos extraídos, podemos hacer un mejor trabajo de lijado y preparación. Para esta tarea es recomendable además de la conocida lija, repasarlos con un vidrio roto, que le da un acabado muy fino.
 
@@ -41,11 +46,9 @@ Estando los rayos sueltos, es más fácil la tarea de pintura. Originalmente los
 
 Una vez terminado el trabajo con los rayos, debemos armar la rueda, ajustándola convenientemente. Para ello debemos contar con una mesa pesada con una perforación central. Con esa perforación como centro, colocaremos la cuna e iremos insertando en ella los tarugos de cada uno de los rayos en el orden en que estaban. Para acomodar todos los rayos, armaremos una especie de corona elevada con sus extremos centrales apoyados entre sí. La consistencia en el armado de una rueda de rayos de madera se logra por la presión entre los laterales de los rayos en su sector central, por lo que para ajustar convenientemente la rueda, deberemos forzar esos extremos hacia abajo, pasando una varilla roscada por el agujero de la mesa con sus correspondientes arandelas y tuercas.
 
-Habitualmente, dado el desgaste, hace falta agregar espesores entre los rayos para que estos queden más ajustados, usando láminas de bronce o trozos de sierras usadas.
+Habitualmente hace falta agregar espesores entre los laterales rectos de los rayos para que estos queden más ajustados, usando láminas de bronce o trozos de sierras usadas.
 
-Posteriormente al ajuste de los rayos podremos pasar la masa por el centro de estos y ajustar convenientemente su tapa con los seis tornillos. Estos tornillos tienen diferente largo entre delanteros y traseros, ya que estos últimos ajustan también la campana del freno de emergencia.
-
-Respecto de las cubiertas, pueden conseguirse 30 x 3½ nuevas en la fábrica Castagno Hnos. de Marcos Juárez, en Funsa (Uruguay) o en los proveedores de Estados Unidos. Recordar al armarlas que es imprescindible hacerlo con el correspondiente protector o improvisar uno con una cámara vieja, ya que de lo contrario, con la fricción contra el metal de la llanta, seguramente sufriremos pinchazos.
+Respecto de las cubiertas, pueden conseguirse 30 x 3½ nuevas en la fábrica Castagno Hnos. de Marcos Juárez, en Funsa (Uruguay) o en los proveedores de Estados Unidos. Recordar al armarlas que es imprescindible hacerlo con el correspondiente protector o improvisar uno con una cámara vieja.
 
 ## Tren delantero
 
@@ -53,7 +56,14 @@ Si hemos procedido al arenado, tendremos a esta altura las piezas del tren delan
 
 Para el desarmado total puede ser necesario calentar las piezas muy pegadas con óxido y recurrir a extractores para sacar los rulemanes y pernos de punta de eje.
 
-Luego de comprobar que no existan fisuras o roturas, deberemos detenernos sobre el alineamiento del eje. Letras iguales en el diagrama de alineación determinan las igualdades que deben darse para la correcta alineación del eje delantero. La distancia D no está fijada por el eje sino por los "percheros". La medición del avance se explica en el párrafo 148 del libro de Servicio Ford. La desviación se mide según se explica en el párrafo 152.
+Luego de comprobar que no existan fisuras o roturas, deberemos detenernos sobre el alineamiento del eje, tarea para la cual podremos ayudarnos siguiendo las indicaciones genéricas del dibujo siguiente:
+
+<figure style="text-align: center; margin: 2em 0;">
+  <img src="/images/ruedas-td-tt_htm_m30a91083.gif" alt="Diagrama de alineación del tren delantero" style="max-width: 100%;">
+  <figcaption style="font-size: 0.85em; font-style: italic;">Letras iguales determinan las igualdades que deben darse para la correcta alineación del eje delantero. Del libro de Richard Wheatley y Brian Morgan.</figcaption>
+</figure>
+
+La distancia D del dibujo no está fijada por el eje sino por los "percheros". La medición del avance se explica en el párrafo 148 del libro de Servicio Ford. La desviación se mide según se explica en el párrafo 152.
 
 Si el eje no estuviera correctamente alineado puede enderezarse en un taller especializado en chasis.
 
@@ -62,6 +72,10 @@ Dado lo expuesto que están estas piezas a golpes y al desgaste por polvillo, es
 Ya que nos referimos al tensor, el extremo de bola muy posiblemente esté gastado, por lo que deberá rellenarse con soldadura de bronce y pulirse. El mismo trabajo puede realizarse a las bolas de la dirección si estuvieran gastadas.
 
 Los "percheros" donde se fija el elástico al eje suelen tener desviaciones o agregados, soldaduras, etc., por lo que deberán ser alineados, ya que son los que fijan el avance del tren delantero.
+
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
+  <img src="/images/ruedas-td-tt_htm_m5bfdc97f.jpg" alt="Tren delantero del Ford T" style="width: 100%;">
+</figure>
 
 Una tarea que difícilmente podamos eludir es el reemplazo de los bujes. La importancia de este conjunto para la seguridad del vehículo hace imprescindible extremar los cuidados. Sólo un eje delantero sin juegos ni holguras nos dará seguridad y esa sensación de manejo "duro".
 
@@ -75,20 +89,24 @@ Como en el caso del tren delantero, si hemos procedido al arenado de las piezas 
 
 Comenzaremos con las mangas del diferencial, las que normalmente no presentan problemas. Deberemos revisar que su encastre sea perfecto para evitar futuras pérdidas de aceite y debemos revisar las camisas de los rodillos.
 
-Estas piezas están fabricadas con un material relativamente blando con el objeto de que absorban el desgaste preservando los rodillos y por ello son reemplazables. Las internas sufren muy poco desgaste ya que no soportan el peso del vehículo, pero las externas son sometidas al mayor esfuerzo. Si se nota un reborde al pasar los dedos por su parte superior externa, lo ideal es su reemplazo, aunque es posible intercambiarlas: usando en el extremo izquierdo la indicada para la derecha y viceversa, la zona desgastada pasa abajo y queda hacia arriba una superficie totalmente nueva. Para hacer esto es necesario perforar las camisas para que la grasa del engrasador externo pueda pasar al rodillo.
+Estas piezas están fabricadas con un material relativamente blando con el objeto de que absorban el desgaste preservando los rodillos y por ello son reemplazables. Las internas sufren muy poco desgaste ya que no soportan el peso del vehículo, pero las externas son sometidas al mayor esfuerzo. Si se nota un reborde, lo ideal es su reemplazo, aunque es posible intercambiarlas: usando en el extremo izquierdo la indicada para la derecha y viceversa, la zona desgastada pasa abajo y queda hacia arriba una superficie totalmente nueva. Para hacer esto es necesario perforar las camisas para que la grasa del engrasador externo pueda pasar al rodillo.
 
 Deberemos revisar el estado de los palieres y sus engranajes. En los palieres, el área que más sufre es el chavetero donde se ajusta la rueda, el que deberá ser rehecho en caso de rotura o deformación.
 
 Las piezas que normalmente presentan más desgaste en el diferencial son el piñón y la corona. Si sus dientes están en buen estado más allá del desgaste, con un correcto ajuste es posible que sigan brindando un buen servicio.
 
-El cardan debe estar perfectamente derecho y con su chavetero y cono en buen estado. La cruceta no debe presentar desgaste significativo — si este fuera el caso, se puede desarmar rompiendo los remaches y rellenando y rectificando sus articulaciones, armándola nuevamente con tornillos de acero con tuercas aseguradas por chavetas partidas.
+El cardan debe estar perfectamente derecho y con su chavetero y cono en buen estado. La cruceta no debe presentar desgaste significativo.
 
 Algunos consejos al momento de armar el diferencial:
 
 1. **¡Cuidado!** La corona debe armarse sobre la manga **izquierda** del diferencial (mirando el auto desde atrás). Si se hiciera sobre la derecha, nada indicaría el error hasta el momento de poner primera, momento en el que partiríamos raudamente... ¡¡¡HACIA ATRÁS!!!
 2. Al armar el núcleo del diferencial, recordar que entre los dos extremos de los palieres debe agregarse una arandela de teflón del diámetro de los palieres y del espesor necesario para que cuando ajustemos las dos partes del portacoronas, los palieres no presenten juego axial.
-3. El ajuste del diferencial se hace seleccionando el espesor correcto de la arandela grande de bronce o plomo de la manga izquierda. Se arma el conjunto diferencial sólo sobre la manga izquierda y se pasa una tira de papel entre el piñón y corona mientras se los hace girar: si el papel resulta roto, está demasiado ajustado. El ajuste correcto se logra cuando el papel no resulta roto ni marcado al pasar entre los dientes.
+3. El ajuste del diferencial se hace seleccionando el espesor correcto de la arandela grande de bronce o plomo de la manga izquierda. Se pasa una tira de papel entre el piñón y corona mientras se los hace girar: si el papel resulta roto, está demasiado ajustado. El ajuste correcto se logra cuando el papel no resulta roto ni marcado al pasar entre los dientes.
 4. Luego del ajuste del juego piñón-corona, se saca el cardan y se termina de armar el diferencial con la manga derecha, colocando una arandela de bronce o plomo del espesor suficiente para suprimir el juego axial.
+
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
+  <img src="/images/ruedas-td-tt_htm_m45086f12.jpg" alt="Diferencial del Ford T" style="width: 100%;">
+</figure>
 
 Debemos preocuparnos por colocar buenos retenes antes de colocar las camisas, ya que estos impedirán la salida del aceite del diferencial hacia las ruedas. Funcionan muy bien los originales de cuero y también pueden reemplazarse por otros más modernos de goma y metal.
 
