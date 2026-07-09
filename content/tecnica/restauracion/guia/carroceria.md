@@ -41,6 +41,10 @@ Deberemos usar la pintura que otorgue el acabado más parecido al original. Lo m
 
 ## Brillos
 
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 200px;">
+  <img src="/images/carroceria_htm_m1ca851a8.jpg" alt="Detalles niquelados del Ford T" style="width: 100%;">
+</figure>
+
 La austeridad de los T los negaba, por lo que muy pocas piezas fueron niqueladas en los modelos abiertos: tazas, caja de dirección y tapa de radiador. Los modelos cerrados incluían piezas del interior como manijas y otros accesorios. En los modelos refinados (26 y 27) se agregaron, en carácter de opcionales, la máscara del radiador, aros de faros, tablero y algunas pequeñas piezas. Siempre debemos recordar que el acabado que debemos darle es el niquelado, ya que el cromado no existía en esos años aún.
 
 Cuidado especial se debe tener con los espejos de los faros, ya que de su brillo dependerá la intensidad de la luz de los mismos.
@@ -59,6 +63,10 @@ Muy posiblemente debamos reemplazar el piso del auto, tarea relativamente fácil
 
 Los materiales actuales reemplazan siempre con ventajas a los originales. En el caso de las carrocerías abiertas se usaba un símil cuero, mientras que en los cerrados se usaron géneros más finos y de distintos colores. En este último caso debemos averiguar el que correspondía a nuestro modelo — una buena fuente es el citado libro de McCalley.
 
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 350px;">
+  <img src="/images/carroceria_htm_2c6424cf.jpg" alt="Interior tapizado del Ford T" style="width: 100%;">
+</figure>
+
 Al encargar el tapizado deberemos hacerlo también con las alfombras y, para los modelos con capota, las cortinas. Para las alfombras, las de goma entelada son las que más se parecen a las originales. Las cortinas varían en su forma pero debe respetarse su sistema de fijación.
 
 ## Capota
@@ -68,6 +76,10 @@ Descontando de que tenemos convenientemente restaurado el armazón de la capota,
 ## Instalación eléctrica
 
 Es relativamente fácil dada su simplicidad. Si deseamos mantener un mínimo de originalidad, deberemos adquirir el ramillete de cables nuevos, ya que es muy notable y desmerece nuestro trabajo el utilizar los cables modernos de plástico. Al encargar los cables, asegúrese de poseer todas las fijaciones para los mismos, las que son de muy bajo precio pero permiten un acabado perfecto de la instalación.
+
+<figure style="text-align: center; margin: 2em 0;">
+  <img src="/images/carroceria_htm_77170d20.jpg" alt="El Ford T restaurado" style="max-width: 100%;">
+</figure>
 
 ## Capítulos de esta guía
 
