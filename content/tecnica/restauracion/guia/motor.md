@@ -1,10 +1,10 @@
 ---
 title: "La apasionante restauración de un T — Motor y Transmisión"
 date: 2005-02-22
-pager: false
 description: "Guía de restauración del Ford T — Motor, radiador y transmisión"
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/motor/"
+pager: false
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*
@@ -12,6 +12,10 @@ url: "/tecnica/restauracion/guia/motor/"
 Para trabajar con el motor es imprescindible que contemos con un malacate y un soporte o mesa para apoyarlo. Estos elementos nos permitirán acceder fácilmente a todas sus partes, ya que trabajar en el piso se hace muy engorroso.
 
 <!--more-->
+
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 320px;">
+  <img src="/images/motor_htm_m1d3b57e5.jpg" alt="El motor del Ford T" style="width: 100%;">
+</figure>
 
 Facilita mucho el diagnóstico sobre las reparaciones que hacen falta hacerle al motor, haber tenido en marcha antes de desmontarlo del auto, ya que nos permite apreciar su potencia, cómo responde a diversas situaciones de marcha, escuchar sus ruidos, etc.
 
@@ -43,39 +47,47 @@ La lubricación del modelo T es pobre, aunque suficiente dado el escaso régimen
 
 1. Colocar "cucharitas" a las tapas de las bielas, perforando estas para que pase ese nuevo flujo de aceite hasta los muñones del cigüeñal.
 2. Si el modelo es anterior a 1926, cambiar su tubo de aceite por el de este modelo, que es de mayor diámetro y tiene un receptáculo más grande.
-3. Las "bañaderas" del cárter guardan algo de aceite para surtir a las bielas. Podemos aumentar notablemente esa cantidad de aceite si realizamos un "dique" en el extremo trasero del cárter (donde se ensancha para dar lugar al volante) soldando una chapita de unos dos centímetros de altura que retenga el aceite en el cárter del motor.
+3. Las "bañaderas" del cárter guardan algo de aceite para surtir a las bielas. Podemos aumentar notablemente esa cantidad de aceite si realizamos un "dique" en el extremo trasero del cárter soldando una chapita de unos dos centímetros de altura que retenga el aceite en el cárter del motor.
 
 ## Árbol de levas y válvulas
 
-La verificación del árbol de levas y sus bujes seguramente la dejaremos para un mecánico avezado o la rectificadora, teniendo en cuenta que contar con levas con el perfil correcto asegura un buen rendimiento del motor. Si las válvulas presentan un gran desgaste, lo mejor será su reemplazo junto con sus guías en la misma operación de rectificación, puliendo también sus botadores.
+La verificación del árbol de levas y sus bujes seguramente la dejaremos para un mecánico avezado o la rectificadora. Si las válvulas presentan un gran desgaste, lo mejor será su reemplazo junto con sus guías en la misma operación de rectificación, puliendo también sus botadores.
 
 ## El magneto
 
-Si queremos un auto en estado original deberemos tener este elemento en funcionamiento. Las bobinas se prueban como refiere el libro en el párrafo 996 o con un tester. Para este último procedimiento desoldamos la conexión de la última bobina a masa y medimos resistencia entre el poste de contacto y masa: si no hay cortocircuito a masa el tester nos debe marcar resistencia infinita.
+Si queremos un auto en estado original deberemos tener este elemento en funcionamiento. Las bobinas se prueban como refiere el libro en el párrafo 996 o con un tester. Los imanes sobre el volante deben estar alineados perfectamente, ya que la distancia de 0,60mm a 1mm que debe existir entre los núcleos de las bobinas y los imanes no permite desviaciones.
 
-Es relativamente fácil rehacer una o todas las bobinas. Se usa la misma lámina de cobre desnudo de la bobina vieja lijándola y acodiéndole una cinta autoadhesiva que se vende en casas de bobinados y se bobinan sobre una pieza de madera con la misma forma que el núcleo.
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
+  <img src="/images/motor_htm_2e31b09c.jpg" alt="Reimantando el volante" style="width: 100%;">
+</figure>
 
-Los imanes sobre el volante deben estar alineados perfectamente, ya que la distancia de 0,60mm a 1mm que debe existir entre los núcleos de las bobinas y los imanes no permite desviaciones. Para asegurarnos de que están a la misma altura podemos construir un comparador con una pequeña lata de conserva a la que se le suelda un brazo con una punta de alambre.
+Si los imanes han perdido su poder se puede intentar reimantarlos sin desarmar el motor, de la siguiente manera:
 
-Si los imanes han perdido su poder se puede intentar reimantarlos sin desarmar el motor — ver la nota completa en [Trucos y mañas del T](/tecnica/publicaciones/notas-tecnicas/trucos-y-manas/).
+a) Si el motor está colocado en el auto, debe liberarse el embrague, colocando la palanca hacia delante. Así se acercan lo más posible los imanes a las bobinas.
+
+b) Desconéctese el cable del poste del magneto.
+
+c) Ubíquese el volante de manera muy precisa: instale una brújula sobre la parte superior de la tapa de la caja de velocidades, con su centro ubicado a 35 mm del poste del magneto hacia los pedales y gire el motor lentamente con la manija de arranque hasta que la brújula indique el norte directamente hacia el frente del auto.
+
+d) En esa posición, se hacen circular aproximadamente 24 volts, provistos por varias baterías conectadas en serie con el positivo conectado al poste del magneto, en tres o cuatro oportunidades durante dos o tres segundos por vez.
 
 ## El carburador
 
-Al carburador conviene llevarlo a un taller especializado para que le quiten el juego en el eje de comando del acelerador, caso contrario nunca podremos deleitarnos con el ronroneo de un motor regulando a 200 RPM. El juego de asiento y aguja de ingreso de combustible debe funcionar correctamente.
-
-Al flotante de bronce (Holley NH) lo podremos probar colocándolo en un recipiente de agua caliente. Si no salen burbujas de su interior, está bien. Si por el contrario presenta alguna "pinchadura" deberemos soldarlo luego de calentarlo para que se evapore y se elimine el líquido que pueda estar en su interior.
+Al carburador conviene llevarlo a un taller especializado para que le quiten el juego en el eje de comando del acelerador, caso contrario nunca podremos deleitarnos con el ronroneo de un motor regulando a 200 RPM. Al flotante de bronce (Holley NH) lo podremos probar colocándolo en un recipiente de agua caliente. Si no salen burbujas de su interior, está bien.
 
 ## Radiador
 
 El radiador es un elemento más importante por su estética que por su funcionalidad, ya que, junto con su máscara, le da la apariencia característica al auto. Luego de tantos años, difícilmente podamos contar con el panel de tubos original, por lo que nos queda la alternativa de cambiar el panel por uno moderno de cuatro o cinco hileras de tubos chatos adaptado a los "tachos" originales. En Córdoba, un taller que sabe hacer muy bien estos arreglos es "Radiadores Norte" en Villa Retiro.
-
-En caso de reemplazar el panel perderemos en originalidad pero ganaremos en funcionalidad, ya que el sistema original de tubos redondos transfiere menos calor que el de tubos planos. De no ser por un panel de este tipo, nos hubiera sido imposible transitar por la Puna en pleno Diciembre cuando iniciamos el viaje La Quiaca-Ushuaia en "El Caminante".
 
 Al instalarlo, no olvidar colocar un trozo de cámara de neumático entre chasis y soporte del radiador, lo que aumenta la absorción de vibraciones.
 
 ## Transmisión
 
 Los tambores deben ser revisados buscando fisuras o quebraduras. Si los bujes presentan desgaste, deberán ser reemplazados. Difícilmente los engranajes necesiten también ser cambiados.
+
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 320px;">
+  <img src="/images/motor_htm_5f37888.jpg" alt="La transmisión del Ford T" style="width: 100%;">
+</figure>
 
 Antes de ensamblar nuevamente la caja, es conveniente el balanceado de todas las piezas: volante, engranajes y tambores, ya que es la única manera de eliminar las vibraciones a alto régimen del motor.
 
@@ -87,14 +99,21 @@ Otro gran tema son las cintas de transmisión. Existen de muchos tipos, pero pod
 
 Personalmente padecí las dos consecuencias y en los peores momentos: quebré un palier cuando íbamos con otras personas a una fiesta (incluida mi esposa luego de arduo trabajo para convencerla de acompañarme en el "T") y fundí una biela exactamente cuando llevaba una novia al altar (¡qué momento!!!).
 
-Con todos los elementos listos (ruedas, tren delantero y trasero, chasis, motor y transmisión), podemos hacer un ensayo y armar "el langostín" — término cordobés que intenta describir un flaco chasis sobre ruedas que se mueve por sus propios medios. Personalmente probé mi "T" durante tres años en ese estado hasta poder afrontar económicamente el resto del trabajo.
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 320px;">
+  <img src="/images/motor_htm_m29acfba3.jpg" alt="El langostón — chasis con motor listo para probar" style="width: 100%;">
+</figure>
 
-Completado el "langostín" tenemos la batalla casi ganada. Nos queda la carrocería, tapizado y capota.
+Con todos los elementos listos (ruedas, tren delantero y trasero, chasis, motor y transmisión), podemos hacer un ensayo y armar "el langostón" — término cordobés que intenta describir un flaco chasis sobre ruedas que se mueve por sus propios medios.
+
+Personalmente probé mi "T" durante tres años en ese estado hasta poder afrontar económicamente el resto del trabajo.
+
+Completado el "langostón" tenemos la batalla casi ganada. Nos queda la carrocería, tapizado y capota.
 
 ## Capítulos de esta guía
 
 - [Introducción](/tecnica/restauracion/guia/introduccion/)
 - [A desarmar](/tecnica/restauracion/guia/desarmar/)
 - [Chasis y Elásticos](/tecnica/restauracion/guia/chasis/)
+- [Las ruedas, Tren delantero y Tren trasero](/tecnica/restauracion/guia/ruedas/)
 - [Motor y Transmisión](/tecnica/restauracion/guia/motor/)
 - [Carrocería](/tecnica/restauracion/guia/carroceria/)
