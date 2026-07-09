@@ -67,4 +67,21 @@ La terminación del chasis se logra con la pintura. Una restauración prolija ac
 
 Las hojas de elásticos deberán ser cuidadosamente inspeccionadas para detectar cristalización o roturas y excesivo desgaste en la zona en que apoyan las hojas unas sobre otras. En caso de necesitarse un reemplazo, un buen taller de elásticos nos proveerá de hojas nuevas, cuidando encargar el correcto corte de las puntas de las hojas.
 
-Lo que suele ser necesario habitualmente es darle nueva curvatura a las hojas para recuperar esa
+Lo que suele ser necesario habitualmente es darle nueva curvatura a las hojas para recuperar esa prestancia de "auto bien parado". Se recomienda 6 hojas para los modelos con carrocería abierta y 7 para los cerrados, más pesados.
+
+Los bujes seguramente deberán ser reemplazados, recordando que los originales eran de chapa.
+
+Un detalle: los elásticos delanteros llevaban una "almohadilla" de chapa entre el larguero delantero donde encaja el elástico para absorber el desgaste por fricción. Se puede realizar fácilmente con un trozo de chapa Nro. 20 cortado a tijera.
+
+Otro detalle es la cabeza cuadrada del tornillo central de ambos elásticos, que deberá encajar perfectamente en el alojamiento del larguero correspondiente. Este permite centrar correctamente el elástico en el proceso de armado.
+
+Un detalle a tener en cuenta son las aceiteras que llevan los elásticos, las que es posible aún encontrar en comercios especializados o pedirlas al exterior. Al colocarlas, verificar que la perforación de los bujes permita el paso del aceite hasta los pernos.
+
+## Capítulos de esta guía
+
+- [Introducción](/tecnica/restauracion/guia/introduccion/)
+- [A desarmar](/tecnica/restauracion/guia/desarmar/)
+- [Chasis y Elásticos](/tecnica/restauracion/guia/chasis/)
+- [Las ruedas, Tren delantero y Tren trasero](/tecnica/restauracion/guia/ruedas/)
+- [Motor y Transmisión](/tecnica/restauracion/guia/motor/)
+- [Carrocería](/tecnica/restauracion/guia/carroceria/)
