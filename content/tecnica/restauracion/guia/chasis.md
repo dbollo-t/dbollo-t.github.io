@@ -24,23 +24,38 @@ En el proceso del armado seguramente requeriremos repuestos. Algunos proveedores
 
 ## Chasis
 
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
+  <img src="/images/desarmar_htm_m5caa9d2e.jpg" alt="El chasis pelado listo para restaurar" style="width: 100%;">
+</figure>
+
 Ya tenemos el chasis sobre caballetes o tacos de madera y estamos listos para comenzar la tarea de restauración propiamente dicha.
 
-Lo primero será su limpieza en varias etapas, algo tedioso y aburrido pero que rendirá buenos frutos. Primero una limpieza de todas las capas viejas de pintura, el barro y grasa acumulados durante años. Con espátula, cepillos de alambre y mejor aún ayudados por cepillos montados en taladros o ejes flexibles haremos una primera limpieza. El arenado es la mejor opción para la limpieza del chasis.
+Lo primero será su limpieza en varias etapas, algo tedioso y aburrido pero que rendirá buenos frutos. Primeramente con espátula, cepillos de alambre y mejor aún ayudados por cepillos montados en taladros o ejes flexibles haremos una primera limpieza. El arenado es la mejor opción para la limpieza del chasis.
 
-Si opta por el arenado, es la oportunidad de arenar otras piezas pesadas: hojas de elásticos, mangas de diferencial, cardán, eje delantero, barras de dirección, tensores delanteros y traseros.
+Si opta por el arenado, es la oportunidad de arenar otras piezas pesadas: hojas de elásticos, mangas de diferencial, cardan, eje delantero, barras de dirección, tensores delanteros y traseros.
 
 Tres consejos antes de llevar las piezas al arenador:
 
 1. La calidad del arenado y del trabajo posterior depende de una buena limpieza previa, sobre todo de grasa y tierra.
-2. Deberá cubrir convenientemente (madera, cinta, colocación de tornillos, etc.) los sectores sensibles que se deben defender de la acción abrasiva de la arena, como bujes, roscas, marcas, etc. En los vehículos posteriores al Nº 12.861.404 tener especial cuidado en preservar el número de chasis grabado en el larguero derecho a la altura del parallamas.
+2. Deberá cubrir convenientemente los sectores sensibles que se deben defender de la acción abrasiva de la arena, como bujes, roscas, marcas, etc. En los vehículos posteriores al Nº 12.861.404 tener especial cuidado en preservar el número de chasis grabado en el larguero derecho a la altura del parallamas.
 3. Antes de enviar las piezas a arenar debe tener prevista la pintura antióxido que preservará las piezas del óxido que surge a pocas horas de que el metal quede expuesto a la humedad ambiente.
 
 Terminado esto, tendremos ante nosotros un chasis limpio, listo para inspeccionarlo buscando imperfecciones, modificaciones, etc.
 
 Algo común es la presencia de perforaciones agregadas para algún fin no determinado, las que deberán ser selladas con soldadura. Otro mal que aqueja a nuestros queridos chasis es el de agregados o reparaciones mal efectuadas.
 
-Seguramente surgirán irregularidades ya que los chasis no tienen una destacada rigidez y pueden haberse revirado. Muchas veces, este trabajo de torsión del bastidor provoca rajaduras en los largueros o travesaños. En estos casos, conviene cortar un buen trozo cercano a la rotura, ya que es posible que el metal esté cristalizado, y soldar en ángulo. No conviene agregar planchuelas de refuerzo porque genera demasiada rigidez en ese sector y generará nuevas roturas en sus extremos.
+Seguramente surgirán irregularidades ya que los chasis no tienen una destacada rigidez y pueden haberse revirado. Muchas veces, este trabajo de torsión del bastidor provoca rajaduras en los largueros o travesaños. En estos casos, conviene cortar un buen trozo cercano a la rotura, ya que es posible que el metal esté cristalizado, y soldar en ángulo como lo indica el dibujo siguiente:
+
+<figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
+  <img src="/images/chasis_htm_18af43d6.gif" alt="Diagrama de soldadura en ángulo" style="width: 100%;">
+</figure>
+
+No conviene agregar planchuelas de refuerzo porque genera demasiada rigidez en ese sector y generará nuevas roturas en sus extremos.
+
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 250px;">
+  <img src="/images/chasis_htm_3b763fca.gif" alt="Diagrama de alineación del chasis" style="width: 100%;">
+  <figcaption style="font-size: 0.85em; font-style: italic;">Esta es la forma de medir la alineación del chasis mediante hilos. Del libro de Richard Wheatley y Brian Morgan.</figcaption>
+</figure>
 
 El sector que suele estar más dañado y sobre todo corroído por el óxido, es el travesaño delantero y sus uniones a los largueros. Si se da este caso y se quiere hacer una prolija restauración, conviene el reemplazo de estas partes, pudiéndose conseguir nuevas en proveedores de EEUU.
 

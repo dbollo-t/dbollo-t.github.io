@@ -28,6 +28,9 @@ Para poner en marcha con motor caliente, colocar el bigote del acelerador en una
 No olvidar que — para una operación correcta — el cebador debe estar cerrado una vez que el motor calentó.
 
 Si el motor está frío es mejor hacer la operación de cebado, repitiendo los pasos anteriores. Cuando arranca, ir cerrando el cebador a medida que el motor se regulariza y levanta temperatura, para cerrarlo del todo cuando regula satisfactoriamente.
+<figure style="float: right; margin: 0 0 1em 1em; max-width: 50%;">
+  <img src="/images/carburadorholley.jpg" alt="Carburador Holley NH" style="width: 100%;">
+</figure>
 
 ## Puesta a punto del carburador
 
