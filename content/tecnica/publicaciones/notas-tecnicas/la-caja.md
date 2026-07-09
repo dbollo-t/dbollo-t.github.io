@@ -138,4 +138,4 @@ La palanca presenta otras dos posiciones: al medio, que quita la directa porque 
 
 ## Nota final
 
-Este artículo pertenece al Primer Club del Ford T de Argentina. Por cualquier consulta respectiva al mismo rogamos contactar a su autor Jorge E. Báez.
+Este artículo pertenece al Primer Club del Ford T de Argentina.
