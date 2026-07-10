@@ -13,7 +13,7 @@ Si querés saber cómo hacer tu tapizado, capota o cortinas, o ubicar algún det
 
 <!--more-->
 
-Hacé clic en una miniatura para ver la foto completa. Hacé clic en la foto grande para volver a las miniaturas.
+Hacé clic en una miniatura para verla en pantalla completa. Hacé clic en la foto (o afuera) para volver a las miniaturas.
 
 <div class="thumb-gallery" id="gallery-grid">
   <img src="/images/restauracion/27-original/thumbs/p1010005.jpg" alt="Modelo 27 original - p1010005.jpg" loading="lazy" onclick="galShowFull('/images/restauracion/27-original/p1010005.jpg')">
@@ -53,28 +53,32 @@ Hacé clic en una miniatura para ver la foto completa. Hacé clic en la foto gra
   <img src="/images/restauracion/27-original/thumbs/pa010073.jpg" alt="Modelo 27 original - pa010073.jpg" loading="lazy" onclick="galShowFull('/images/restauracion/27-original/pa010073.jpg')">
 </div>
 
-<div class="gallery-full" id="gallery-full">
-  <img id="gallery-full-img" src="" alt="Foto completa" onclick="galShowGrid()">
-  <p class="gallery-hint">Hacé clic en la imagen para volver a las miniaturas</p>
+<div class="gallery-full" id="gallery-full" onclick="galShowGrid()">
+  <span class="gallery-close" onclick="galShowGrid()">&times;</span>
+  <img id="gallery-full-img" src="" alt="Foto completa">
 </div>
 
 <style>
 .thumb-gallery{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0;}
 .thumb-gallery img{width:140px;height:105px;object-fit:cover;border:1px solid #ddd;border-radius:2px;cursor:zoom-in;}
 .thumb-gallery img:hover{border-color:#8B0000;}
-.gallery-full{display:none;text-align:center;margin:1.2rem 0;}
-.gallery-full img{max-width:100%;height:auto;border:1px solid #ddd;cursor:zoom-out;}
-.gallery-hint{color:#666;font-size:.85rem;margin-top:.5rem;}
+.gallery-full{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.92);z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;}
+.gallery-full img{max-width:95vw;max-height:92vh;object-fit:contain;box-shadow:0 0 20px rgba(0,0,0,.6);}
+.gallery-close{position:absolute;top:16px;right:24px;color:#fff;font-size:2.5rem;line-height:1;cursor:pointer;user-select:none;}
+@media (max-width:700px){.gallery-close{top:8px;right:14px;font-size:2rem;}}
 </style>
 
 <script>
 function galShowFull(src){
   document.getElementById('gallery-full-img').src=src;
-  document.getElementById('gallery-grid').style.display='none';
-  document.getElementById('gallery-full').style.display='block';
+  document.getElementById('gallery-full').style.display='flex';
+  document.body.style.overflow='hidden';
 }
 function galShowGrid(){
   document.getElementById('gallery-full').style.display='none';
-  document.getElementById('gallery-grid').style.display='flex';
+  document.body.style.overflow='';
 }
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){galShowGrid();}
+});
 </script>
