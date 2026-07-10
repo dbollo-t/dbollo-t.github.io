@@ -15,8 +15,10 @@ pager: false
 </div>
 
 <div style="text-align: center; width: 150px;">
+<a href="/tecnica/publicaciones/manuales/manual-del-dueno/">
 <img src="/images/catalogo/manualduenio.jpg" alt="Manual del dueño" style="width: 100px;">
 <p>Manual del dueño</p>
+</a>
 </div>
 
 <div style="text-align: center; width: 150px;">
