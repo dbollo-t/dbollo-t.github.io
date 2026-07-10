@@ -8,6 +8,9 @@ pager: false
 ---
 
 *Publicado el 2 de Diciembre de 2010. Traducción gentileza de FEVA.*
+
+<!--more-->
+
 <figure style="text-align: center; margin: 2em 0;">
   <img src="/images/turin04articulo.jpg" alt="La Carta de Turín" style="max-width: 100%;">
 </figure>
@@ -16,7 +19,6 @@ Por fin la guía que muchos esperábamos y que nuestro mundillo necesita.
 
 **Fédération Internationale des Véhicules Anciens**
 
-<!--more-->
 
 ## Introducción
 
