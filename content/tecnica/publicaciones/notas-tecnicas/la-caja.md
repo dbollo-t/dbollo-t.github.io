@@ -26,7 +26,7 @@ A efectos de entender el funcionamiento de la caja de cambios del Ford T, deber√
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagenD.jpg" alt="Imagen D" style="width: 90px;"><br>
 <small>Imagen D</small><br>
-<embed src="/images/img_varias/lacaja/Link D.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-D.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagenD1.jpg" alt="Imagen D1-1" style="width: 90px;">
@@ -46,38 +46,37 @@ A efectos de entender el funcionamiento de la caja de cambios del Ford T, deber√
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen01.jpg" alt="Imagen 01" style="width: 90px;"><br>
 <small>Imagen 01</small>
-<embed src="/images/img_varias/lacaja/Link N1.swf" width="180" height="120">
 </td></tr>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen02.jpg" alt="Imagen 02" style="width: 90px;"><br>
 <small>Imagen 02</small>
-<embed src="/images/img_varias/lacaja/Link N2.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-N2.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen03.jpg" alt="Imagen 03" style="width: 90px;"><br>
 <small>Imagen 03</small>
-<embed src="/images/img_varias/lacaja/Link N3.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-N3.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen04.jpg" alt="Imagen 04" style="width: 90px;"><br>
 <small>Imagen 04</small>
-<embed src="/images/img_varias/lacaja/Link N4.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-N4.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen05.jpg" alt="Imagen 05" style="width: 90px;"><br>
 <small>Imagen 05</small>
-<embed src="/images/img_varias/lacaja/Link N5.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-N5.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen06.jpg" alt="Imagen 06" style="width: 90px;"><br>
 <small>Imagen 06</small>
-<embed src="/images/img_varias/lacaja/Link N6.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-N6.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
 <img src="/images/img_varias/lacaja/imagen07.jpg" alt="Imagen 07" style="width: 90px;"><br>
 <small>Imagen 07</small>
-<embed src="/images/img_varias/lacaja/Link N7.swf" width="180" height="120">
+<video src="/images/img_varias/lacaja/Link-N7.mp4" controls width="180"></video>
 </td></tr>
 </table>
 
@@ -139,4 +138,4 @@ La palanca presenta otras dos posiciones: al medio, que quita la directa porque 
 
 ## Nota final
 
-Este art√≠culo pertenece al Primer Club del Ford T de Argentina. Por cualquier consulta respectiva al mismo rogamos contactar a su autor Jorge E. B√°ez.
+Este art√≠culo pertenece al Primer Club del Ford T de Argentina.
