@@ -9,13 +9,15 @@ pager: false
 
 *Colaboración de Daniel Bollo* — La herramienta imprescindible para la restauración.
 
-Las imágenes del Manual de Servicio son de calidad reducida por cuestiones técnicas.
-
-El Club, junto al Ovalo Azul, ha desarrollado un Manual de Servicio con imágenes de máxima calidad y acceso mediante un índice interactivo que se puede solicitar al mail: [adl@elovaloazul.com.ar](mailto:adl@elovaloazul.com.ar)
+<!--more-->
 
 <p style="text-align:center;margin:1.5rem 0;">
   <a href="/tecnica/restauracion/manual-de-servicio/manual/" style="background:#8B0000;color:#fff;text-decoration:none;padding:.6rem 1.4rem;border-radius:4px;font-size:1rem;display:inline-block;">Seguir al Manual de servicio &rarr;</a>
 </p>
+
+Las imágenes del Manual de Servicio son de calidad reducida por cuestiones técnicas.
+
+El Club, junto al Ovalo Azul, ha desarrollado un Manual de Servicio con imágenes de máxima calidad y acceso mediante un índice interactivo que se puede solicitar al mail: [adl@elovaloazul.com.ar](mailto:adl@elovaloazul.com.ar)
 
 ### Imágenes de muestra
 
