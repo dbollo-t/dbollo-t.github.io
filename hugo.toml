@@ -4,6 +4,9 @@ defaultContentLanguage = "es"
 title = "Club del Ford T de Argentina"
 theme = "mainroad"
 
+[minify]
+  disableJS = true
+
 [params]
   description = "Primer Club del Ford T de Argentina"
   copyright = "Club del Ford T de Argentina"
