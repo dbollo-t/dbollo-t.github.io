@@ -20,8 +20,8 @@ theme = "mainroad"
   customCSS = ["css/custom.css"]
 
 [params.logo]
-  title = "Club Ford T Argentina"
-  subtitle = "Primer Club del Ford T de Argentina"
+  title = "Primer Club Ford T Argentina"
+  subtitle = "Más de 30 años apasionados por el T"
   image = "/images/logo-club.png"
 
 [params.sidebar]
