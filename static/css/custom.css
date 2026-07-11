@@ -9,3 +9,34 @@
 .logo--mixed .logo__imagebox {
 	margin-left: 1rem;
 }
+
+/* Buscador integrado en la barra de menú (mismo contenedor que los links,
+   visible/oculto junto con ellos en mobile) */
+.menu__item--search {
+	border-left: 0;
+}
+
+.menu__item--search .widget-search {
+	margin-bottom: 0;
+}
+
+.menu__item--search .widget-search__form {
+	padding: 8px 15px;
+	background: transparent;
+}
+
+.menu__item--search .widget-search__field {
+	width: 100%;
+	padding: 6px 8px;
+}
+
+@media screen and (min-width: 767px) {
+	.menu__item--search {
+		margin-left: auto;
+		border-left: 1px solid rgba(255, 255, 255, .1);
+	}
+
+	.menu__item--search .widget-search__field {
+		width: 160px;
+	}
+}
