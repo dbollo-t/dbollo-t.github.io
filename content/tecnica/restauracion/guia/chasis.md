@@ -5,6 +5,8 @@ description: "Guía de restauración del Ford T — Chasis, elásticos y comienz
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/chasis/"
 pager: false
+build:
+  list: local
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*

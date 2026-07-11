@@ -5,6 +5,8 @@ description: "Guía de restauración del Ford T — Ruedas, tren delantero y tre
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/ruedas/"
 pager: false
+build:
+  list: local
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*

@@ -5,6 +5,8 @@ description: "Guía de restauración del Ford T — Motor, radiador y transmisi�
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/motor/"
 pager: false
+build:
+  list: local
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*

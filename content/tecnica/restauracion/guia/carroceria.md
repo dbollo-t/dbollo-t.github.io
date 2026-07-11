@@ -5,6 +5,8 @@ description: "Guía de restauración del Ford T — Carrocería, pintura, tapiza
 categories: ["Técnica"]
 url: "/tecnica/restauracion/guia/carroceria/"
 pager: false
+build:
+  list: local
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*
