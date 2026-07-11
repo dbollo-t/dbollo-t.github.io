@@ -6,12 +6,13 @@ categories: ["El Club"]
 url: "/el-club/comision-directiva/"
 pager: false
 ---
-
 **Presidente:** Alfredo Oscar Civalero
 
 **Secretario:** Guillermo Palumbo
 
 **Tesorero:** Daniel Bollo
+
+<!--more-->
 
 **Vocales titulares:** Jorge Carnevalle y Luis Angel Olmos
 
