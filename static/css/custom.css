@@ -1,0 +1,11 @@
+/* Logo del club junto al título del encabezado */
+.logo--mixed .logo__img {
+	max-height: 70px;
+	max-width: 110px;
+	width: auto;
+	height: auto;
+}
+
+.logo--mixed .logo__imagebox {
+	margin-left: 1rem;
+}
