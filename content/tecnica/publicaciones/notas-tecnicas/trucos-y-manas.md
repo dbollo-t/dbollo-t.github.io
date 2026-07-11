@@ -1,6 +1,6 @@
 ---
 title: "Trucos y mañas del T"
-date: 2010-05-01
+date: 2011-05-01
 description: "Recopilación de trucos y soluciones prácticas para el Ford T"
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/trucos-y-manas/"
