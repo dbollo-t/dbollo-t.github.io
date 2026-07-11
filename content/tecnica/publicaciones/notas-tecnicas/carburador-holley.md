@@ -11,13 +11,16 @@ pager: false
 
 *Colaboración de Adolfo Mazzoni (Traducción del manual de la Holley, año 1921)*
 
-El modelo NH de Holley equipó a casi todos los Ford T hasta 1925. Desde 1922 se modificó la posición del drenaje del tazón (al centro en lugar de a un costado). Además se reemplazó el tornillo que lo sujetaba al cuerpo del carburador (NH 44) por una fijación que permitía atornillarlo directamente. También desde 1922 en adelante se reemplazó el anillo flotante de corcho por uno de bronce.
+El modelo NH de Holley equipó a casi todos los Ford T hasta 1925. 
+
+<!--more-->
+
+Desde 1922 se modificó la posición del drenaje del tazón (al centro en lugar de a un costado). Además se reemplazó el tornillo que lo sujetaba al cuerpo del carburador (NH 44) por una fijación que permitía atornillarlo directamente. También desde 1922 en adelante se reemplazó el anillo flotante de corcho por uno de bronce.
 
 Desde 1925 la aguja del carburador pudo regularse desde el asiento del conductor, mediante una leva similar a la que accionaba el cebador. Por su comodidad, esta modificación se utilizó en muchos autos de modelos anteriores.
 
 El modelo NH de Holley dejó de ser parte del equipo original de fábrica a partir de 1926, y fue reemplazado con el vaporizador de la misma marca.
 
-<!--more-->
 
 Una vez ajustado, no hay partes del carburador Holley que puedan descalibrarse. Se corrige automáticamente, sin el uso de partes móviles, mediante el compensado de la cantidad de combustible según el flujo de aire requerido. La válvula de aguja en el orificio de ingreso de combustible es el único ajuste, y un cambio en ella afecta a todos los regímenes de operación del motor.
 
