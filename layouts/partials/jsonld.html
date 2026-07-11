@@ -1,0 +1,32 @@
+{{- $logo := absURL "images/logobue.jpg" }}
+{{- $orgName := "Primer Club del Ford T de Argentina" }}
+
+{{- if .IsHome }}
+{{- $data := dict "@context" "https://schema.org" "@type" "Organization"
+    "name" $orgName "url" .Site.BaseURL "logo" $logo
+    "email" "primerclubdelfordtargentina@gmail.com"
+    "description" .Site.Params.description }}
+<script type="application/ld+json">{{ $data | jsonify (dict "indent" "  ") }}</script>
+{{- else if .IsPage }}
+{{- $author := .Params.author | default $orgName }}
+{{- $article := dict "@context" "https://schema.org" "@type" "Article"
+    "headline" .Title
+    "description" (.Description | default .Summary | plainify)
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "image" (slice $logo)
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "author" (dict "@type" "Person" "name" $author)
+    "publisher" (dict "@type" "Organization" "name" $orgName "logo" (dict "@type" "ImageObject" "url" $logo)) }}
+<script type="application/ld+json">{{ $article | jsonify (dict "indent" "  ") }}</script>
+{{- end }}
+
+{{- if not .IsHome }}
+{{- $items := slice (dict "@type" "ListItem" "position" 1 "name" .Site.Title "item" .Site.BaseURL) }}
+{{- $pos := 1 }}
+{{- range .Ancestors.Reverse }}{{- if not .IsHome }}{{- $pos = add $pos 1 }}{{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}{{- end }}{{- end }}
+{{- $pos = add $pos 1 }}
+{{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}
+{{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items }}
+<script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") }}</script>
+{{- end }}
