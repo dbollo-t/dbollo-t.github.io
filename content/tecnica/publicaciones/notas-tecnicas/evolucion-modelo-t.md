@@ -10,7 +10,6 @@ pager: false
 *Por Daniel E. Bollo*
 
 Esta nota quiere ser un tributo para aquellos que se esfuerzan dedicando muchas horas de trabajo tratando de respetar las condiciones originales de sus automóviles, verdaderos voceros de la historia reciente de la humanidad. La falta de ese respeto se traduce en el travestismo al que nos exponen bastardeos como los hot-rod, malas restauraciones y otras infidelidades a la historia.
-
 <!--more-->
 
 En un rápido análisis, podríamos decir que la idea de evolución, ligada a cambios, se contradice con la filosofía de bajos costos en base a economías de escala que se encarna en el modelo T.
