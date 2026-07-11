@@ -7,11 +7,14 @@ url: "/tecnica/publicaciones/notas-tecnicas/pintura-modelos-t/"
 pager: false
 ---
 
-*Trabajo original: "ALL MODEL T'S WERE BLACK", autor: Trent Boggess. Publicado en la Model T Encyclopedia del Model T Ford Club of America. Traducido para el Primer Club del Ford T de Argentina por José Fernandez Pernas.*
+*autor: Trent Boggess. Traducido por José Fernandez Pernas.*
 
-La mayoría de los Modelos T eran negros. No todos, sólo la mayoría. Los primeros modelos de 1909 eran rojos y grises, pero en mitad de 1909 éste último se llevó a verde oscuro. Durante diciembre de 1910 y enero de 1911, el verde oscuro, a su vez, se cambió a un tono muy oscuro, casi negro: el azul medianoche. Por último, a fines de 1914 y principios de 1915 el azul fue substituido por negro puro en los coches abiertos. Desde este punto hasta la introducción de los "Modelos Mejorados" que aparecen en agosto de 1925, el negro fue el color estándar.
+La mayoría de los Modelos T eran negros. No todos, sólo la mayoría. 
 
 <!--more-->
+
+Los primeros modelos de 1909 eran rojos y grises, pero en mitad de 1909 éste último se llevó a verde oscuro. Durante diciembre de 1910 y enero de 1911, el verde oscuro, a su vez, se cambió a un tono muy oscuro, casi negro: el azul medianoche. Por último, a fines de 1914 y principios de 1915 el azul fue substituido por negro puro en los coches abiertos. Desde este punto hasta la introducción de los "Modelos Mejorados" que aparecen en agosto de 1925, el negro fue el color estándar.
+
 
 Aunque hay poco para discutir sobre el color del modelo T, todavía hay mucho que decir sobre la terminación de un modelo T. Es decir, qué tipo de pintura se utilizaba y cómo se aplicaba. Muy pocos coches sobreviven con su terminación original. La mayoría se han repintado una o más veces durante sus vidas, generalmente con pinturas y técnicas de pintado perfeccionadas que se han desarrollado durante los últimos 70 años.
 
