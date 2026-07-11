@@ -11,6 +11,8 @@ pager: false
 
 Esta nota quiere ser un tributo para aquellos que se esfuerzan dedicando muchas horas de trabajo tratando de respetar las condiciones originales de sus automóviles, verdaderos voceros de la historia reciente de la humanidad. La falta de ese respeto se traduce en el travestismo al que nos exponen bastardeos como los hot-rod, malas restauraciones y otras infidelidades a la historia.
 
+<!--more-->
+
 En un rápido análisis, podríamos decir que la idea de evolución, ligada a cambios, se contradice con la filosofía de bajos costos en base a economías de escala que se encarna en el modelo T.
 
 Los beneficios de las economías de escala se logran con la producción de grandes cantidades de un mismo artículo, bajando por ende sus costos unitarios. Este fue el principio rector de la producción del Ford T, que funcionó a través de sus 19 años de producción y le permitió bajar de sus U$S 850,- iniciales a los U$S 260 hacia 1925 para el modelo más vendido, el touring.
@@ -22,8 +24,6 @@ Podemos dividir los cambios producidos en el modelo T en tres periodos:
 - En 1925 y debido a la baja en la demanda, los cambios incorporados al "modelo refinado" (1926/7) fueron motivados por la demanda de mejor estética y mayor confort.
 
 Ninguna de las modificaciones afectó de manera sustancial el diseño original. Para referirnos a la evolución del modelo, nos hemos basado en el más conocido, el Touring y que, junto con la Runabout, estuvieron todos los años en producción.
-
-<!--more-->
 
 ## 1909
 
