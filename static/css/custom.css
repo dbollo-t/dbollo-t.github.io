@@ -1,3 +1,12 @@
+/* Segunda línea del encabezado (subtítulo) y línea bajo el menú: rojo -> azul profundo */
+.logo__tagline {
+	color: #1a3c6e;
+}
+
+.menu {
+	border-bottom-color: #1a3c6e;
+}
+
 /* Logo del club junto al título del encabezado */
 .logo--mixed .logo__img {
 	max-height: 65px;
