@@ -7,7 +7,11 @@ url: "/el-club/acerca-del-club/"
 pager: false
 ---
 
-El **Primer Club del Ford T de Argentina** se originó en Córdoba a fines del año 1996. Con anterioridad a esa fecha nos habíamos reunido, en diversas oportunidades, los entusiastas de autos antiguos de la década del veinte y anteriores, o sea los correspondientes a las categorías vintage y veteranos de la mayoría de los rallies organizados por clubes de autos antiguos.
+El **Primer Club del Ford T de Argentina** se originó en Córdoba a fines del año 1996. 
+
+<!--more-->
+
+Con anterioridad a esa fecha nos habíamos reunido, en diversas oportunidades, los entusiastas de autos antiguos de la década del veinte y anteriores, o sea los correspondientes a las categorías vintage y veteranos de la mayoría de los rallies organizados por clubes de autos antiguos.
 
 El deseo de rescatar al auto verdaderamente antiguo, aparece ante el hecho que los que estamos en esta actividad desde hace veinte años o más, veníamos observando que los Clubes de Autos Antiguos organizaban rallies cada vez más extensos y exigidos que iban desplazando estos vehículos que por su antigüedad no estaban en condiciones de afrontarlas.
 
