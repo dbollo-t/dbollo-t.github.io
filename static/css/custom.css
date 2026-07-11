@@ -49,3 +49,37 @@
 		width: 160px;
 	}
 }
+
+/* Fondo del footer: gris oscuro -> azul profundo */
+.footer {
+	background: #1a3c6e;
+}
+
+/* Redes/contacto del club en el footer (solo íconos, crema) */
+.footer__social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 18px;
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+.footer__social-link {
+	display: inline-flex;
+	line-height: 0;
+}
+
+.footer__social-icon {
+	width: 26px;
+	height: 26px;
+	fill: #f0e6cc;
+	transition: fill .15s ease, transform .15s ease;
+}
+
+.footer__social-link:hover .footer__social-icon,
+.footer__social-link:focus .footer__social-icon {
+	fill: #fff8e6;
+	transform: translateY(-2px);
+}

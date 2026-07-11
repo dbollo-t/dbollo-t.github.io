@@ -1,0 +1,26 @@
+<footer class="footer">
+	<div class="container footer__container flex">
+		<div class="footer__social">
+			<a class="footer__social-link" title="Facebook" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/groups/662972573777697">
+				{{ partial "svg/facebook.svg" (dict "class" "footer__social-icon") }}
+			</a>
+			<a class="footer__social-link" title="YouTube" rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/@clubdelfordt/playlists">
+				{{ partial "svg/youtube.svg" (dict "class" "footer__social-icon") }}
+			</a>
+			<a class="footer__social-link" title="Email" href="mailto:primerclubdelfordtargentina@gmail.com">
+				{{ partial "svg/email.svg" (dict "class" "footer__social-icon") }}
+			</a>
+			<a class="footer__social-link" title="WhatsApp: (54) 351-5322392" rel="noopener noreferrer" target="_blank" href="https://wa.me/543515322392">
+				{{ partial "svg/whatsapp.svg" (dict "class" "footer__social-icon") }}
+			</a>
+			<a class="footer__social-link" title="Teléfono: (54) 351-5550818" href="tel:+543515550818">
+				{{ partial "svg/phone.svg" (dict "class" "footer__social-icon") }}
+			</a>
+		</div>
+		{{ partial "footer_links.html" . }}
+		<div class="footer__copyright">
+			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
+			<span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
+		</div>
+	</div>
+</footer>
