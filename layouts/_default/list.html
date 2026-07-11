@@ -22,7 +22,9 @@
       <div class="post__meta">{{ .Date.Format "2 January, 2006" }}</div>
     </header>
     {{ with .Summary }}<p>{{ . }}</p>{{ end }}
-    <a href="{{ .Permalink }}">Leer más</a>
+    <div class="list__footer clearfix">
+      <a class="list__footer-readmore btn" href="{{ .Permalink }}">Leer más</a>
+    </div>
   </article>
   {{ end }}
 </div>
