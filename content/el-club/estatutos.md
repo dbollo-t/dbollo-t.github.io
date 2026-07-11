@@ -7,7 +7,7 @@ url: "/el-club/estatutos/"
 pager: false
 ---
 
-## TITULO I - DENOMINACION - DOMICILIO - OBJETO SOCIAL
+### TITULO I - DENOMINACION - DOMICILIO - OBJETO SOCIAL
 
 **ARTICULO 1o.:** Con la denominación de **Primer Club del Ford T de Argentina**, se constituyó el día primero de mayo del año dos mil una asociación civil, sin fines de lucro, con domicilio legal en la ciudad de Córdoba, Provincia de Córdoba.
 
@@ -25,7 +25,7 @@ e) Realizar eventos y reuniones, en especial, el Evento Anual "**Encuentro Inter
 
 Asimismo, y a los efectos de preservar el objetivo social, se prohíben dentro del ámbito del Club las actividades comerciales, partidarias o religiosas.
 
-## TITULO II - CAPACIDAD - PATRIMONIO - RECURSOS SOCIALES
+### TITULO II - CAPACIDAD - PATRIMONIO - RECURSOS SOCIALES
 
 **ARTICULO 3o.:** El Club, con arreglo a su naturaleza de persona jurídica de bien público y sin fines de lucro, está capacitado para adquirir bienes muebles o inmuebles, enajenar, transferir, gravar, locar, etc., por cualquier causa o título no prohibido por las normas legales en vigencia.
 
@@ -33,7 +33,7 @@ En consecuencia, podrá celebrar toda clase de actos jurídicos, convenios o con
 
 **ARTICULO 4o.:** El patrimonio social se compone de los bienes que posee en la actualidad y de los que adquiera en lo sucesivo por cualquier causa razón o título y de los recursos que obtenga por: a) Las cuotas que abonan los asociados; b) Las rentas que produzcan sus bienes; c) Las donaciones, herencias, legados y subvenciones que le fueran acordadas; d) El producto de toda otra entrada que pueda obtener lícitamente.
 
-## TITULO III - ASOCIADOS - CONDICIONES DE ADMISION - OBLIGACIONES Y DERECHOS
+### TITULO III - ASOCIADOS - CONDICIONES DE ADMISION - OBLIGACIONES Y DERECHOS
 
 **ARTICULO 5o.:** De la misma manera que el auto que motiva este Club llegó a todos, el Primer Club del Ford T de Argentina queda abierto a cualquier persona, sin distinción de raza, credo o ideología política que adhiera al objetivo manifestado en el artículo segundo, posea o no un automóvil Ford T. Se establecen las siguientes categorías de asociados:
 
@@ -59,7 +59,7 @@ En consecuencia, podrá celebrar toda clase de actos jurídicos, convenios o con
 
 **ARTICULO 12o.:** Las sanciones disciplinarias a que se refiere el artículo anterior serán resueltos por la Comisión Directiva, con estricta observancia del derecho de defensa. En todos los casos, el afectado podrá interponer - dentro del término de DIEZ (10) días de notificado de la sanción - el recurso de apelación para ser considerado ante la primera Asamblea que se celebre.
 
-## TITULO IV – ORGANOS SOCIALES
+### TITULO IV – ORGANOS SOCIALES
 
 Los órganos sociales serán dos: LA COMISIÓN DIRECTIVA y LA COMISIÓN REVISORA DE CUENTAS.
 
@@ -77,33 +77,33 @@ Los órganos sociales serán dos: LA COMISIÓN DIRECTIVA y LA COMISIÓN REVISORA
 
 **ARTICULO 18o.:** Cuando por cualquier circunstancia la Comisión Directiva quedare en la imposibilidad de formar quórum, una vez incorporadas las autoridades suplentes, los miembros restantes procederán, dentro de los quince días, a convocar a Asamblea General Extraordinaria a los fines de elegir reemplazantes que completarán mandatos.
 
-## TITULO V - DEL PRESIDENTE
+### TITULO V - DEL PRESIDENTE
 
 **ARTICULO 19o.:** El Presidente o quien lo reemplace estatutariamente, tiene los siguientes deberes y atribuciones: a) Ejercer la representación de la Entidad; b) Convocar a las sesiones de la Comisión Directiva y presidir éstas y las Asambleas; c) Tendrá derecho a voto en las sesiones de Comisión Directiva, al igual que los demás miembros del cuerpo y, en caso de empate, votará nuevamente para desempatar; d) Firmar con el Secretario, las actas de las Asambleas y de las sesiones de la Comisión Directiva, la correspondencia y todo documento emanado del Club; e) Autorizar con el Tesorero las cuentas de gastos firmando los recibos y demás documentos de tesorería; f) Dirigir las discusiones, suspender y levantar las sesiones de la Comisión Directiva y Asambleas cuando se altere el orden o falte el debido respeto; g) Velar por la buena marcha y administración del Club; h) Sancionar a cualquier empleado que no cumpla con sus obligaciones; i) Presentar anualmente a la Asamblea Ordinaria por escrito, el Informe Anual con el resumen de lo actuado por la Comisión Directiva y los proyectos pendientes.
 
-## TITULO VI - DEL SECRETARIO
+### TITULO VI - DEL SECRETARIO
 
 **ARTICULO 20o.:** El Secretario o quien lo reemplace estatutariamente, tiene los siguientes deberes y atribuciones: a) Asistir a las Asambleas y sesiones de la Comisión Directiva, redactando las actas respectivas; b) Firmar con el Presidente la correspondencia y todo documento del Club; c) Citar a las sesiones de la Comisión Directiva; d) Llevar al día el Libro de Actas de Asambleas y de Comisión Directiva y, de acuerdo con el Tesorero, el Registro de Asociados.
 
 El Vocal colabora con la tarea de quien ocupe la Secretaría, reemplazándolo en caso de ausencia o vacancia con iguales deberes y atribuciones, y hasta completar el mandato si el reemplazo fuere definitivo.
 
-## TITULO VII - DEL TESORERO
+### TITULO VII - DEL TESORERO
 
 **ARTICULO 21o.:** El Tesorero, o quien lo reemplace estatutariamente, tiene las siguientes atribuciones y obligaciones: a) Asistir a las sesiones de la Comisión Directiva y a las Asambleas; b) Llevar, de acuerdo con el Secretario, el Registro de Asociados, ocupándose de todo lo relacionado con el cobro de las cuotas sociales; c) Llevar los Libros de Contabilidad; d) Presentar a la Comisión Directiva balances mensuales y preparar o hacer preparar anualmente el Balance General, Cuenta de Gastos y Recursos e Inventario; e) Firmar con el Presidente los recibos y demás documentos de Tesorería; f) Efectuar en una institución bancaria, a nombre del Club y a la orden conjunta del Presidente y Tesorero, los depósitos del dinero ingresado a la caja social; g) Dar cuenta del estado económico de la Entidad a la Comisión Directiva y a la Comisión Revisora de Cuentas toda vez que estos lo requieran.
 
-## TITULO VIII – DE LOS VOCALES TITULARES Y DEL SUPLENTE
+### TITULO VIII – DE LOS VOCALES TITULARES Y DEL SUPLENTE
 
 **ARTICULO 22o.:** Corresponde al Vocal Titular: a) Asistir a las Asambleas y a las sesiones de la Comisión Directiva, con voz y voto; b) Desempeñar las comisiones y tareas encomendadas por la Comisión Directiva; c) Reemplazar al Presidente, Secretario o Tesorero en casos de ausencia o vacancia, con las mismas atribuciones y obligaciones.
 
 Corresponde al Vocal Suplente: a) Reemplazar al vocal titular en los casos de ausencia o de vacancia; b) Podrá concurrir a las sesiones de la Comisión Directiva con derecho a voz, pero no a voto, excepto cuando reemplazare a algún titular.
 
-## TITULO IX; COMISIÓN REVISORA DE CUENTAS
+### TITULO IX; COMISIÓN REVISORA DE CUENTAS
 
 **ARTICULO 23o.:** La fiscalización social estará a cargo de una Comisión Revisora de Cuentas, integrada por DOS (2) miembros titulares y UN (1) miembro suplente. El mandato de los mismos durará DOS (2) ejercicios pudiendo ser reelectos, en forma consecutiva, por un período. En el caso que se superen los CIEN (100) asociados se elegirá UN (1) miembro titular adicional, conforme lo establece el Art. 251 de la Resolución 50/2021.
 
 **ARTICULO 24o.:** La Comisión Revisora de Cuenta tendrá las siguientes atribuciones y obligaciones: a) Examinar los libros y documentos del Club por lo menos cada tres meses; b) Asistir a las sesiones de la Comisión Directiva cuando esta lo estime necesario; c) Fiscalizar la administración y la percepción e inversión de los fondos sociales; d) Verificar el cumplimiento de las leyes, estatutos y reglamentos; e) Dictaminar sobre la Memoria, Inventario, Balance General y Cuenta de Gastos y Recursos; f) Convocar a Asamblea General Ordinaria cuando omitiere hacerlo la Comisión Directiva; g) Solicitar la convocatoria a Asamblea General Extraordinaria cuando lo juzgue necesario; h) Vigilar las operaciones de liquidación del Club.
 
-## TITULO X - DE LAS ASAMBLEAS
+### TITULO X - DE LAS ASAMBLEAS
 
 **ARTICULO 25o.:** Habrá dos clases de Asambleas Generales, Ordinarias y Extraordinarias. Las Asambleas Generales Ordinarias tendrán lugar una vez por año, dentro de los ciento veinte días posteriores al cierre del Ejercicio, cuya fecha de clausura será el 31 de diciembre de cada año y en ellas se deberá: a) Considerar, aprobar o modificar la Memoria, Balance General, Inventario, Cuenta de Gastos y Recursos e Informe del Organo de Fiscalización; b) Elegir en su caso, mediante voto secreto y directo, a los miembros de la Comisión Directiva y de la Comisión Revisora de Cuentas; c) Tratar cualquier otro asunto incluido en el Orden del Día; d) Considerar los asuntos que hayan sido propuestos por un mínimo del cinco por ciento (5 %) de los socios en condiciones de votar.
 
@@ -119,7 +119,7 @@ Las Asambleas serán presididas por el Presidente de la Entidad o, en su defecto
 
 **ARTICULO 30o.:** Las resoluciones de las Asambleas se adoptarán por mayoría de votos de los socios presentes con derecho a voto, salvo los casos de fusión o escisión en que será necesario por lo menos el voto favorable de dos tercios de tales asociados. Ningún asociado podrá tener más de un voto.
 
-## TITULO XI - DE LAS ELECCIONES
+### TITULO XI - DE LAS ELECCIONES
 
 **ARTICULO 31o.:** Cuando se convoquen Asambleas en las que deban realizarse elecciones de autoridades, se confeccionará un padrón de los socios en condiciones de intervenir, el que será puesto en exhibición de los asociados con no menos de 15 (quince) días de antelación a la fecha fijada para el acto.
 
@@ -127,7 +127,7 @@ Las Asambleas serán presididas por el Presidente de la Entidad o, en su defecto
 
 **ARTICULO 33o.:** Para el caso que sea oficializada una sola lista de candidatos a autoridades, no será necesario el acto eleccionario. La lista será proclamada por aclamación.
 
-## TITULO XII - DISOLUCION
+### TITULO XII - DISOLUCION
 
 **ARTICULO 34o.:** La Asamblea no podrá decretar la disolución de la Entidad, mientras exista suficiente cantidad de socios dispuestos a sostenerla en un número equivalente al quórum mínimo requerido a la Comisión Directiva. De hacerse efectiva la disolución se designarán liquidadores, que podrán ser, la misma Comisión Directiva o cualquier otra comisión de asociados que la Asamblea designare.
 
