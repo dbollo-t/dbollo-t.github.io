@@ -6,7 +6,7 @@
     "name" $orgName "url" .Site.BaseURL "logo" $logo
     "email" "primerclubdelfordtargentina@gmail.com"
     "description" .Site.Params.description }}
-<script type="application/ld+json">{{ $data | jsonify (dict "indent" "  ") }}</script>
+<script type="application/ld+json">{{ $data | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- else if .IsPage }}
 {{- $author := .Params.author | default $orgName }}
 {{- $article := dict "@context" "https://schema.org" "@type" "Article"
@@ -18,7 +18,7 @@
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
     "author" (dict "@type" "Person" "name" $author)
     "publisher" (dict "@type" "Organization" "name" $orgName "logo" (dict "@type" "ImageObject" "url" $logo)) }}
-<script type="application/ld+json">{{ $article | jsonify (dict "indent" "  ") }}</script>
+<script type="application/ld+json">{{ $article | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- end }}
 
 {{- if not .IsHome }}
@@ -28,5 +28,5 @@
 {{- $pos = add $pos 1 }}
 {{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}
 {{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items }}
-<script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") }}</script>
+<script type="application/ld+json">{{ $breadcrumb | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- end }}
