@@ -1,21 +1,19 @@
 ---
 title: "Trucos y mañas del T"
-date: 2010-05-01
+date: 2011-05-01
 description: "Recopilación de trucos y soluciones prácticas para el Ford T"
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/trucos-y-manas/"
 pager: false
 ---
+*Recopilación de Daniel Bollo de trucos, reparaciones y soluciones prácticas para el Ford T*
 
-*Recopilados por Daniel Bollo*
-
+<!--more-->
 ## Reparación
 
 **Camisa de rodillos muerta, camisa puesta**
 
 Las camisas de los rodillos del eje trasero son 4, distintas para cada extremo. Las que sufren mayor desgaste son las exteriores, las que sólo se gastan en su parte externa superior, que es la que soporta el peso.
-
-<!--more-->
 
 Sin embargo, es posible reutilizarlas, en primer lugar, intercambiándolas con las internas o cambiándolas de extremo (la camisa derecha en la manga izquierda y viceversa), pero pasando la parte superior (gastada) de cada una de ellas hacia abajo. No debe olvidar hacer un nuevo agujero para el paso de la grasa del engrasador.
 

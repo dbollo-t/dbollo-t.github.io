@@ -9,9 +9,11 @@ pager: false
 
 *Por Ron Patterson y Steve Coniff. Traducido al español por Marcelo Fiuri y los miembros del Primer Club del Ford T de Argentina.*
 
-Con la posible excepción de la transmisión planetaria, ningún otro componente del diseño original del Ford T es normalmente más mal interpretado que el sistema de encendido por magneto. El propósito de este artículo es explicar lo más simplemente posible cómo funcionan el sistema de encendido y de sincronización de la chispa.
+Con la posible excepción de la transmisión planetaria, ningún otro componente del diseño original del Ford T es normalmente más mal interpretado que el sistema de encendido por magneto. 
 
 <!--more-->
+
+El propósito de este artículo es explicar lo más simplemente posible cómo funcionan el sistema de encendido y de sincronización de la chispa.
 
 Los autores vienen tratando este tema desde hace algún tiempo, cada uno abordándolo con diferentes objetivos. Steve estaba interesado en la optimización de la sincronización del encendido para competición y Ron quería escribir un artículo que explique claramente el sistema de encendido original del modelo T.
 
