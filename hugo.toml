@@ -21,7 +21,7 @@ theme = "mainroad"
 
 [params.logo]
   title = "Primer Club Ford T Argentina"
-  subtitle = "Desde 1996 apasionados por el T"
+  subtitle = "Desde 1996 reunidos bajo la misma pasión"
   image = "/images/logo-club.png"
 
 [params.sidebar]
