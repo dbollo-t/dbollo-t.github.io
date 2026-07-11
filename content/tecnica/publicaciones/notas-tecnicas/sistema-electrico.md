@@ -9,11 +9,11 @@ pager: false
 
 *Por Daniel Bollo*
 
-## Introducción
-
 Al igual que su caja de velocidades, el sistema eléctrico distingue al Ford T de los demás autos de su época y aún hoy llama la atención su diseño. Cumplía con los objetivos con los que se concibió el auto: simplicidad y robustez.
-
 <!--more-->
+
+
+## Introducción
 
 Tan simple fue pensado, que no se le incluyó fusibles siquiera, con el peligro que eso conlleva. Al respecto, tuve una ingrata experiencia: al querer poner en marcha mi auto luego de estar una semana estacionado junto a otros autos antiguos no respondía al arranque. Al investigar, me di con que un cortocircuito producido mientras el auto había estado detenido, en el cable del botón de la bocina, había quemado toda la instalación eléctrica. El accidente no provocó un incendio con impredecibles consecuencias por ser nueva la instalación y realizada con cables ignífugos. A partir de allí instalé un cortacorriente que activo siempre que lo dejo parado por algunos días, precaución que recomiendo a todos.
 
