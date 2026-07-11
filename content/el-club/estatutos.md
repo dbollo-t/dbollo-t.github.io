@@ -11,6 +11,8 @@ pager: false
 
 **ARTICULO 1o.:** Con la denominación de **Primer Club del Ford T de Argentina**, se constituyó el día primero de mayo del año dos mil una asociación civil, sin fines de lucro, con domicilio legal en la ciudad de Córdoba, Provincia de Córdoba.
 
+<!--more-->
+
 **ARTICULO 2o.:** Es su objetivo promover la recuperación, preservación, restauración y uso de los automóviles Ford modelo T y sus ancestros. Asimismo promover el interés por su historia, tradición y literatura. Para cumplir dicho fin, buscará:
 
 a) Fomentar las relaciones con entidades similares del país y del exterior.
