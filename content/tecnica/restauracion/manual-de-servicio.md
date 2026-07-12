@@ -12,7 +12,7 @@ pager: false
 <!--more-->
 
 <p style="text-align:center;margin:1.5rem 0;">
-  <a href="/tecnica/restauracion/manual-de-servicio/manual/" style="background:#8B0000;color:#fff;text-decoration:none;padding:.6rem 1.4rem;border-radius:4px;font-size:1rem;display:inline-block;">Seguir al Manual de servicio &rarr;</a>
+  <a href="/tecnica/restauracion/manual-de-servicio/manual/" style="background:#1a3c6e;color:#fff;text-decoration:none;padding:.6rem 1.4rem;border-radius:4px;font-size:1rem;display:inline-block;">Seguir al Manual de servicio &rarr;</a>
 </p>
 
 Las imágenes del Manual de Servicio son de calidad reducida por cuestiones técnicas.

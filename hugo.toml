@@ -18,6 +18,7 @@ theme = "mainroad"
   dateformat = "2 January, 2006"
   highlightColor = "#8B0000"
   customCSS = ["css/custom.css"]
+  customJS = ["js/pub-viewer.js"]
 
 [params.logo]
   title = "Primer Club Ford T Argentina"

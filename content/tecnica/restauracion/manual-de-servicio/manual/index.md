@@ -206,12 +206,6 @@ build:
     <a href="#" onclick="pubShowIndex('manserv',192);return false;">Pág. 360-361</a>
     <a href="#" onclick="pubShowIndex('manserv',193);return false;">Pág. 362-363</a>
   </nav>
-  <div class="pub-controls">
-    <label class="pub-jump">
-      <span>Ir a página:</span>
-      <select id="pub-select-manserv" onchange="pubShowIndex('manserv',parseInt(this.value,10));return false;"></select>
-    </label>
-  </div>
   <div class="pub-image">
     <a id="pub-link-manserv" href="/images/restauracion/manservicio/manual/tapa.jpg" target="_blank" rel="noopener">
       <img id="pub-img-manserv" src="/images/restauracion/manservicio/manual/tapa.jpg" alt="Manual de Servicio">
@@ -223,67 +217,7 @@ build:
   </div>
 </div>
 
-<style>
-.pub-viewer{margin:1rem 0;}
-.pub-index{display:none;}
-.pub-controls{margin-bottom:1rem;text-align:center;}
-.pub-jump{display:inline-flex;align-items:center;gap:.5rem;flex-wrap:wrap;justify-content:center;font-size:.95rem;color:#333;}
-.pub-jump select{font-size:1rem;padding:.45rem .6rem;border:1px solid #bbb;border-radius:4px;background:#fff;max-width:100%;}
-.pub-image{text-align:center;min-width:0;}
-.pub-image img{max-width:100%;height:auto;border:1px solid #ddd;cursor:zoom-in;}
-.pub-nav-buttons{display:flex;justify-content:center;gap:1rem;margin-top:.8rem;}
-.pub-nav-buttons button{background:#8B0000;color:#fff;border:none;padding:.5rem 1.1rem;border-radius:4px;font-size:.95rem;cursor:pointer;}
-.pub-nav-buttons button:disabled{background:#ccc;cursor:not-allowed;}
-.pub-nav-buttons button:hover:not(:disabled){background:#6e0000;}
-</style>
-
 <script>
-function pubShow(imgId,linkId,src){
-  document.getElementById(imgId).src=src;
-  var l=document.getElementById(linkId);
-  if(l){l.href=src;}
-}
-function pubShowIndex(prefix,i){
-  var pages=window['pubPages_'+prefix];
-  if(!pages){return;}
-  if(i<0){i=0;}
-  if(i>pages.length-1){i=pages.length-1;}
-  window['pubIndex_'+prefix]=i;
-  pubShow('pub-img-'+prefix,'pub-link-'+prefix,pages[i]);
-  var nav=document.getElementById('pub-index-'+prefix);
-  if(nav){
-    for(var k=0;k<nav.children.length;k++){
-      nav.children[k].className=(k===i)?'active':'';
-    }
-  }
-  var prevBtn=document.getElementById('pub-prev-'+prefix);
-  var nextBtn=document.getElementById('pub-next-'+prefix);
-  if(prevBtn){prevBtn.disabled=(i<=0);}
-  if(nextBtn){nextBtn.disabled=(i>=pages.length-1);}
-  var sel=document.getElementById('pub-select-'+prefix);
-  if(sel){sel.value=i;}
-}
-function pubBuildSelect(prefix){
-  var nav=document.getElementById('pub-index-'+prefix);
-  var sel=document.getElementById('pub-select-'+prefix);
-  if(!nav||!sel||sel.options.length){return;}
-  for(var k=0;k<nav.children.length;k++){
-    var opt=document.createElement('option');
-    opt.value=k;
-    opt.textContent=nav.children[k].textContent;
-    sel.appendChild(opt);
-  }
-}
-function pubNext(prefix){
-  var cur=window['pubIndex_'+prefix];
-  if(cur===undefined){cur=0;}
-  pubShowIndex(prefix,cur+1);
-}
-function pubPrev(prefix){
-  var cur=window['pubIndex_'+prefix];
-  if(cur===undefined){cur=0;}
-  pubShowIndex(prefix,cur-1);
-}
 window.pubPages_manserv=[
   '/images/restauracion/manservicio/manual/tapa.jpg',
   '/images/restauracion/manservicio/manual/pagi.jpg',
@@ -480,7 +414,4 @@ window.pubPages_manserv=[
   '/images/restauracion/manservicio/manual/pag360.jpg',
   '/images/restauracion/manservicio/manual/pag362.jpg'
 ];
-window.pubIndex_manserv=0;
-pubBuildSelect('manserv');
-pubShowIndex('manserv',0);
 </script>
