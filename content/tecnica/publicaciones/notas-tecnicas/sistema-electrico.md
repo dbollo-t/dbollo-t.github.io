@@ -5,6 +5,7 @@ description: "Cómo funciona el sistema eléctrico del Ford T: magneto, distribu
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/sistema-electrico/"
 pager: false
+aliases: ["/publicaciones/s-electrico.htm"]
 ---
 
 *Por Daniel Bollo*
