@@ -7,6 +7,7 @@ url: "/tecnica/restauracion/guia/motor/"
 pager: false
 build:
   list: local
+aliases: ["/publicaciones/restauracion/motor.htm"]
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*
@@ -16,7 +17,7 @@ Para trabajar con el motor es imprescindible que contemos con un malacate y un s
 <!--more-->
 
 <figure style="float: right; margin: 0 0 1em 1em; max-width: 320px;">
-  <img src="/images/motor_htm_m1d3b57e5.jpg" alt="El motor del Ford T" style="width: 100%;">
+<img src="/images/motor_htm_m1d3b57e5.jpg" alt="El motor del Ford T" style="width: 100%;">
 </figure>
 
 Facilita mucho el diagnóstico sobre las reparaciones que hacen falta hacerle al motor, haber tenido en marcha antes de desmontarlo del auto, ya que nos permite apreciar su potencia, cómo responde a diversas situaciones de marcha, escuchar sus ruidos, etc.
@@ -60,7 +61,7 @@ La verificación del árbol de levas y sus bujes seguramente la dejaremos para u
 Si queremos un auto en estado original deberemos tener este elemento en funcionamiento. Las bobinas se prueban como refiere el libro en el párrafo 996 o con un tester. Los imanes sobre el volante deben estar alineados perfectamente, ya que la distancia de 0,60mm a 1mm que debe existir entre los núcleos de las bobinas y los imanes no permite desviaciones.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/motor_htm_2e31b09c.jpg" alt="Reimantando el volante" style="width: 100%;">
+<img src="/images/motor_htm_2e31b09c.jpg" alt="Reimantando el volante" style="width: 100%;">
 </figure>
 
 Si los imanes han perdido su poder se puede intentar reimantarlos sin desarmar el motor, de la siguiente manera:
@@ -88,7 +89,7 @@ Al instalarlo, no olvidar colocar un trozo de cámara de neumático entre chasis
 Los tambores deben ser revisados buscando fisuras o quebraduras. Si los bujes presentan desgaste, deberán ser reemplazados. Difícilmente los engranajes necesiten también ser cambiados.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 320px;">
-  <img src="/images/motor_htm_5f37888.jpg" alt="La transmisión del Ford T" style="width: 100%;">
+<img src="/images/motor_htm_5f37888.jpg" alt="La transmisión del Ford T" style="width: 100%;">
 </figure>
 
 Antes de ensamblar nuevamente la caja, es conveniente el balanceado de todas las piezas: volante, engranajes y tambores, ya que es la única manera de eliminar las vibraciones a alto régimen del motor.
@@ -102,7 +103,7 @@ Otro gran tema son las cintas de transmisión. Existen de muchos tipos, pero pod
 Personalmente padecí las dos consecuencias y en los peores momentos: quebré un palier cuando íbamos con otras personas a una fiesta (incluida mi esposa luego de arduo trabajo para convencerla de acompañarme en el "T") y fundí una biela exactamente cuando llevaba una novia al altar (¡qué momento!!!).
 
 <figure style="float: right; margin: 0 0 1em 1em; max-width: 320px;">
-  <img src="/images/motor_htm_m29acfba3.jpg" alt="El langostón — chasis con motor listo para probar" style="width: 100%;">
+<img src="/images/motor_htm_m29acfba3.jpg" alt="El langostón — chasis con motor listo para probar" style="width: 100%;">
 </figure>
 
 Con todos los elementos listos (ruedas, tren delantero y trasero, chasis, motor y transmisión), podemos hacer un ensayo y armar "el langostón" — término cordobés que intenta describir un flaco chasis sobre ruedas que se mueve por sus propios medios.

@@ -5,6 +5,7 @@ description: "Todos los modelos T fueron negros — historia y técnica de la pi
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/pintura-modelos-t/"
 pager: false
+aliases: ["/publicaciones/boggess.htm"]
 ---
 
 *autor: Trent Boggess. Traducido por José Fernandez Pernas.*

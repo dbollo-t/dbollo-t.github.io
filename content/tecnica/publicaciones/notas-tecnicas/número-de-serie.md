@@ -5,6 +5,7 @@ description: "Guía de números de serie del Ford T para determinar el año de f
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/numero-de-serie/"
 pager: false
+aliases: ["/publicaciones/nroserie.htm"]
 ---
 
 *Traducción y colaboración de Fernando Sesto*
@@ -18,7 +19,7 @@ Es interesante hacer notar que Ford asegura haber construido 15 millones de auto
 Una lista de números de serie diaria mucho más completa con varias notas, se incluye en el libro Ford Modelo T, pero la misma tiene cerca de 150 páginas, demasiado extensa para ponerla en este sitio.
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/tablas/tabla1/tabla1.jpg" alt="Números de serie Ford T 1908-1922" style="max-width: 100%;">
+<img src="/images/tablas/tabla1/tabla1.jpg" alt="Números de serie Ford T 1908-1922" style="max-width: 100%;">
 </figure>
 
 \* Los números mostrados están basados en datos de venta, no de fabricación.
@@ -32,17 +33,17 @@ Pareciera que los motores fabricados en este período fueron almacenados y usado
 Los registros de Ford muestran 157.425 como el primer número fiscal de 1913 (1° de Octubre de 1912), aunque autos con motor en el rango de 153.000 a 157.000 fueron vendidos en Octubre (en adición a los de la letra B). 169.000 a 173.000 en Noviembre, y 169.000 y pico a 183.563 en Diciembre.
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/tablas/tabla2/tabla2.jpg" alt="Números de serie Ford T 1912-1913 detalle" style="max-width: 100%;">
+<img src="/images/tablas/tabla2/tabla2.jpg" alt="Números de serie Ford T 1912-1913 detalle" style="max-width: 100%;">
 </figure>
 
 A comienzos de Septiembre de 1924 Ford comienza a producir motores en la flamante planta de Rouge River. Inicialmente Highland Park podría haber enviado a la nueva planta un conjunto de registros de números de motor y estos números aparecieron en los motores construidos en la planta de Rouge River. Como la producción de la nueva planta aumentó y la de Highland Park declinó, la relación se invirtió: Rouge River comenzó a enviar bloques de registros numéricos a HP. Como resultado de esta producción en ambas plantas, los números de serie no son secuenciales entre Septiembre de 1924 y Febrero de 1925.
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/tablas/tabla3/tabla3.jpg" alt="Números de serie Ford T 1923-1927" style="max-width: 100%;">
+<img src="/images/tablas/tabla3/tabla3.jpg" alt="Números de serie Ford T 1923-1927" style="max-width: 100%;">
 </figure>
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/tablas/tabla4/tabla4.jpg" alt="Números de serie Ford T detalle Rouge River" style="max-width: 100%;">
+<img src="/images/tablas/tabla4/tabla4.jpg" alt="Números de serie Ford T detalle Rouge River" style="max-width: 100%;">
 </figure>
 
 El último motor Modelo T fue ensamblado el 4 de Agosto de 1941. Un total de 169.856 motores fueron construidos después que el último Modelo T fue armado en Dearborn.

@@ -5,9 +5,10 @@ description: "Historia y orígenes del Primer Club del Ford T de Argentina"
 categories: ["El Club"]
 url: "/el-club/acerca-del-club/"
 pager: false
+aliases: ["/index.php"]
 ---
 
-El **Primer Club del Ford T de Argentina** se originó en Córdoba a fines del año 1996. 
+El **Primer Club del Ford T de Argentina** se originó en Córdoba a fines del año 1996.
 
 <!--more-->
 

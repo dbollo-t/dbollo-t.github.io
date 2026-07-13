@@ -5,4 +5,5 @@ description: "Videos del club"
 categories: ["Galería"]
 url: "/galeria/videos/"
 pager: false
+aliases: ["/index.php/galeria/videos"]
 ---

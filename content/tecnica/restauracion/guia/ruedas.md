@@ -7,6 +7,7 @@ url: "/tecnica/restauracion/guia/ruedas/"
 pager: false
 build:
   list: local
+aliases: ["/publicaciones/restauracion/ruedas-td-tt.htm"]
 ---
 
 *LA APASIONANTE RESTAURACIÓN DE UN "T" — Daniel Bollo*
@@ -18,7 +19,7 @@ Las ruedas junto al radiador, son características fundamentales del modelo T, e
 ## Las ruedas
 
 <figure style="float: right; margin: 0 0 1em 1em; max-width: 250px;">
-  <img src="/images/ruedas-td-tt_htm_m6a312af0.jpg" alt="Rueda de rayos del Ford T" style="width: 100%;">
+<img src="/images/ruedas-td-tt_htm_m6a312af0.jpg" alt="Rueda de rayos del Ford T" style="width: 100%;">
 </figure>
 
 Si el modelo fuera anterior a 1919, la única opción es la rueda con talón, una pieza de gran valor histórico. Si fuera posterior, el sistema habitual era el de llanta desmontable.
@@ -61,8 +62,8 @@ Para el desarmado total puede ser necesario calentar las piezas muy pegadas con 
 Luego de comprobar que no existan fisuras o roturas, deberemos detenernos sobre el alineamiento del eje, tarea para la cual podremos ayudarnos siguiendo las indicaciones genéricas del dibujo siguiente:
 
 <figure style="text-align: center; margin: 2em 0;">
-  <img src="/images/ruedas-td-tt_htm_m30a91083.gif" alt="Diagrama de alineación del tren delantero" style="max-width: 100%;">
-  <figcaption style="font-size: 0.85em; font-style: italic;">Letras iguales determinan las igualdades que deben darse para la correcta alineación del eje delantero. Del libro de Richard Wheatley y Brian Morgan.</figcaption>
+<img src="/images/ruedas-td-tt_htm_m30a91083.gif" alt="Diagrama de alineación del tren delantero" style="max-width: 100%;">
+<figcaption style="font-size: 0.85em; font-style: italic;">Letras iguales determinan las igualdades que deben darse para la correcta alineación del eje delantero. Del libro de Richard Wheatley y Brian Morgan.</figcaption>
 </figure>
 
 La distancia D del dibujo no está fijada por el eje sino por los "percheros". La medición del avance se explica en el párrafo 148 del libro de Servicio Ford. La desviación se mide según se explica en el párrafo 152.
@@ -76,7 +77,7 @@ Ya que nos referimos al tensor, el extremo de bola muy posiblemente esté gastad
 Los "percheros" donde se fija el elástico al eje suelen tener desviaciones o agregados, soldaduras, etc., por lo que deberán ser alineados, ya que son los que fijan el avance del tren delantero.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/ruedas-td-tt_htm_m5bfdc97f.jpg" alt="Tren delantero del Ford T" style="width: 100%;">
+<img src="/images/ruedas-td-tt_htm_m5bfdc97f.jpg" alt="Tren delantero del Ford T" style="width: 100%;">
 </figure>
 
 Una tarea que difícilmente podamos eludir es el reemplazo de los bujes. La importancia de este conjunto para la seguridad del vehículo hace imprescindible extremar los cuidados. Sólo un eje delantero sin juegos ni holguras nos dará seguridad y esa sensación de manejo "duro".
@@ -107,7 +108,7 @@ Algunos consejos al momento de armar el diferencial:
 4. Luego del ajuste del juego piñón-corona, se saca el cardan y se termina de armar el diferencial con la manga derecha, colocando una arandela de bronce o plomo del espesor suficiente para suprimir el juego axial.
 
 <figure style="float: left; margin: 0 1em 1em 0; max-width: 300px;">
-  <img src="/images/ruedas-td-tt_htm_m45086f12.jpg" alt="Diferencial del Ford T" style="width: 100%;">
+<img src="/images/ruedas-td-tt_htm_m45086f12.jpg" alt="Diferencial del Ford T" style="width: 100%;">
 </figure>
 
 Debemos preocuparnos por colocar buenos retenes antes de colocar las camisas, ya que estos impedirán la salida del aceite del diferencial hacia las ruedas. Funcionan muy bien los originales de cuero y también pueden reemplazarse por otros más modernos de goma y metal.
