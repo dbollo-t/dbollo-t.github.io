@@ -68,32 +68,32 @@
   </article>
 </main>
 
-<div class="lightbox" id="lightbox" hidden>
-  <button class="lightbox__close" aria-label="Cerrar">&times;</button>
-  <button class="lightbox__nav lightbox__nav--prev" aria-label="Anterior">&#8249;</button>
-  <img class="lightbox__img" src="" alt="">
-  <button class="lightbox__nav lightbox__nav--next" aria-label="Siguiente">&#8250;</button>
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:2000;align-items:center;justify-content:center;background:rgba(0,0,0,.92);padding:14px;-webkit-overflow-scrolling:touch;">
+  <button id="lb-close" aria-label="Cerrar" style="position:absolute;top:6px;right:12px;font-size:2.4rem;line-height:1;color:#fff;background:none;border:none;cursor:pointer;z-index:2;">&times;</button>
+  <button id="lb-prev" aria-label="Anterior" style="position:absolute;left:4px;top:50%;transform:translateY(-50%);font-size:2.4rem;line-height:1;color:#fff;background:rgba(0,0,0,.35);border:none;width:50px;height:68px;cursor:pointer;z-index:2;">&#8249;</button>
+  <img id="lb-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;">
+  <button id="lb-next" aria-label="Siguiente" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:2.4rem;line-height:1;color:#fff;background:rgba(0,0,0,.35);border:none;width:50px;height:68px;cursor:pointer;z-index:2;">&#8250;</button>
 </div>
 <script>
 (function () {
   var box = document.getElementById('lightbox');
   if (!box) return;
-  var img = box.querySelector('.lightbox__img');
+  var img = document.getElementById('lb-img');
   var links = Array.prototype.slice.call(document.querySelectorAll('.encuentro__foto'));
   var srcs = links.map(function (a) { return a.getAttribute('data-full'); });
   var i = 0;
   function show(n) { i = (n + srcs.length) % srcs.length; img.src = srcs[i]; }
-  function open(n) { show(n); box.hidden = false; document.body.style.overflow = 'hidden'; }
-  function close() { box.hidden = true; img.src = ''; document.body.style.overflow = ''; }
+  function open(n) { show(n); box.style.display = 'flex'; document.documentElement.style.overflow = 'hidden'; document.body.style.overflow = 'hidden'; }
+  function close() { box.style.display = 'none'; img.src = ''; document.documentElement.style.overflow = ''; document.body.style.overflow = ''; }
   links.forEach(function (a, n) {
     a.addEventListener('click', function (e) { e.preventDefault(); open(n); });
   });
-  box.querySelector('.lightbox__close').addEventListener('click', function (e) { e.stopPropagation(); close(); });
-  box.querySelector('.lightbox__nav--prev').addEventListener('click', function (e) { e.stopPropagation(); show(i - 1); });
-  box.querySelector('.lightbox__nav--next').addEventListener('click', function (e) { e.stopPropagation(); show(i + 1); });
-  box.addEventListener('click', function (e) { if (e.target === box || e.target === img) close(); });
+  document.getElementById('lb-close').addEventListener('click', function (e) { e.stopPropagation(); close(); });
+  document.getElementById('lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(i - 1); });
+  document.getElementById('lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(i + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
   document.addEventListener('keydown', function (e) {
-    if (box.hidden) return;
+    if (box.style.display === 'none') return;
     if (e.key === 'Escape') close();
     else if (e.key === 'ArrowLeft') show(i - 1);
     else if (e.key === 'ArrowRight') show(i + 1);
