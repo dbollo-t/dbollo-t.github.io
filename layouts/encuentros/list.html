@@ -1,0 +1,38 @@
+{{ define "main" }}
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">{{ .Title }}</h1>
+    </header>
+    {{- with .Content }}
+    <div class="content post__content clearfix">{{ . }}</div>
+    {{- end }}
+
+    <table class="encuentros-tabla">
+      <thead>
+        <tr><th>Nº</th><th>Sede</th><th>Año</th></tr>
+      </thead>
+      <tbody>
+        {{- range (sort .RegularPages ".Params.anio" "asc") }}
+        <tr class="encuentros-tabla__fila{{ if .Params.destacado }} encuentro--destacado{{ end }}" data-href="{{ .Permalink }}">
+          <td class="encuentros-tabla__num"><a href="{{ .Permalink }}">{{ .Params.numero }}</a></td>
+          <td><a href="{{ .Permalink }}">{{ .Params.lugar }}</a>{{ with .Params.motivo }} <span class="encuentros-tabla__nota">— {{ . }}</span>{{ end }}</td>
+          <td>{{ .Params.anio }}</td>
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </article>
+</main>
+<script>
+(function () {
+  document.querySelectorAll('.encuentros-tabla__fila').forEach(function (row) {
+    row.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      var href = row.getAttribute('data-href');
+      if (href) window.location.href = href;
+    });
+  });
+})();
+</script>
+{{ end }}

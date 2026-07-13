@@ -221,3 +221,218 @@
 .pub-nav-buttons button:hover:not(:disabled) {
 	background: #12294d;
 }
+
+/* ==== Encuentros ==== */
+.encuentros-tabla {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5rem 0;
+	font-size: 0.95rem;
+}
+.encuentros-tabla th,
+.encuentros-tabla td {
+	padding: 8px 12px;
+	border-bottom: 1px solid #e2e2e2;
+	text-align: left;
+	vertical-align: top;
+}
+.encuentros-tabla thead th {
+	border-bottom: 2px solid #1a3c6e;
+	color: #1a3c6e;
+}
+.encuentros-tabla__num {
+	white-space: nowrap;
+	font-weight: 700;
+	color: #8B0000;
+}
+.encuentros-tabla__nota {
+	color: #666;
+	font-size: 0.85em;
+}
+.encuentros-tabla tbody tr:hover {
+	background: #f6f8fb;
+}
+.encuentro--destacado {
+	background: #fff6e0;
+}
+.encuentro--destacado td {
+	border-bottom-color: #e0c268;
+	font-weight: 700;
+}
+
+/* Ficha de encuentro */
+.encuentro__meta {
+	color: #1a3c6e;
+	font-weight: 700;
+}
+.encuentro__motivo {
+	color: #8B0000;
+	font-style: italic;
+	margin-top: -0.3rem;
+}
+.encuentro__banner {
+	margin: 1.2rem 0;
+	text-align: center;
+}
+.encuentro__banner img {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+}
+.encuentro__banner figcaption {
+	font-size: 0.85rem;
+	color: #666;
+	margin-top: 0.4rem;
+}
+.encuentro__seccion {
+	margin-top: 1.5rem;
+}
+.encuentro__volver {
+	margin-top: 2rem;
+	font-size: 0.9rem;
+}
+
+/* Renglón de tabla clickeable */
+.encuentros-tabla__fila {
+	cursor: pointer;
+}
+.encuentros-tabla__num a,
+.encuentros-tabla td a {
+	text-decoration: none;
+}
+.encuentros-tabla__fila:hover .encuentros-tabla__num a {
+	text-decoration: underline;
+}
+
+/* Galería de imágenes */
+.encuentro__galeria {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 8px;
+	margin-top: 0.8rem;
+}
+.encuentro__galeria figure {
+	margin: 0;
+}
+.encuentro__galeria img {
+	width: 100%;
+	height: 130px;
+	object-fit: cover;
+	border: 1px solid #ddd;
+	display: block;
+}
+.encuentro__galeria figcaption {
+	font-size: 0.78rem;
+	color: #666;
+	margin-top: 2px;
+}
+.encuentro__galeria-mas {
+	margin-top: 0.6rem;
+	font-size: 0.9rem;
+}
+
+/* Inscriptos en dos columnas */
+.encuentro__participantes {
+	column-count: 2;
+	column-gap: 2rem;
+}
+.encuentro__participantes ul {
+	margin-top: 0;
+	list-style: none;
+	padding-left: 0;
+}
+.encuentro__participantes li {
+	break-inside: avoid;
+}
+@media (max-width: 480px) {
+	.encuentro__participantes { column-count: 1; }
+}
+
+/* Galería: miniatura clickeable */
+.encuentro__foto {
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
+}
+.encuentro__foto img {
+	transition: transform 0.2s ease;
+}
+.encuentro__foto:hover img {
+	transform: scale(1.05);
+}
+
+/* Visor (lightbox) */
+.lightbox {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	cursor: zoom-out;
+	padding: 20px;
+}
+.lightbox[hidden] {
+	display: none;
+}
+.lightbox__img {
+	max-width: 95%;
+	max-height: 95%;
+	object-fit: contain;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+.lightbox__close {
+	position: absolute;
+	top: 12px;
+	right: 20px;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 2.5rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+/* Galería centrada (evita fotos "colgadas" en la última fila) */
+.encuentro__galeria {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+.encuentro__galeria .encuentro__foto {
+	flex: 0 0 auto;
+	width: 150px;
+}
+.encuentro__galeria .encuentro__foto img {
+	width: 150px;
+	height: 120px;
+	object-fit: cover;
+	border: 1px solid #ddd;
+	display: block;
+}
+
+/* Flechas del visor */
+.lightbox__nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.3);
+	border: none;
+	color: #fff;
+	font-size: 3rem;
+	line-height: 1;
+	width: 56px;
+	height: 72px;
+	cursor: pointer;
+	user-select: none;
+}
+.lightbox__nav:hover {
+	background: rgba(0, 0, 0, 0.55);
+}
+.lightbox__nav--prev { left: 10px; }
+.lightbox__nav--next { right: 10px; }
+@media (max-width: 480px) {
+	.lightbox__nav { font-size: 2rem; width: 40px; height: 56px; }
+}
