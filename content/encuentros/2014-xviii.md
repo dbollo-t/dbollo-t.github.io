@@ -31,6 +31,41 @@ programa: |
   **Domingo 28 de septiembre**
 
   - 9:30 — Desayuno y desconcentración
+participantes: |
+  - Adaro Alejandro
+  - Aquino Francisco
+  - Bailey Rettig (Estados Unidos)
+  - Bollo Daniel
+  - Bozikovich Ismael
+  - Bressa Alcides Armando
+  - Carnevale Jorge
+  - Castañeda Moncho
+  - Castellanos Oscar
+  - Civalero Alfredo
+  - Demonte Daniel E.
+  - Dias Iván
+  - Druetto Jacinto
+  - Esquenazi Miguel Ángel
+  - Fagalde Horacio (Uruguay)
+  - Gentille Héctor Luján
+  - Giraudo Víctor Santiago
+  - Inchauste Francisco
+  - Lafata Lucio Daniel
+  - Lecumberri Carlos
+  - Mainardi Eduardo
+  - Oliver José Carlos
+  - Olmos Luis Ángel de Jesús
+  - Patterson Ron (Estados Unidos)
+  - Peretti Américo
+  - Royón Guillermo
+  - Sirtori Néstor Guillermo
+  - Uriburu Roberto
+  - Watson Guillermo
+  - Wortley Juan Carlos
+  - Yammal Nelson Eduardo
+  - Zanetti Ernesto
+  - Zentena Atilio Javier
+  - Zgaib Elías Antonio
 banner: "/images/encuentros/2014/foto-01.jpg"
 galeria:
   - {thumb: "/images/encuentros/2014/thumb/foto-02.jpg", full: "/images/encuentros/2014/foto-02.jpg"}
