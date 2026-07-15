@@ -30,6 +30,48 @@ programa: |
   - 17:20 — Visita y merienda en Bodega La Caroyense
   - 21:00 — Estática en la plaza principal, con los faros de kerosene encendidos
   - 21:30 — Cena de gala en Bodega Terra Camiare
+participantes: |
+  - Adaro Alejandro Carlos
+  - Bertolotti Fernando Luis
+  - Bollo Daniel
+  - Bulnes Gabriel Claudio
+  - Candia
+  - Canto Germán
+  - Cárcano Juan Ramón
+  - Carnevale Jorge
+  - Civalero Alfredo
+  - De Almeida Remor Fabiano
+  - De Lorenzo Alfredo
+  - Delaporte Cristian
+  - Depauli Rogelio
+  - Dornelles Duarte Ronaldo
+  - Eberhardt Lepore Leonardo
+  - Fagalde Horacio
+  - Fasolis
+  - Fiuri Marcelo
+  - Galmarino Juan Oscar
+  - Garzino Alberto
+  - Gioda Miguel Ángel
+  - Giraudo Víctor Santiago
+  - Lafata Lucio Daniel
+  - Mainardi Eduardo
+  - Muñoz Juan Luis
+  - Olmos Luis Ángel
+  - Olmos Manuel Ángel
+  - Palumbo Guillermo Gabriel
+  - Pigliacampo Roberto
+  - Ribas Francisco Ronil
+  - Rivata Ariel
+  - Royón Guillermo
+  - Sánchez José Martín
+  - Segura Samuel
+  - Valentinuzzi Ricardo Osvaldo
+  - Velazco Gustavo
+  - Watson Guillermo
+  - Yammal Nelson Eduardo
+  - Zentena Atilio Javier
+  - Zurro Pedro Rafael
+  - Zurro Regina
 ---
 
 El XXVII Encuentro Internacional del Ford T, bajo el lema *"Ford T entre historias y sabores de Caroya"*, se realizó los días 29 y 30 de septiembre de 2023 en Colonia Caroya (Córdoba), combinando estáticas, bautismos de autos, una caravana por la Estancia Jesuítica y la tradicional cena de gala.

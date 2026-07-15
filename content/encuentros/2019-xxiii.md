@@ -7,5 +7,6 @@ date: 2019-10-01
 categories: ["Encuentros"]
 url: "/encuentros/2019-xxiii/"
 pager: false
+banner: "/images/encuentros/2019/banner.jpg"
 ---
 

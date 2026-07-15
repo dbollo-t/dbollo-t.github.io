@@ -3,10 +3,34 @@ title: "XVIII Encuentro Internacional"
 numero: "XVIII"
 lugar: "La Falda"
 anio: 2014
-date: 2014-10-01
+date: 2014-09-26
+motivo: "Encuentro «Ing. Jorge Báez»"
 categories: ["Encuentros"]
 url: "/encuentros/2014-xviii/"
 pager: false
+programa: |
+  Durante todo el evento fue mandatoria la participación con indumentaria de época.
+
+  **Viernes 26 de septiembre**
+
+  - Desde las 12:00 — Alojamiento en el Hotel Fatsa de La Falda
+  - 16:00 — Apertura de la mesa de acreditaciones
+  - 18:00 — Autojumble
+  - 20:00 — Charla y videos a cargo de Alfredo De Lorenzo
+  - 21:30 — Cena de camaradería
+
+  **Sábado 27 de septiembre**
+
+  - Desayuno y salida individual o en pequeños grupos por el circuito matutino, rumbo al parque temático Tatú Carreta
+  - 11:30 — En Tatú Carreta, bautismo de los "guachitos"
+  - 13:30 — Almuerzo en el Hotel Fatsa
+  - Por la tarde, circuito vespertino rumbo al Museo de Motos en Cruz Grande (por Ruta 38 o por el Camino de los Artesanos)
+  - 18:00 — Sorteo en el Museo de Motos de una estadía en la Posada
+  - 22:00 — Cena de gala, animación y baile
+
+  **Domingo 28 de septiembre**
+
+  - 9:30 — Desayuno y desconcentración
 banner: "/images/encuentros/2014/foto-01.jpg"
 galeria:
   - {thumb: "/images/encuentros/2014/thumb/foto-02.jpg", full: "/images/encuentros/2014/foto-02.jpg"}
