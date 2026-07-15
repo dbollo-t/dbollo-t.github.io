@@ -48,20 +48,14 @@ theme = "mainroad"
   url = "/encuentros/"
   weight = 3
 [[menu.main]]
-  name = "Historia"
-  url = "/historia/"
+  name = "Actividades"
+  url = "/actividades/"
   weight = 4
-[[menu.main]]
-  name = "Galería"
-  url = "/galeria/"
-  weight = 5
-[[menu.main]]
-  name = "Noticias"
-  url = "/posts/"
-  weight = 6
-[[menu.main]]
+
+[[menu.footer]]
   name = "Contacto"
   url = "/contacto/"
-  weight = 7
-  [markup.goldmark.renderer]
+  weight = 1
+
+[markup.goldmark.renderer]
   unsafe = true
