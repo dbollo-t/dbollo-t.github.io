@@ -2,8 +2,9 @@
 title: "Consejos para locos"
 date: 2010-04-26
 description: "Consejos prácticos para viajes largos en Ford T"
-categories: ["Historia"]
-url: "/historia/viajes/consejos-para-locos/"
+categories: ["Actividades"]
+url: "/actividades/viajes/consejos-para-locos/"
+aliases: ["/historia/viajes/consejos-para-locos/"]
 pager: false
 ---
 
@@ -15,7 +16,7 @@ Creo que muchos de nosotros hemos soñado más de una vez con poder realizar alg
 
 Nuestros T nos dan la posibilidad de concretar esos deseos.
 
-En el mensaje previo al [viaje La Quiaca-Ushuaia](/historia/viajes/raid-la-quiaca-ushuaia/), decía: *«A muchos les parecerá una locura viajar miles kilómetros en agotadoras jornadas, pero no puedo ni pretendo explicarlo: A los sueños y a los sentimientos no se los puede explicar, solo vivirlos. Comprenderán sólo aquellos que abriguen, aún desde hace mucho, "locuras" cuya evocación los haga vibrar en la esperanza de que algún día se harán realidad».*
+En el mensaje previo al [viaje La Quiaca-Ushuaia](/actividades/viajes/raid-la-quiaca-ushuaia/), decía: *«A muchos les parecerá una locura viajar miles kilómetros en agotadoras jornadas, pero no puedo ni pretendo explicarlo: A los sueños y a los sentimientos no se los puede explicar, solo vivirlos. Comprenderán sólo aquellos que abriguen, aún desde hace mucho, "locuras" cuya evocación los haga vibrar en la esperanza de que algún día se harán realidad».*
 
 Los consejos que siguen son para aquellos que cobijen alguna de esas "locuras".
 
