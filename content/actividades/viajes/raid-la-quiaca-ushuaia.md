@@ -13,9 +13,11 @@ pager: false
 
 Daniel Bollo y Alfredo Civalero partieron en un Ford T modelo 1926 el 27 de Diciembre del 2000 desde La Quiaca. El 1ro. de Enero, desde Córdoba, se unió a la aventura Domingo Koiman con una camioneta de apoyo. Tras 5.500 Kmts. recorridos a 45 Kmts. por hora, y ya en un nuevo siglo, llegaron a Ushuaia el 11 de Enero de 2001. Su lema fue: Soñar es querer, querer es poder, poder es llegar.
 
+<!--more-->
+
 ![El Caminante en la ruta patagónica](/images/viajes/raid/caminante-patagonia.jpg)
 
-<!--more-->
+
 
 Nuevamente nos engañaban, lo habían hecho toda la semana. Hacia el mediodía se asomaban desde el Oeste, en un primer momento tímidamente para ir cobrando poco a poco mayor dimensión. Hacia el final de la tarde, ya convertidas en grandes nubarrones, eran amenaza de lluvia casi segura, pero no se terminaban de decidir.
 
