@@ -15,9 +15,11 @@ Daniel Bollo y Alfredo Civalero partieron en un Ford T modelo 1926 el 27 de Dici
 
 Las fotos, relatos y detalles del viaje se pueden ver en [el sitio de El Caminante](https://sites.google.com/view/fordt-caminante/viajes/el-largo).
 
+<!--more-->
+
 ![El Caminante en la ruta patagónica](/images/viajes/raid/caminante-patagonia.jpg)
 
-<!--more-->
+
 
 Nuevamente nos engañaban, lo habían hecho toda la semana. Hacia el mediodía se asomaban desde el Oeste, en un primer momento tímidamente para ir cobrando poco a poco mayor dimensión. Hacia el final de la tarde, ya convertidas en grandes nubarrones, eran amenaza de lluvia casi segura, pero no se terminaban de decidir.
 
