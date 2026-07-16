@@ -16,11 +16,12 @@ Creo que muchos de nosotros hemos soñado más de una vez con poder realizar alg
 
 Nuestros T nos dan la posibilidad de concretar esos deseos.
 
+<!--more-->
+
 En el mensaje previo al [viaje La Quiaca-Ushuaia](/actividades/viajes/raid-la-quiaca-ushuaia/), decía: *«A muchos les parecerá una locura viajar miles kilómetros en agotadoras jornadas, pero no puedo ni pretendo explicarlo: A los sueños y a los sentimientos no se los puede explicar, solo vivirlos. Comprenderán sólo aquellos que abriguen, aún desde hace mucho, "locuras" cuya evocación los haga vibrar en la esperanza de que algún día se harán realidad».*
 
 Los consejos que siguen son para aquellos que cobijen alguna de esas "locuras".
 
-<!--more-->
 
 ## Delirios previos
 
