@@ -1,0 +1,98 @@
+{{ define "main" }}
+<main class="main" role="main">
+  <article class="post encuentro">
+    <header class="post__header">
+      <h1 class="post__title">{{ .Title }}</h1>
+      <p class="post__lead encuentro__meta">
+        {{- with .Params.lugar }}{{ . }}{{ end -}}
+        {{- with .Params.anio }} &middot; {{ . }}{{ end -}}
+      </p>
+      {{- with .Params.motivo }}<p class="encuentro__motivo">{{ . }}</p>{{ end }}
+    </header>
+
+    {{- with .Params.banner }}
+    <figure class="encuentro__banner">
+      <img src="{{ . | relURL }}" alt="Banner {{ $.Title }}" loading="lazy">
+      {{- with $.Params.banner_pie }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{- end }}
+
+    {{- with .Content }}
+    <div class="content post__content clearfix">{{ . }}</div>
+    {{- end }}
+
+    {{- with .Params.programa }}
+    <section class="encuentro__seccion">
+      <h2>{{ $.Params.programa_titulo | default "Programa" }}</h2>
+      <div class="content clearfix">{{ . | markdownify }}</div>
+    </section>
+    {{- end }}
+
+    {{- with .Params.galeria }}
+    <section class="encuentro__seccion">
+      <h2>Galería</h2>
+      <div class="encuentro__galeria">
+        {{- range . }}
+        <a class="encuentro__foto" href="{{ .full | relURL }}" data-full="{{ .full | relURL }}">
+          <img src="{{ .thumb | relURL }}" alt="{{ .pie | default $.Title }}" loading="lazy">
+        </a>
+        {{- end }}
+      </div>
+      {{- with $.Params.fotos }}
+      <p class="encuentro__galeria-mas"><a href="{{ . }}" target="_blank" rel="noopener">Ver galería completa &rarr;</a></p>
+      {{- end }}
+    </section>
+    {{- else }}
+    {{- with .Params.fotos }}
+    <section class="encuentro__seccion encuentro__fotos">
+      <a class="btn" href="{{ . }}" target="_blank" rel="noopener">Ver galería de fotos</a>
+    </section>
+    {{- end }}
+    {{- end }}
+
+    {{- with .Params.participantes }}
+    <section class="encuentro__seccion">
+      <h2>Participantes</h2>
+      <div class="encuentro__participantes">{{ . | markdownify }}</div>
+    </section>
+    {{- end }}
+
+    {{- with .Parent }}
+    <p class="encuentro__volver"><a href="{{ .RelPermalink }}">&larr; Volver a {{ .Title }}</a></p>
+    {{- end }}
+  </article>
+</main>
+
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:2000;align-items:center;justify-content:center;background:rgba(0,0,0,.92);padding:14px;-webkit-overflow-scrolling:touch;">
+  <button id="lb-close" aria-label="Cerrar" style="position:absolute;top:6px;right:12px;font-size:2.4rem;line-height:1;color:#fff;background:none;border:none;cursor:pointer;z-index:2;">&times;</button>
+  <button id="lb-prev" aria-label="Anterior" style="position:absolute;left:4px;top:50%;transform:translateY(-50%);font-size:2.4rem;line-height:1;color:#fff;background:rgba(0,0,0,.35);border:none;width:50px;height:68px;cursor:pointer;z-index:2;">&#8249;</button>
+  <img id="lb-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;">
+  <button id="lb-next" aria-label="Siguiente" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:2.4rem;line-height:1;color:#fff;background:rgba(0,0,0,.35);border:none;width:50px;height:68px;cursor:pointer;z-index:2;">&#8250;</button>
+</div>
+<script>
+(function () {
+  var box = document.getElementById('lightbox');
+  if (!box) return;
+  var img = document.getElementById('lb-img');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.encuentro__foto'));
+  var srcs = links.map(function (a) { return a.getAttribute('data-full'); });
+  var i = 0;
+  function show(n) { i = (n + srcs.length) % srcs.length; img.src = srcs[i]; }
+  function open(n) { show(n); box.style.display = 'flex'; document.documentElement.style.overflow = 'hidden'; document.body.style.overflow = 'hidden'; }
+  function close() { box.style.display = 'none'; img.src = ''; document.documentElement.style.overflow = ''; document.body.style.overflow = ''; }
+  links.forEach(function (a, n) {
+    a.addEventListener('click', function (e) { e.preventDefault(); open(n); });
+  });
+  document.getElementById('lb-close').addEventListener('click', function (e) { e.stopPropagation(); close(); });
+  document.getElementById('lb-prev').addEventListener('click', function (e) { e.stopPropagation(); show(i - 1); });
+  document.getElementById('lb-next').addEventListener('click', function (e) { e.stopPropagation(); show(i + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (box.style.display === 'none') return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(i - 1);
+    else if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
+{{ end }}
