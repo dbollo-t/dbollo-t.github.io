@@ -11,6 +11,8 @@ El **Primer Club del Ford T de Argentina** anuncia que el **XXX Encuentro
 Internacional del Ford T** se realizará del **1 al 4 de octubre de 2026** en
 **Miramar de Ansenuza (Córdoba)**, a orillas de la laguna Mar Chiquita.
 
+<!--more-->
+
 El Encuentro se celebra cada año en torno al 1.º de octubre, fecha que
 conmemora la salida a la calle del primer Modelo T, el 1.º de octubre
 de 1908. La tradición se mantiene ininterrumpida desde 1997, y en 2026

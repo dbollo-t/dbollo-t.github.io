@@ -40,4 +40,11 @@ description: "Manuales y catálogos del Ford T"
 </a>
 </div>
 
+<div style="text-align: center; width: 150px;">
+<a href="/tecnica/restauracion/manual-de-servicio/">
+<img src="/images/restauracion/manservicio/tapa.jpg" alt="Manual de Servicio en castellano" style="width: 100px;">
+<p>Manual de Servicio en castellano, on-line</p>
+</a>
+</div>
+
 </div>

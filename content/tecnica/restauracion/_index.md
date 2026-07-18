@@ -1,5 +1,5 @@
 ---
 title: "Restauración"
-description: "Guía completa de restauración del Ford T por Daniel Bollo"
+description: "Guías, manuales y experiencias para la restauración del Ford T"
 aliases: ["/index.php/tecnica/restauracion"]
 ---

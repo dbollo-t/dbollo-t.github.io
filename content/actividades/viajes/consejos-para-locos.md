@@ -14,9 +14,9 @@ pager: false
 
 Creo que muchos de nosotros hemos soñado más de una vez con poder realizar algo fuera de lo común, que nos saque de la rutina y amplíe ese ámbito diario que se nos antoja chico, limitado y en ocasiones, nos agobia.
 
-Nuestros T nos dan la posibilidad de concretar esos deseos.
-
 <!--more-->
+
+Nuestros T nos dan la posibilidad de concretar esos deseos.
 
 En el mensaje previo al [viaje La Quiaca-Ushuaia](/actividades/viajes/raid-la-quiaca-ushuaia/), decía: *«A muchos les parecerá una locura viajar miles kilómetros en agotadoras jornadas, pero no puedo ni pretendo explicarlo: A los sueños y a los sentimientos no se los puede explicar, solo vivirlos. Comprenderán sólo aquellos que abriguen, aún desde hace mucho, "locuras" cuya evocación los haga vibrar en la esperanza de que algún día se harán realidad».*
 

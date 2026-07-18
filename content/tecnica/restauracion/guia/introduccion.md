@@ -17,6 +17,8 @@ pager: false
 
 Esta guía está dirigida a aquellos que por fin poseen el paradigma del automóvil. Por algo, luego de un largo proceso de selección del que participaron cientos de expertos, el modelo T fue designado el "Auto del Siglo": en su concepción reúne las características que luego marcarían el desarrollo de la industria mecánica del siglo XX.
 
+<!--more-->
+
 Además de estas características, el modelo "T" es sin duda el auto ideal para restaurar por tres razones: simplicidad, accesibilidad e información:
 
 - **Simplicidad:** Su concepción austera y simple prescinde de detalles, accesorios y materiales delicados (como el aluminio), por lo que, para cada modelo de carrocería, es el auto con la menor cantidad de piezas de su época. Los touring últimos modelos (26 y 27), llevan al máximo esa simplicidad, al prescindir de la madera en su construcción, excepto para la fijación de sus tapizados.
@@ -24,8 +26,6 @@ Además de estas características, el modelo "T" es sin duda el auto ideal para 
 - **Información:** Su sistema de fabricación a gran escala (se llegó a superar la cifra de 8.500 autos diarios), exigía una rigurosa documentación de sus piezas y los cambios que se realizaban, lo que hoy está representada en una amplia bibliografía que se puede consultar y servir como guía para la tarea de restauración.
 
 Estamos entonces frente a este escenario: tenemos un auto que anhelamos por mucho tiempo y que representa el paradigma del automóvil, deseamos profundamente que recupere el aspecto que tenía cuando salió de fábrica y a su vez, es el auto más fácil de restaurar. **¿Qué puede resultar de todo esto?: ¡sólo un éxito!**
-
-<!--more-->
 
 ## Consejos previos
 
