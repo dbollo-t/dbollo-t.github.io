@@ -19,6 +19,7 @@ theme = "mainroad"
   highlightColor = "#8B0000"
   customCSS = ["css/custom.css"]
   customJS = ["js/pub-viewer.js"]
+  mainSections = ["posts"]
 
 [params.logo]
   title = "Primer Club Ford T Argentina"
@@ -35,13 +36,6 @@ theme = "mainroad"
   recent_num = 5
   categories_counter = false
 
-[params]
-   description = "Primer Club del Ford T de Argentina"
-   copyright = "Club del Ford T de Argentina"
-+  mainSections = ["posts"]
-   opengraph = true
-   readmore = true
-   
 [[menu.main]]
   name = "El Club"
   url = "/el-club/"
