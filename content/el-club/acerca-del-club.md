@@ -8,6 +8,7 @@ pager: false
 aliases: ["/index.php"]
 ---
 
+*Artículo del Ing. Jorge Báez*
 El **Primer Club del Ford T de Argentina** se originó en Córdoba a fines del año 1996.
 
 <!--more-->
