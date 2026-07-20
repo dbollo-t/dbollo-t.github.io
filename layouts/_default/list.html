@@ -15,6 +15,17 @@
   {{ end }}
   {{ end }}
 
+  {{ with .Params.enlaces }}
+  {{ range . }}
+  <article class="post">
+    <header class="post__header">
+      <h2 class="post__title"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .titulo }}</a></h2>
+      {{ with .descripcion }}<p>{{ . }}</p>{{ end }}
+    </header>
+  </article>
+  {{ end }}
+  {{ end }}
+
   {{ range .RegularPages }}
   <article class="post">
     <header class="post__header">

@@ -68,6 +68,8 @@ participantes: |
 
 El 29 de diciembre de 1924, a las 17 horas, Ford Motor Company de Argentina —tercera filial internacional de la empresa— produjo su Ford T número 100.000, un Touring. Al día siguiente, ese auto inició una gira de casi 4.800 kilómetros por el país, visitando ciudades y pueblos donde se organizaban fiestas a su paso.
 
+<!--more-->
+
 Noventa años después, en septiembre y octubre de 2015, el Primer Club del Ford T de Argentina reeditó aquel viaje con una caravana de nueve autos. Partieron de la planta Ford de Pacheco y recorrieron las mismas localidades que la gira de 1925: veintitrés días y unos 4.670 kilómetros, divididos en siete etapas, cada una cubierta por dos o tres autos distintos. Héctor Gentile completó las siete etapas con su Ford T Fordor 1926.
 
 ![Afiche de la Caravana a 90 años del 100.000](/images/viajes/caravana-100000/banner.jpg)

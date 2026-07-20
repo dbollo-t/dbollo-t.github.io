@@ -66,7 +66,7 @@ participantes: |
   - Zanetti Ernesto
   - Zentena Atilio Javier
   - Zgaib Elías Antonio
-banner: "/images/encuentros/2014/foto-01.jpg"
+banner: "/images/encuentros/2014/foto-08.jpg"
 galeria:
   - {thumb: "/images/encuentros/2014/thumb/foto-02.jpg", full: "/images/encuentros/2014/foto-02.jpg"}
   - {thumb: "/images/encuentros/2014/thumb/foto-03.jpg", full: "/images/encuentros/2014/foto-03.jpg"}

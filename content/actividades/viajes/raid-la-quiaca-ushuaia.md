@@ -8,12 +8,13 @@ aliases: ["/historia/viajes/raid-la-quiaca-ushuaia/"]
 pager: false
 ---
 
-## Soñar es querer...
 **por Daniel Bollo**
 
 Daniel Bollo y Alfredo Civalero partieron en un Ford T modelo 1926 el 27 de Diciembre del 2000 desde La Quiaca. El 1ro. de Enero, desde Córdoba, se unió a la aventura Domingo Koiman con una camioneta de apoyo. Tras 5.500 Kmts. recorridos a 45 Kmts. por hora, y ya en un nuevo siglo, llegaron a Ushuaia el 11 de Enero de 2001. Su lema fue: Soñar es querer, querer es poder, poder es llegar.
 
 <!--more-->
+
+## Soñar es querer...
 
 Las fotos, relatos y detalles del viaje se pueden ver en [el sitio de El Caminante](https://sites.google.com/view/fordt-caminante/viajes/el-largo).
 

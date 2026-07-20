@@ -79,13 +79,13 @@ Descontando de que tenemos convenientemente restaurado el armazón de la capota,
 
 Es relativamente fácil dada su simplicidad. Si deseamos mantener un mínimo de originalidad, deberemos adquirir el ramillete de cables nuevos, ya que es muy notable y desmerece nuestro trabajo el utilizar los cables modernos de plástico. Al encargar los cables, asegúrese de poseer todas las fijaciones para los mismos, las que son de muy bajo precio pero permiten un acabado perfecto de la instalación.
 
-## El final del viaje
-
-Con la carrocería pintada, el tapizado colocado y la instalación eléctrica terminada, nuestro T está completo. Culmina así un proceso que comenzó con un auto desarmado "científicamente" y que avanzó pieza por pieza, siempre bajo la misma premisa: no agregar nada que no estuviera definitivamente restaurado. Queda lo mejor: hacerlo andar y compartirlo, porque cada salida y cada encuentro son la verdadera recompensa de tantas horas de trabajo. Y como decíamos en la introducción, la urgencia por llegar no nos debe privar del placer del viaje.
-
 <figure style="text-align: center; margin: 2em 0;">
   <img src="/images/carroceria_htm_77170d20.jpg" alt="El Ford T restaurado" style="max-width: 100%;">
 </figure>
+
+## El final del viaje
+
+Con la carrocería pintada, el tapizado colocado y la instalación eléctrica terminada, nuestro T está completo. Culmina así un proceso que comenzó con un auto desarmado "científicamente" y que avanzó pieza por pieza, siempre bajo la misma premisa: no agregar nada que no estuviera definitivamente restaurado. Queda lo mejor: hacerlo andar y compartirlo, porque cada salida y cada encuentro son la verdadera recompensa de tantas horas de trabajo. Y como decíamos en la introducción, la urgencia por llegar no nos debe privar del placer del viaje.
 
 ## Capítulos de esta guía
 
