@@ -87,6 +87,8 @@ programa: |
   - 19:00 — Caravana por Valparaíso y Viña del Mar
   - 20:30 — Conferencia y cena en reunión del Club de Automóviles Antiguos de Chile
 participantes: |
+  **Todo el recorrido:** Daniel Bollo en "El Caminante" y Mario Orihuela.
+
   Interesados en participar, según la planilla del Club actualizada al 31 de julio de 2008, con el tramo previsto:
 
   - Abaurrea Lozada, José (España) — Punta del Este a Córdoba
