@@ -9,6 +9,8 @@ build:
   list: never
 ---
 
+*También disponible una [versión más clara para su lectura](/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/). Gracias a Alfredo de Lorenzo (Club El Óvalo Azul) por este aporte.*
+
 <div class="pub-viewer">
   <nav class="pub-index" id="pub-index-mandueno">
     <a href="#" class="active" onclick="pubShowIndex('mandueno',0);return false;">Tapa</a>

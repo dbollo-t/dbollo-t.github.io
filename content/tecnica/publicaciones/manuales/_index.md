@@ -20,6 +20,13 @@ description: "Manuales y catálogos del Ford T"
 </div>
 
 <div style="text-align: center; width: 150px;">
+<a href="/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/">
+<img src="/images/catalogo/manualduenio-ovaloazul.jpg" alt="Manual del dueño, versión Óvalo Azul" style="width: 100px;">
+<p>Manual del dueño (versión Óvalo Azul, más clara)</p>
+</a>
+</div>
+
+<div style="text-align: center; width: 150px;">
 <a href="/tecnica/publicaciones/manuales/catalogo-repuestos-1926/">
 <img src="/images/catalogo/catalogorep.jpg" alt="Catálogo de repuestos 1926" style="width: 100px;">
 <p>Catálogo de repuestos 1926</p>
