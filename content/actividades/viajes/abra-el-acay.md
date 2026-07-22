@@ -35,6 +35,8 @@ galeria:
   - {thumb: "/images/viajes/abra-el-acay/thumb/foto-05.jpg", full: "/images/viajes/abra-el-acay/foto-05.jpg", pie: "Llegada a Cachi, frente al restaurante Ashpamanta"}
   - {thumb: "/images/viajes/abra-el-acay/thumb/foto-06.jpg", full: "/images/viajes/abra-el-acay/foto-06.jpg", pie: "La caravana en marcha"}
   - {thumb: "/images/viajes/abra-el-acay/thumb/foto-07.jpg", full: "/images/viajes/abra-el-acay/foto-07.jpg", pie: "Un T de la caravana, con la calcomanía \"Desafío Abra El Acay\" en la puerta"}
+  - {thumb: "/images/viajes/abra-el-acay/thumb/foto-08.jpg", full: "/images/viajes/abra-el-acay/foto-08.jpg", pie: "Regulador y manómetro del sistema de oxígeno suplementario, instalado para compensar el aire enrarecido en las subidas"}
+  - {thumb: "/images/viajes/abra-el-acay/thumb/foto-09.jpg", full: "/images/viajes/abra-el-acay/foto-09.jpg", pie: "Instalación del sistema de oxígeno suplementario en el auto"}
 ---
 
 El hombre se ha comunicado por medio de símbolos desde sus orígenes. Los símbolos hablan por sí solos, tienen una gran capacidad comunicacional. Un grupo de socios buscábamos justamente simbolizar lo que son y fueron los T. Queríamos representar la capacidad, fortaleza y vigencia de un auto que nos apasiona.
