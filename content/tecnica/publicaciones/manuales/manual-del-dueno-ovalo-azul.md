@@ -1,7 +1,7 @@
 ---
 title: "Manual del Dueño (versión Óvalo Azul)"
 date: 2026-07-22
-description: "Versión digital del Manual del Dueño del Ford T, más clara que el original escaneado. Agradecemos a Alfredo de Lorenzo (Club El Óvalo Azul) por este aporte"
+description: "Versión digital del Manual del Dueño del Ford T, más clara que el original escaneado. Agradecemos a Alfredo de Lorenzo (El Óvalo Azul) por este aporte"
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/"
 pager: false
@@ -11,7 +11,7 @@ build:
 
 Versión digital del *Manual del Dueño* del Ford T, de lectura más clara que el
 [original escaneado](/tecnica/publicaciones/manuales/manual-del-dueno/).
-Agradecemos a **Alfredo de Lorenzo**, del Club El Óvalo Azul, por acercarnos
+Agradecemos a **Alfredo de Lorenzo**, de El Óvalo Azul, por acercarnos
 este aporte.
 
 <div class="pub-viewer">

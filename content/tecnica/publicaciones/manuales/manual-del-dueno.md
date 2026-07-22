@@ -9,7 +9,7 @@ build:
   list: never
 ---
 
-*También disponible una [versión más clara para su lectura](/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/). Gracias a Alfredo de Lorenzo (Club El Óvalo Azul) por este aporte.*
+*También disponible una [versión más clara para su lectura](/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/). Gracias a Alfredo de Lorenzo (El Óvalo Azul) por este aporte.*
 
 <div class="pub-viewer">
   <nav class="pub-index" id="pub-index-mandueno">
