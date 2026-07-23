@@ -45,6 +45,8 @@ En enero de 1997, en la oficina de Jorge Báez, se completó la primera comisió
 
 La primera salida del año fue el 9 de febrero: seis Ford T se concentraron en la estación de servicio San Lorenzo y recorrieron la zona norte de la ciudad, para culminar con una choripaneada en el domicilio de Jorge Báez. El 9 de marzo, a propuesta del escribano, la convocatoria se hizo en la Plaza Colón — que sería el punto de partida clásico de las salidas dominicales — con destino a Santa Elena; en el regreso, las fotos tomadas frente a una antigua mansión semiabandonada sirvieron para ilustrar la primera página web del Club, a cargo del corresponsal Daniel Bollo.
 
+![Ford T concentrados en una estación de servicio, en los primeros años del Club](/images/el-club/primeras-caravanas.jpg)
+
 Siguieron la caravana de abril al establecimiento San Miguel (diez autos, entre la arboleda otoñal que retrató la revista *Road Test*), la de mayo a Alta Gracia (once autos, el récord del año) y la de julio, nuevamente a Alta Gracia, invitados por la intendencia, donde se estrenó el megáfono del Club donado por el escribano. En junio, cuatro Ford T corrieron el rally de la Asociación Cordobesa de Autos Antiguos, que por primera vez incluyó una categoría Ford T.
 
 Y en septiembre de 1997 llegó el gran salto: el [Primer Encuentro del Ford T](/encuentros/1997-i/) en La Falda, con veinte automóviles, por el 89º aniversario de la creación del modelo.

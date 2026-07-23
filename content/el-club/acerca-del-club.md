@@ -23,6 +23,8 @@ La otra propuesta era la presentada por el autor de esta nota que pretendía agr
 
 Una noche de diciembre de 1996, nos reunimos en la escribanía de Del Castillo, todos los propietarios de automóviles Ford T, y también otros, como el que escribe esta nota que no tiene un vehículo de este modelo, pero que es un admirador de la creación de mayor trascendencia de la vida industrial de Henry Ford.
 
+![Socios del Club reunidos en sus primeros años](/images/el-club/reunion-socios.jpg)
+
 Se proponen los lineamientos de lo que originalmente se presentaba como una agrupación o círculo, ya que el nombre de "Club" aparecía muy "estructurado", además, dado que la mayoría éramos socios de la Asociación Cordobesa de Autos Antiguos decidimos en primer lugar solicitar a la comisión directiva que se nos aceptara como "Registro Ford T" de la misma en el entendimiento que nuestra propuesta contribuiría a enriquecer y agrandar la Asociación e invitábamos, al mismo tiempo, a que se propusieran otros Registros de otros modelos y marcas.
 
 Los objetivos formulados en la primera reunión de la escribanía Del Castillo para nuestra agrupación Ford T fueron:
