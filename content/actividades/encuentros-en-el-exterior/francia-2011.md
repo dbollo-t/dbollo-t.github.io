@@ -16,7 +16,7 @@ galeria:
   - {thumb: "/images/encuentros-en-el-exterior/francia-2011/thumb/foto-04.jpg", full: "/images/encuentros-en-el-exterior/francia-2011/foto-04.jpg", pie: "Otro detalle de bronce, con el reflejo del pueblo en el vidrio del farol"}
   - {thumb: "/images/encuentros-en-el-exterior/francia-2011/thumb/foto-05.jpg", full: "/images/encuentros-en-el-exterior/francia-2011/foto-05.jpg", pie: "El tablero de instrumentos de un Ford T Speedster, con placas de anteriores concentraciones"}
   - {thumb: "/images/encuentros-en-el-exterior/francia-2011/thumb/foto-06.jpg", full: "/images/encuentros-en-el-exterior/francia-2011/foto-06.jpg", pie: "Otro de los T de la Concentración, junto a la misma locomotora histórica"}
-  - {thumb: "/images/encuentros-en-el-exterior/francia-2011/thumb/foto-07.jpg", full: "/images/encuentros-en-el-exterior/francia-2011/foto-07.jpg", pie: "Entrega de un reconocimiento del Primer Club Uruguayo del Ford T a los organizadores del Encuentro"}
+  - {thumb: "/images/encuentros-en-el-exterior/francia-2011/thumb/foto-07.jpg", full: "/images/encuentros-en-el-exterior/francia-2011/foto-07.jpg", pie: "Entrega de un reconocimiento del Primer Club del Ford T de Argentina a los organizadores del Encuentro"}
 ---
 
 En junio de 2011, el Club participó del XIV Encuentro Francés del Ford T
@@ -28,7 +28,7 @@ Beaujolais, al sur de Francia.
 
 El recorrido pasó por los pueblos de piedra de la región, entre viñedos y
 colinas, con los Ford T circulando por calles y callejuelas centenarias.
-Durante la cena de camaradería se entregó un reconocimiento del Primer
-Club Uruguayo del Ford T a los organizadores del encuentro, en un gesto
+Durante la cena de camaradería, el Primer Club del Ford T de Argentina
+entregó un reconocimiento a los organizadores del encuentro, en un gesto
 que reflejó los lazos entre los clubes del modelo T de distintos
 continentes.

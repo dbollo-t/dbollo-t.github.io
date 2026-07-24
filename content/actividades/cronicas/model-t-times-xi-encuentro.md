@@ -19,23 +19,6 @@ el título "A Visit to Our South American Model T Chapter".
 
 <!--more-->
 
-Rettig fue recibida en el aeropuerto de Córdoba por dos expresidentes del
-Club, Jorge Báez y Daniel Bollo, y se alojó en la casa de este último.
-Antes del Encuentro visitó el campo de Jorge, donde este guarda una docena
-de autos, y recorrió luego los 80 km hasta La Cumbre en un Ford T 1924
-prestado. Según su crónica, al Encuentro llegaron unos 50 autos y 120
-entusiastas, entre ellos visitantes de Uruguay y Paraguay.
-
-En su nota describió la exposición estática, la caravana a Capilla del
-Monte, el asado servido en el hotel y la cena de gala del sábado. También
-contó que el Club reunía entonces unos 150 socios, con encuentros
-mensuales y un paseo de fin de semana cada primavera, y que le impresionó
-la cantidad de familias jóvenes participando. Mencionó, además, un
-documental filmado años antes por la televisión argentina sobre el Club,
-que incluía el relato de dos socios —Daniel Bollo y Alfredo Civalero—
-sobre su viaje desde el extremo norte al extremo sur del país: el
-[Raid La Quiaca–Ushuaia](/actividades/viajes/raid-la-quiaca-ushuaia/).
-
 Rettig cerró su artículo invitando a los socios del Model T Ford Club
 International a sumarse a los festejos del
 [Centenario del Ford T](/encuentros/2008-xii/), en Córdoba, en 2008.
