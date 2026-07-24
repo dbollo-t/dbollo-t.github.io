@@ -7,7 +7,17 @@
 <script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}">
 {{- if .Site.Params.opengraph }}
-{{ template "_internal/opengraph.html" . }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}{{ end }}">
+<meta property="og:locale" content="es_AR">
+{{- with .Params.banner }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{- else }}
+<meta property="og:image" content="{{ .Site.Params.logo.image | default "images/logo-club.png" | absURL }}">
+{{- end }}
 {{- end }}
 {{- if .Site.Params.schema }}
 {{ template "_internal/schema.html" . }}
