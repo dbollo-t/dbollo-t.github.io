@@ -7,4 +7,4 @@ pager: false
 
 Una tradición ininterrumpida desde 1997. Cada año, el Primer Club del Ford T de Argentina organiza su **Encuentro Internacional del Ford T**. En octubre de 2026 se celebra el **30º Encuentro**, en Miramar (Córdoba).
 
-Esta es la historia completa de nuestros encuentros:
+Esta es la historia completa de nuestros encuentros, muchos de ellos graficados con imágenes de Alfredo De Lorenzo, a quien agradecemos su aporte.
