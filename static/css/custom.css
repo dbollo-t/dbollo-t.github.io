@@ -271,6 +271,21 @@
 	font-size: 0.85em;
 }
 
+/* ==== Post fijado en el inicio ==== */
+.post--fijado {
+	background: #fff6e0;
+	border-left: 4px solid #8B0000;
+	padding: 0.9rem 1.2rem;
+	margin-bottom: 1.5rem;
+}
+.post--fijado__title {
+	margin: 0 0 0.2rem;
+}
+.post--fijado__resumen {
+	margin: 0;
+	color: #444;
+}
+
 /* ==== Encuentros ==== */
 .encuentros-tabla__intro {
 	font-weight: 600;
