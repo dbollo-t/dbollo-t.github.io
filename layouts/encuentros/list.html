@@ -1,4 +1,63 @@
 {{ define "main" }}
+{{ $sedes := .Site.Data.sedes }}
+{{ $items := slice }}
+{{ range (sort .RegularPages ".Params.anio" "asc") }}
+  {{ $page := . }}
+  {{ $lugar := $page.Params.lugar }}
+  {{ $coord := index $sedes $lugar }}
+  {{ if $coord }}
+    {{ $items = $items | append (dict
+        "numero" $page.Params.numero
+        "titulo" $page.Title
+        "lugar" $lugar
+        "anio" $page.Params.anio
+        "motivo" $page.Params.motivo
+        "url" $page.Permalink
+        "lat" $coord.lat
+        "lon" $coord.lon
+        "tipo" "nacional") }}
+  {{ end }}
+{{ end }}
+{{ with .Site.GetPage "/actividades/encuentros-en-el-exterior" }}
+  {{ range .RegularPages }}
+    {{ $page := . }}
+    {{ $lugar := $page.Params.lugar }}
+    {{ $coord := index $sedes $lugar }}
+    {{ if $coord }}
+      {{ $items = $items | append (dict
+          "numero" ""
+          "titulo" $page.Title
+          "lugar" $lugar
+          "anio" $page.Params.anio
+          "motivo" $page.Params.motivo
+          "url" $page.Permalink
+          "lat" $coord.lat
+          "lon" $coord.lon
+          "tipo" "exterior") }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ with .Site.GetPage "/actividades/cronicas" }}
+  {{ range .RegularPages }}
+    {{ $page := . }}
+    {{ $lugar := $page.Params.lugar }}
+    {{ if and $lugar $page.Params.anio }}
+      {{ $coord := index $sedes $lugar }}
+      {{ if $coord }}
+        {{ $items = $items | append (dict
+            "numero" ""
+            "titulo" $page.Title
+            "lugar" $lugar
+            "anio" $page.Params.anio
+            "motivo" $page.Params.motivo
+            "url" $page.Permalink
+            "lat" $coord.lat
+            "lon" $coord.lon
+            "tipo" "exterior") }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 <main class="main" role="main">
   <article class="post">
     <header class="post__header">
@@ -7,6 +66,16 @@
     {{- with .Content }}
     <div class="content post__content clearfix">{{ . }}</div>
     {{- end }}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <h2 class="encuentros-mapa__titulo">Mapa de los Encuentros</h2>
+    <p class="encuentros-mapa__nota">
+      En <strong style="color:#8B0000;">rojo</strong>, los Encuentros Internacionales organizados por el Club. En <strong style="color:#2b6cb0;">azul</strong>, actividades en el exterior: encuentros en los que el Club participó (organizados por otros clubes) y otros hitos, como la fundación de clubes hermanos. Las ediciones XXIV (2020) y XXV (2021) fueron virtuales, sin sede física, y no figuran en el mapa.
+    </p>
+    <div id="encuentros-mapa" class="encuentros-mapa"></div>
+    <script id="encuentros-mapa-data" type="application/json">{{ $items | jsonify | safeJS }}</script>
+
+    <p class="encuentros-tabla__intro">A continuación, el listado completo de los Encuentros Internacionales organizados por el Primer Club del Ford T de Argentina desde 1997.</p>
 
     <table class="encuentros-tabla">
       <thead>
@@ -33,6 +102,54 @@
       if (href) window.location.href = href;
     });
   });
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function () {
+  var el = document.getElementById('encuentros-mapa');
+  var dataEl = document.getElementById('encuentros-mapa-data');
+  if (!el) { console.warn('encuentros-mapa: no se encontró el div del mapa'); return; }
+  if (!dataEl) { console.warn('encuentros-mapa: no se encontró el script de datos'); return; }
+  if (typeof L === 'undefined') { console.warn('encuentros-mapa: Leaflet (L) no está definido, no cargó la librería'); return; }
+  var data = JSON.parse(dataEl.textContent);
+  if (typeof data === 'string') data = JSON.parse(data); // por si quedó doble-codificado en caché
+  console.log('encuentros-mapa: puntos recibidos =', data.length, data);
+  if (!Array.isArray(data) || !data.length) { console.warn('encuentros-mapa: el array de datos está vacío o no es un array (revisar data/sedes.yaml y el template)'); return; }
+
+  var map = L.map(el).setView([-32.5, -63.5], 5);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  var groups = {};
+  data.forEach(function (item) {
+    var key = item.lat + ',' + item.lon;
+    (groups[key] = groups[key] || []).push(item);
+  });
+
+  var bounds = [];
+  Object.keys(groups).forEach(function (key) {
+    var list = groups[key].sort(function (a, b) { return a.anio - b.anio; });
+    var first = list[0];
+    var color = first.tipo === 'exterior' ? '#2b6cb0' : '#8B0000';
+    var marker = L.circleMarker([first.lat, first.lon], {
+      radius: 9, fillColor: color, color: '#fff', weight: 2, fillOpacity: 0.9
+    }).addTo(map);
+    bounds.push([first.lat, first.lon]);
+
+    var html = '<strong>' + first.lugar + '</strong><ul style="padding-left:1.1em;margin:.4em 0 0;list-style:none;">';
+    list.forEach(function (item) {
+      html += '<li style="margin-bottom:2px;"><a href="' + item.url + '">' +
+        (item.numero ? item.numero + '° — ' : '') + item.anio +
+        (item.motivo ? ' · ' + item.motivo : '') + '</a></li>';
+    });
+    html += '</ul>';
+    marker.bindPopup(html);
+  });
+
+  if (bounds.length) map.fitBounds(bounds, { padding: [30, 30], maxZoom: 8 });
 })();
 </script>
 {{ end }}

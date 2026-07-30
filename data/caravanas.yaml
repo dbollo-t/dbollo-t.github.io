@@ -1,0 +1,85 @@
+# Recorridos de las caravanas/raids del Club, para el mapa de /actividades/viajes/.
+# Coordenadas: ubicación geográfica conocida de cada localidad citada en la
+# ficha correspondiente (ver content/actividades/viajes/*.md). Verificadas por
+# búsqueda las menos conocidas (Abra del Acay, Laboulaye, General Lamadrid).
+
+alto:
+  titulo: "Caravana al Abra del Acay"
+  url: "/actividades/viajes/abra-el-acay/"
+  anio: "2014"
+  color: "#b45309"
+  ruta:
+    - { lugar: "Salta", lat: -24.7859, lon: -65.4117 }
+    - { lugar: "San Antonio de los Cobres", lat: -24.2167, lon: -66.3167 }
+    - { lugar: "Abra del Acay (4.895 m)", lat: -24.433, lon: -66.233 }
+    - { lugar: "Cachi", lat: -25.1167, lon: -66.1667 }
+    - { lugar: "Cafayate", lat: -26.0833, lon: -65.9667 }
+
+ancho:
+  titulo: "Caravana Centenario 123"
+  url: "/actividades/viajes/caravana-centenario/"
+  anio: "2008"
+  color: "#059669"
+  ruta:
+    - { lugar: "Punta del Este", lat: -34.9667, lon: -54.95 }
+    - { lugar: "Montevideo", lat: -34.9011, lon: -56.1645 }
+    - { lugar: "Colonia del Sacramento", lat: -34.4623, lon: -57.84 }
+    - { lugar: "Buenos Aires", lat: -34.6037, lon: -58.3816 }
+    - { lugar: "Casilda", lat: -33.0333, lon: -61.1667 }
+    - { lugar: "Villa María", lat: -32.4075, lon: -63.2444 }
+    - { lugar: "Córdoba", lat: -31.4201, lon: -64.1888 }
+    - { lugar: "Villa Carlos Paz", lat: -31.4241, lon: -64.4978 }
+    - { lugar: "Río Cuarto", lat: -33.1232, lon: -64.3494 }
+    - { lugar: "Mendoza", lat: -32.8895, lon: -68.8458 }
+    - { lugar: "Portillo (frontera con Chile)", lat: -32.8333, lon: -70.1333 }
+    - { lugar: "Santiago de Chile", lat: -33.4489, lon: -70.6693 }
+    - { lugar: "Valparaíso", lat: -33.0472, lon: -71.6127 }
+
+largo:
+  titulo: "La Quiaca - Ushuaia"
+  url: "/actividades/viajes/raid-la-quiaca-ushuaia/"
+  anio: "2000-2001"
+  color: "#7c3aed"
+  ruta:
+    - { lugar: "La Quiaca", lat: -22.105, lon: -65.595 }
+    - { lugar: "San Salvador de Jujuy", lat: -24.1858, lon: -65.2995 }
+    - { lugar: "Córdoba", lat: -31.4201, lon: -64.1888 }
+    - { lugar: "Puerto San Julián", lat: -49.3057, lon: -67.721 }
+    - { lugar: "Ushuaia", lat: -54.8019, lon: -68.303 }
+
+ruta40:
+  titulo: "Caravana a Ushuaia por Ruta 40"
+  url: "/actividades/viajes/caravana-ushuaia-ruta40/"
+  anio: "2014-2018"
+  color: "#2563eb"
+  ruta:
+    - { lugar: "San Antonio de los Cobres (tramo 1, 2014)", lat: -24.2167, lon: -66.3167 }
+    - { lugar: "San Rafael, Mendoza (tramo 2, 2016)", lat: -34.6177, lon: -68.3301 }
+    - { lugar: "El Calafate (tramo 4, 2018)", lat: -50.3379, lon: -72.2648 }
+    - { lugar: "Ushuaia (tramo 4, 2018)", lat: -54.8019, lon: -68.303 }
+
+cien_mil:
+  titulo: "Caravana a 90 años del 100.000"
+  url: "/actividades/viajes/caravana-100000/"
+  anio: "2015"
+  color: "#dc2626"
+  ruta:
+    - { lugar: "Pacheco (planta Ford)", lat: -34.4667, lon: -58.6333 }
+    - { lugar: "Pilar", lat: -34.4586, lon: -58.9142 }
+    - { lugar: "Rosario", lat: -32.9468, lon: -60.6393 }
+    - { lugar: "Santa Fe", lat: -31.6333, lon: -60.7 }
+    - { lugar: "Sunchales", lat: -30.9436, lon: -61.5622 }
+    - { lugar: "Villa María", lat: -32.4075, lon: -63.2444 }
+    - { lugar: "Córdoba", lat: -31.4201, lon: -64.1888 }
+    - { lugar: "Río Cuarto", lat: -33.1232, lon: -64.3494 }
+    - { lugar: "Laboulaye", lat: -34.129, lon: -63.391 }
+    - { lugar: "Junín", lat: -34.5833, lon: -60.95 }
+    - { lugar: "Intendente Alvear", lat: -35.2333, lon: -63.5333 }
+    - { lugar: "Trenque Lauquen", lat: -35.9667, lon: -62.7333 }
+    - { lugar: "Bahía Blanca", lat: -38.7183, lon: -62.2663 }
+    - { lugar: "General Lamadrid", lat: -37.25, lon: -61.25 }
+    - { lugar: "Tandil", lat: -37.3217, lon: -59.1332 }
+    - { lugar: "Tres Arroyos", lat: -38.3833, lon: -60.2833 }
+    - { lugar: "Mar del Plata", lat: -38.0055, lon: -57.5426 }
+    - { lugar: "Chascomús", lat: -35.5742, lon: -58.0122 }
+    - { lugar: "Buenos Aires", lat: -34.6037, lon: -58.3816 }

@@ -1,0 +1,39 @@
+# Coordenadas de las sedes de los Encuentros Internacionales del Ford T.
+# La clave debe coincidir EXACTAMENTE con el campo "lugar" de cada ficha.
+# Fuente: ubicación geográfica conocida de cada localidad (OpenStreetMap /
+# fuentes públicas). Las ediciones "Virtual" (2020, 2021) no tienen sede
+# física y no se incluyen en el mapa.
+
+"La Falda (Hotel Fatsa)": { lat: -31.0833, lon: -64.4833 }
+"La Falda (Hotel del Lago)": { lat: -31.0833, lon: -64.4833 }
+"La Falda": { lat: -31.0833, lon: -64.4833 }
+"Los Cocos": { lat: -30.974, lon: -64.506 }
+"Villa Giardino": { lat: -31.018, lon: -64.487 }
+"Ascochinga": { lat: -31.05, lon: -64.2167 }
+"Villa Carlos Paz": { lat: -31.4241, lon: -64.4978 }
+"Carlos Paz": { lat: -31.4241, lon: -64.4978 }
+"Valle Hermoso": { lat: -31.1667, lon: -64.4833 }
+"La Cumbre": { lat: -30.9667, lon: -64.4833 }
+"Córdoba y Carlos Paz": { lat: -31.4201, lon: -64.1888 }
+"Córdoba – Carlos Paz": { lat: -31.4201, lon: -64.1888 }
+"Miramar": { lat: -30.9167, lon: -62.6833 }
+"Miramar (Córdoba)": { lat: -30.9167, lon: -62.6833 }
+"Villa María": { lat: -32.4075, lon: -63.2444 }
+"Huerta Grande": { lat: -31.033, lon: -64.478 }
+"Jesús María": { lat: -30.9747, lon: -64.0944 }
+"Sunchales (Santa Fe)": { lat: -30.9436, lon: -61.5622 }
+"San Rafael (Mendoza)": { lat: -34.6177, lon: -68.3301 }
+"Zárate (Buenos Aires)": { lat: -34.0987, lon: -59.0248 }
+"Río Ceballos": { lat: -31.1667, lon: -64.3333 }
+"Colonia Caroya": { lat: -31.1667, lon: -63.9833 }
+"Villa General Belgrano": { lat: -31.9833, lon: -64.55 }
+"Intendente Alvear (La Pampa)": { lat: -35.2333, lon: -63.5333 }
+
+# Encuentros en el exterior
+"Mercedes, Uruguay": { lat: -33.2667, lon: -58.0333 }
+"Melo, Uruguay": { lat: -32.3667, lon: -54.1833 }
+"Belleville-en-Beaujolais, Francia": { lat: 46.1094, lon: 4.75 }
+"Rutland, Vermont, Estados Unidos": { lat: 43.6106, lon: -72.9726 }
+
+# Crónicas con sede propia (fundaciones de clubes hermanos, etc.)
+"La Rioja, España": { lat: 42.4627, lon: -2.4449 }

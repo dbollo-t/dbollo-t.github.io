@@ -1,0 +1,85 @@
+{{ define "main" }}
+<main class="main" role="main">
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">{{ .Title }}</h1>
+    </header>
+    {{- with .Content }}
+    <div class="content post__content clearfix">{{ . }}</div>
+    {{- end }}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+    <h2 class="encuentros-mapa__titulo">Mapa de las caravanas</h2>
+    <p class="encuentros-mapa__nota">
+      Cada color es una caravana distinta. Tocá una línea o un punto para ver el nombre del lugar, o abrí la ficha completa desde la referencia.
+    </p>
+    <div id="caravanas-mapa" class="encuentros-mapa"></div>
+    <ul id="caravanas-leyenda" class="caravanas-leyenda"></ul>
+    <script id="caravanas-mapa-data" type="application/json">{{ .Site.Data.caravanas | jsonify | safeJS }}</script>
+  </article>
+
+  <div class="main__content">
+    {{ range .RegularPages }}
+    <article class="post">
+      <header class="post__header">
+        <h2 class="post__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="post__meta">{{ .Date.Format "2 January, 2006" }}</div>
+      </header>
+      {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+      <div class="list__footer clearfix">
+        <a class="list__footer-readmore btn" href="{{ .Permalink }}">Leer más</a>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function () {
+  var el = document.getElementById('caravanas-mapa');
+  var dataEl = document.getElementById('caravanas-mapa-data');
+  var leyenda = document.getElementById('caravanas-leyenda');
+  if (!el || !dataEl) { console.warn('caravanas-mapa: falta el div o el script de datos'); return; }
+  if (typeof L === 'undefined') { console.warn('caravanas-mapa: Leaflet no cargó'); return; }
+
+  var raw = JSON.parse(dataEl.textContent);
+  if (typeof raw === 'string') raw = JSON.parse(raw); // por si quedó doble-codificado en caché
+  var caravanas = Object.keys(raw).map(function (k) { return raw[k]; });
+  caravanas.sort(function (a, b) {
+    return parseInt(a.anio, 10) - parseInt(b.anio, 10);
+  });
+  console.log('caravanas-mapa: caravanas recibidas =', caravanas.length, caravanas);
+
+  var map = L.map(el).setView([-38, -64], 4);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    maxZoom: 18
+  }).addTo(map);
+
+  var bounds = [];
+  caravanas.forEach(function (c) {
+    var latlngs = c.ruta.map(function (p) { return [p.lat, p.lon]; });
+    var line = L.polyline(latlngs, { color: c.color, weight: 4, opacity: 0.85 }).addTo(map);
+    line.bindPopup('<strong><a href="' + c.url + '">' + c.titulo + '</a></strong><br>' + c.anio);
+
+    c.ruta.forEach(function (p) {
+      L.circleMarker([p.lat, p.lon], {
+        radius: 4, color: '#fff', weight: 1, fillColor: c.color, fillOpacity: 1
+      }).addTo(map).bindTooltip(p.lugar, { direction: 'top' });
+      bounds.push([p.lat, p.lon]);
+    });
+
+    if (leyenda) {
+      var li = document.createElement('li');
+      li.innerHTML = '<span class="caravanas-leyenda__swatch" style="background:' + c.color + '"></span> ' +
+        '<a href="' + c.url + '">' + c.titulo + '</a> ' +
+        '<span class="caravanas-leyenda__anio">(' + c.anio + ')</span>';
+      leyenda.appendChild(li);
+    }
+  });
+
+  if (bounds.length) map.fitBounds(bounds, { padding: [24, 24] });
+})();
+</script>
+{{ end }}
