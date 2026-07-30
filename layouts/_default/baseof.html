@@ -60,7 +60,7 @@
 {{- end }}
 {{ partial "jsonld.html" . }}
 </head>
-<body class="body">
+<body class="body{{ if eq .RelPermalink "/tecnica/restauracion/quiero-empezar/" }} pagina-quiero-empezar{{ end }}">
 <div class="container container--outer">
 {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
 <div class="wrapper flex">

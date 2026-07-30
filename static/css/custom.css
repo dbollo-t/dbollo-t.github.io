@@ -271,6 +271,15 @@
 	font-size: 0.85em;
 }
 
+/* ==== Enlaces de "Quiero empezar con un Ford T" en azul ==== */
+.pagina-quiero-empezar .content a {
+	color: #1a3c6e;
+}
+.pagina-quiero-empezar .content a:hover {
+	color: #1a3c6e;
+	text-decoration: underline;
+}
+
 /* ==== Post fijado en el inicio ==== */
 .post--fijado {
 	background: #fff6e0;
