@@ -4,7 +4,7 @@
 {{- if .IsHome }}
 {{- $data := dict "@context" "https://schema.org" "@type" "Organization"
     "name" $orgName "url" .Site.BaseURL "logo" $logo
-    "email" "primerclubdelfordtargentina@gmail.com"
+    "email" "info@fordt.org.ar"
     "description" .Site.Params.description }}
 <script type="application/ld+json">{{ $data | jsonify (dict "indent" "  ") | safeJS }}</script>
 {{- else if .IsPage }}

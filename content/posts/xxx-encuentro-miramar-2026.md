@@ -30,6 +30,6 @@ se incorpora a la comunidad recibe su nombre oficial y su Documento Nacional
 de Identidad T (DNIT).
 
 Proximamente publicaremos el programa detallado y la información
-para inscripciones. Consultas: **primerclubdelfordtargentina@gmail.com**.
+para inscripciones. Consultas: **info@fordt.org.ar**.
 
 [Ver la historia de los 30 Encuentros →](/encuentros/)
