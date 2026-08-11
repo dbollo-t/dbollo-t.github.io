@@ -2,14 +2,6 @@
 title: "El Club"
 description: "Información sobre el Primer Club del Ford T de Argentina"
 ---
-
-<!-- =========================================================================
-     IMPORTANTE: esto NO es el archivo _index.md completo.
-     Es solamente el CUERPO. En GitHub, abrí
-     https://github.com/dbollo-t/dbollo-t.github.io/edit/main/content/el-club/_index.md
-     dejá intacto el frontmatter (todo lo que está entre las dos líneas de
-     tres guiones --- al principio del archivo) y reemplazá TODO lo que viene
-     debajo por lo que sigue, desde este comentario hasta el final.
 <div class="consulta-cuotas">
 <iframe id="iframe-consulta-cuotas" src="https://script.google.com/macros/s/AKfycbxg9jd9YqETDZcrL-PLgWncncTeuD8wwIZcSKOTYkls9dE361r57UNn3i1UzWWfEfpq/exec" title="Consulta del estado de tu cuota social" style="display:block;width:100%;height:250px;border:0;overflow:hidden;transition:height .2s ease" scrolling="no" loading="lazy"></iframe>
 </div>
