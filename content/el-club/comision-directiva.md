@@ -1,6 +1,6 @@
 ---
 title: "Comisión Directiva"
-date: 2026-06-29
+date: 2026-08-03
 description: "Autoridades del Primer Club del Ford T de Argentina"
 categories: ["El Club"]
 url: "/el-club/comision-directiva/"
