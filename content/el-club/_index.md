@@ -3,28 +3,39 @@ title: "El Club"
 description: "Información sobre el Primer Club del Ford T de Argentina"
 ---
 
-<div class="consulta-cuotas-sticky">
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbxg9jd9YqETDZcrL-PLgWncncTeuD8wwIZcSKOTYkls9dE361r57UNn3i1UzWWfEfpq/exec"
-    style="width:100%; min-height:280px; border:0;"
-    loading="lazy"
-    title="Consulta de cuotas sociales">
-  </iframe>
+<!-- =========================================================================
+     IMPORTANTE: esto NO es el archivo _index.md completo.
+     Es solamente el CUERPO. En GitHub, abrí
+     https://github.com/dbollo-t/dbollo-t.github.io/edit/main/content/el-club/_index.md
+     dejá intacto el frontmatter (todo lo que está entre las dos líneas de
+     tres guiones --- al principio del archivo) y reemplazá TODO lo que viene
+     debajo por lo que sigue, desde este comentario hasta el final.
+<div class="consulta-cuotas">
+<iframe id="iframe-consulta-cuotas" src="https://script.google.com/macros/s/AKfycbxg9jd9YqETDZcrL-PLgWncncTeuD8wwIZcSKOTYkls9dE361r57UNn3i1UzWWfEfpq/exec" title="Consulta del estado de tu cuota social" style="display:block;width:100%;height:250px;border:0;overflow:hidden;transition:height .2s ease" scrolling="no" loading="lazy"></iframe>
 </div>
-
-<style>
-  .consulta-cuotas-sticky {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: #fff;
-    padding: 10px 0 14px 0;
-    margin-bottom: 18px;
-    box-shadow: 0 4px 6px -6px rgba(0,0,0,0.3);
+<script>
+/* El iframe es cross-origin: el navegador no nos deja medir su contenido desde
+   acá. Por eso la página de Apps Script nos avisa su alto por postMessage cada
+   vez que el contenido cambia (al mostrar el "consultando..." o el resultado),
+   y acá simplemente ajustamos el height. Así el widget arranca compacto y crece
+   sólo lo necesario, en vez de reservar un alto fijo que deja un hueco en
+   blanco al principio.
+   Se valida el origen del mensaje: Apps Script sirve el contenido del usuario
+   desde *.googleusercontent.com, no desde script.google.com. */
+(function () {
+  var iframe = document.getElementById('iframe-consulta-cuotas');
+  if (!iframe) return;
+  function origenConfiable(origen) {
+    return origen === 'https://script.google.com' ||
+           /^https:\/\/[a-z0-9-]+\.googleusercontent\.com$/.test(origen);
   }
-  /* Si en algún momento se prefiere que quede fijo en toda la pantalla
-     en vez de solo dentro de esta página, cambiar "position: sticky"
-     por "position: fixed" y agregar padding-top al body para compensar. */
-</style>
-
-<!-- Contenido existente de la página "El Club" va debajo de este bloque -->
+  window.addEventListener('message', function (ev) {
+    if (!origenConfiable(ev.origin)) return;
+    var datos = ev.data;
+    if (!datos || datos.tipo !== 'fordt-alto-consulta-cuotas') return;
+    var alto = parseInt(datos.alto, 10);
+    if (!isFinite(alto) || alto < 80 || alto > 3000) return; // Descarta valores absurdos.
+    iframe.style.height = alto + 'px';
+  }, false);
+})();
+</script>
