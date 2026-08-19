@@ -19,19 +19,23 @@ Manejar un Ford T no es difícil una vez que se comprende su particular sistema 
 
 En modelos desde 1920, frente al conductor encontramos:
 
-**Tablero.** Al centro el tablero principal (la imagen de referencia es de un modelo 27; en modelos anteriores puede variar).
+### Tablero
+
+Al centro el tablero principal (la imagen de referencia es de un modelo 27; en modelos anteriores puede variar).
 
 - El interruptor de luces es la pequeña palanca, alternando alta y baja a izquierda o derecha.
 - La llave de contacto se inserta al centro, con encendido a izquierda batería y derecha magneto.
 - El amperímetro mide la carga o descarga de la batería.
 - A la derecha, el mando de riqueza de la mezcla y cebador: se abre (antihorario) para enriquecer la mezcla (más combustible) y se cierra para reducirla. Tirando hacia atrás, se activa el cebador para arranque en frío, que también se comanda tirando el mando frontal, bajo el radiador.
 
-**Dos palancas bajo el volante.**
+### Dos palancas bajo el volante
 
 - **Izquierda** → avance del encendido. Permite retardar o adelantar la chispa: arriba, retardado; abajo, adelantado.
 - **Derecha** → acelerador. Regula directamente el régimen del motor (el Ford T no tiene pedal de acelerador): arriba, menos aceleración / ralentí; abajo, más aceleración.
 
-**Palanca de mano.** Está a la izquierda del conductor y tiene tres posiciones fundamentales:
+### Palanca de mano
+
+Está a la izquierda del conductor y tiene tres posiciones fundamentales:
 
 - Hacia atrás: freno de estacionamiento y transmisión en neutral.
 - Vertical o posición intermedia: neutral.
