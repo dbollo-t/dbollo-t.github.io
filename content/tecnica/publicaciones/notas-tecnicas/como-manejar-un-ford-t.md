@@ -7,6 +7,10 @@ url: "/tecnica/publicaciones/notas-tecnicas/como-manejar-un-ford-t/"
 pager: false
 ---
 
+*Por Daniel Bollo*
+
+![Puesto de manejo de un Ford T, con el volante, el tablero y las dos palancas bajo el volante](/images/tecnica/notas-tecnicas/como-manejar-un-ford-t/interior.jpg)
+
 Manejar un Ford T no es difícil una vez que se comprende su particular sistema de controles. La clave está en aprender primero qué hace cada control y después coordinar todos ellos.
 
 <!--more-->
@@ -15,14 +19,23 @@ Manejar un Ford T no es difícil una vez que se comprende su particular sistema 
 
 En modelos desde 1920, frente al conductor encontramos:
 
-**Tablero.** Al centro el tablero principal (la imagen de referencia es de un modelo 27; en modelos anteriores puede variar). El interruptor de luces es la pequeña palanca, alternando alta y baja a izquierda o derecha. La llave de contacto se inserta al centro, con encendido a izquierda batería y derecha magneto. El amperímetro mide la carga o descarga de la batería. A la derecha, el mando de riqueza de la mezcla y cebador: se abre (antihorario) para enriquecer la mezcla (más combustible) y se cierra para reducirla; tirando hacia atrás, se activa el cebador para arranque en frío, que también se comanda tirando el mando frontal, bajo el radiador.
+**Tablero.** Al centro el tablero principal (la imagen de referencia es de un modelo 27; en modelos anteriores puede variar).
+
+- El interruptor de luces es la pequeña palanca, alternando alta y baja a izquierda o derecha.
+- La llave de contacto se inserta al centro, con encendido a izquierda batería y derecha magneto.
+- El amperímetro mide la carga o descarga de la batería.
+- A la derecha, el mando de riqueza de la mezcla y cebador: se abre (antihorario) para enriquecer la mezcla (más combustible) y se cierra para reducirla. Tirando hacia atrás, se activa el cebador para arranque en frío, que también se comanda tirando el mando frontal, bajo el radiador.
 
 **Dos palancas bajo el volante.**
 
-- Izquierda → avance del encendido. Permite retardar o adelantar la chispa: arriba, retardado; abajo, adelantado.
-- Derecha → acelerador. Regula directamente el régimen del motor (el Ford T no tiene pedal de acelerador): arriba, menos aceleración / ralentí; abajo, más aceleración.
+- **Izquierda** → avance del encendido. Permite retardar o adelantar la chispa: arriba, retardado; abajo, adelantado.
+- **Derecha** → acelerador. Regula directamente el régimen del motor (el Ford T no tiene pedal de acelerador): arriba, menos aceleración / ralentí; abajo, más aceleración.
 
-**Palanca de mano.** Está a la izquierda del conductor y tiene tres posiciones fundamentales: hacia atrás, freno de estacionamiento y transmisión en neutral; vertical o posición intermedia, neutral; hacia adelante, alta velocidad.
+**Palanca de mano.** Está a la izquierda del conductor y tiene tres posiciones fundamentales:
+
+- Hacia atrás: freno de estacionamiento y transmisión en neutral.
+- Vertical o posición intermedia: neutral.
+- Hacia adelante: alta velocidad.
 
 ## 2. Los tres pedales
 
@@ -58,7 +71,7 @@ El motor necesita dos regulaciones y media:
 
 - **Acelerador** — regula cuánto trabaja el motor.
 - **Avance** — una vez que el motor arranca, no se debe dejar el encendido excesivamente retardado. Regula cuándo se produce la chispa: al aumentar el régimen del motor, se va adelantando progresivamente el encendido. La posición correcta es aquella en la que el motor funciona con suavidad y buena respuesta; si aparece un golpeteo característico, el encendido está demasiado adelantado y debe atrasarse ligeramente.
-- **Riqueza de la mezcla** (la "media" regulación, porque no se requiere con tanta frecuencia como las anteriores) — luego de un tiempo de arrancar el motor, cerrar (sentido horario) una cuarta vuelta y, si se quiere el mejor funcionamiento del motor, adaptar este regulador al ritmo habitual: en ciudad un poco más abierto, y en ruta cerrarlo hasta que comience a fallar y abrirlo apenas.
+- **Riqueza de la mezcla** (la "media" regulación, porque no se requiere con tanta frecuencia como las anteriores) — luego de un tiempo de arrancar el motor, cerrar (sentido horario) una cuarta vuelta y, si se quiere el mejor funcionamiento del motor, adaptar este regulador al ritmo habitual: en ciudad un poco más abierto, y en ruta cerrarlo hasta que comience a fallar e inmediatamente abrirlo apenas.
 
 ## 7. Ponerse en movimiento
 
@@ -96,15 +109,15 @@ Con el auto detenido: colocar la transmisión en neutral (pedal izquierdo o pala
 
 ## 12. Los errores más frecuentes del conductor moderno
 
-- **Buscar el acelerador con el pie.** No existe: el acelerador está en la palanca derecha.
-- **Pensar que el pedal izquierdo es simplemente el embrague.** No: es el control de las velocidades (baja — neutral — alta).
-- **Buscar una palanca de cambios.** No hay.
-- **Soltar violentamente el pedal izquierdo.** La transición debe hacerse progresivamente y con el auto avanzando en baja.
-- **Arrancar con el encendido adelantado.** Nunca, especialmente si se utiliza la manivela.
-- **Confundir el pedal central con el freno.** El central es reversa.
-- **Confundir el pedal derecho con el embrague.** El derecho es freno.
-- **Adelantar demasiado el encendido.** Si el motor comienza a golpear, está demasiado avanzado.
-- **Intentar conducirlo como un automóvil moderno.** Probablemente el error más importante: el Ford T exige coordinar las manos, los pies y el oído.
+- ❌ **Buscar el acelerador con el pie.** No existe: el acelerador está en la palanca derecha.
+- ❌ **Pensar que el pedal izquierdo es simplemente el embrague.** No: es el control de las velocidades (baja — neutral — alta).
+- ❌ **Buscar una palanca de cambios.** No hay.
+- ❌ **Soltar violentamente el pedal izquierdo.** La transición debe hacerse progresivamente y con el auto avanzando en baja.
+- ❌ **Arrancar con el encendido adelantado.** Nunca, especialmente si se utiliza la manivela.
+- ❌ **Confundir el pedal central con el freno.** El central es reversa.
+- ❌ **Confundir el pedal derecho con el embrague.** El derecho es freno.
+- ❌ **Adelantar demasiado el encendido.** Si el motor comienza a golpear, está demasiado avanzado.
+- ❌ **Intentar conducirlo como un automóvil moderno.** Probablemente el error más importante: el Ford T exige coordinar las manos, los pies y el oído.
 
 ## 13. El "machete" para aprender
 
@@ -133,4 +146,4 @@ Si alguien se sienta por primera vez en un Ford T, estas ocho frases son suficie
 
 El secreto para aprender a manejar un Ford T no está en memorizar dónde debe estar cada palanca. Está en sentir qué está haciendo el automóvil. Después de unas pocas prácticas, el conductor comienza a reconocer cuándo el pedal izquierdo está entrando en baja, cuándo está pasando por neutral, cuándo entró en alta, cuándo el motor pide más o menos avance, cuándo el motor tiene una mezcla muy rica o pobre, y cuánto freno necesita.
 
-Ahí es cuando el manejo del Ford T deja de parecer extraño y comienza a resultar natural.
+Ahí es cuando el manejo del Ford T deja de parecer extraño y comienza a resultar no solo natural, sino un placer.
