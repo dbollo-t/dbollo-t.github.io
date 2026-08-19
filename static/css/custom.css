@@ -280,6 +280,18 @@
 	text-decoration: underline;
 }
 
+/* Espacio uniforme antes de los títulos del contenido: el tema pone
+   margin-top: 0 en los h2/h3/h4 y confía en el margen inferior del
+   elemento anterior para separar. Cuando ese elemento es una lista,
+   el margen no siempre se respeta y el título queda "pegado". Forzamos
+   un margen superior real para que se vea igual venga antes un párrafo
+   o una lista. */
+.content h2,
+.content h3,
+.content h4 {
+	margin-top: 1.8rem;
+}
+
 /* ==== Post fijado en el inicio ==== */
 .post--fijado {
 	background: #fff6e0;
