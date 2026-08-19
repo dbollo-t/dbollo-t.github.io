@@ -280,15 +280,23 @@
 	text-decoration: underline;
 }
 
-/* Espacio uniforme antes de los títulos del contenido: el tema pone
-   margin-top: 0 en los h2/h3/h4 y confía en el margen inferior del
-   elemento anterior para separar. Cuando ese elemento es una lista,
-   el margen no siempre se respeta y el título queda "pegado". Forzamos
-   un margen superior real para que se vea igual venga antes un párrafo
-   o una lista. */
-.content h2,
-.content h3,
-.content h4 {
+/* Espacio uniforme antes de los títulos del contenido.
+   Causa real: layouts/_default/single.html no envuelve el contenido en
+   un div .content (a diferencia de encuentros/actividades), así que
+   las reglas ".content ul/ol" del tema (que les dan margen inferior)
+   no aplican ahí: las listas quedan con el reset base (margin: 0) y el
+   título que sigue queda pegado a la lista, aunque sí se separa bien
+   de un párrafo (que tiene margen propio sin necesitar .content).
+   Usamos .primary, que sí envuelve el contenido en todas las páginas,
+   para restablecer el margen de las listas y dar a los títulos un
+   margen superior real que no dependa del elemento anterior. */
+.primary ul,
+.primary ol {
+	margin: 0 0 20px 40px;
+}
+.primary h2,
+.primary h3,
+.primary h4 {
 	margin-top: 1.8rem;
 }
 
