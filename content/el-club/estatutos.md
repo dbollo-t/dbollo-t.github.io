@@ -1,6 +1,6 @@
 ---
 title: "Estatutos del Primer Club del Ford T de Argentina"
-date: 2010-03-29
+date: 2022-03-29
 description: "Estatuto social del Primer Club del Ford T de Argentina"
 categories: ["El Club"]
 url: "/el-club/estatutos/"

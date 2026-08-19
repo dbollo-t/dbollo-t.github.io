@@ -1,6 +1,6 @@
 ---
 title: "Así nacía el Club"
-date: 2026-07-15
+date: 2023-02-15
 description: "Crónica de los primeros años del Primer Club del Ford T de Argentina (1995–1998), según el libro de actas"
 categories: ["El Club"]
 url: "/el-club/asi-nacia-el-club/"
