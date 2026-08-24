@@ -534,3 +534,95 @@
 @media (max-width: 480px) {
 	.lightbox__nav { font-size: 2rem; width: 40px; height: 56px; }
 }
+
+/* ==== Emisión de credencial (Socios) ==== */
+.emision-credencial {
+	border: 1px solid #e2e2e2;
+	border-radius: 8px;
+	padding: 14px 16px;
+	max-width: 640px;
+	margin: 1.5rem auto;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+	line-height: 1.6;
+}
+.emision-credencial .emision-credencial__titulo {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: #8B0000;
+	margin: 0 0 10px 0;
+}
+.emision-credencial__label {
+	display: block;
+	font-weight: 600;
+	margin: 0.8rem 0 0.3rem;
+}
+.emision-credencial input[type="text"],
+.emision-credencial input[type="file"] {
+	width: 100%;
+	padding: 9px 10px;
+	border: 1px solid #e2e2e2;
+	border-radius: 6px;
+	font-family: inherit;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+.emision-credencial__boton {
+	background: #8B0000;
+	color: #fff;
+	border: none;
+	padding: 9px 18px;
+	border-radius: 6px;
+	margin-top: 1rem;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 14px;
+}
+.emision-credencial__boton:hover {
+	background: #5c0000;
+}
+.emision-credencial__divisor {
+	max-width: 640px;
+	margin: 2rem auto;
+	border: none;
+	border-top: 1px solid #e2e2e2;
+}
+.emision-credencial__estado {
+	margin-top: 0.6rem;
+	font-size: 0.9rem;
+	color: #444;
+}
+.emision-credencial__fila {
+	display: flex;
+	gap: 0.6rem;
+	align-items: stretch;
+}
+.emision-credencial__fila input[type="text"] {
+	flex: 1;
+}
+.emision-credencial__fila .emision-credencial__boton {
+	margin-top: 0;
+	white-space: nowrap;
+}
+.emision-credencial__compartir-imgs {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin: 1rem 0;
+}
+.emision-credencial__compartir-imgs img {
+	max-width: 220px;
+	width: 100%;
+	border: 1px solid #e2e2e2;
+	border-radius: 8px;
+}
+.emision-credencial__boton--compartir {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.emision-credencial__boton--compartir span {
+	font-size: 0.85rem;
+}
