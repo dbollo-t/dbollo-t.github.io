@@ -84,6 +84,7 @@ document.getElementById('credencial-verificar').addEventListener('click', functi
     if (data.ok && data.aptoParaCredencial) {
       estado.textContent = '';
       window.CREDENCIAL_NUMERO_SOCIO = data.numeroSocio;
+      window.CREDENCIAL_DOCUMENTO = doc;
       document.getElementById('credencial-verificar').disabled = true;
       document.getElementById('credencial-documento').disabled = true;
       document.getElementById('credencial-formulario').style.display = 'block';
@@ -153,7 +154,8 @@ function buscarCredencialLista(numeroSocio, estado, intento) {
       estado.textContent = 'Tu foto se guardó bien, pero la credencial está tardando más de lo normal. Volvé a esta página en unos minutos.';
     }
   };
-  script.src = CREDENCIAL_URL + '?buscarCredencial=' + encodeURIComponent(numeroSocio) + '&callback=' + nombreCallback;
+  // El documento va junto con el número de socio: el backend verifica que uno corresponda al otro antes de entregar la credencial.
+  script.src = CREDENCIAL_URL + '?buscarCredencial=' + encodeURIComponent(numeroSocio) + '&documento=' + encodeURIComponent(window.CREDENCIAL_DOCUMENTO || '') + '&callback=' + nombreCallback;
   document.body.appendChild(script);
 }
 document.getElementById('credencial-compartir-boton').addEventListener('click', function () {
