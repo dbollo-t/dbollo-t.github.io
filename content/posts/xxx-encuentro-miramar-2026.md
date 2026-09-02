@@ -26,6 +26,25 @@ esta nota.
 Este año, además, el Encuentro coincide con las fiestas patronales de la
 localidad.
 
+## Inscripción
+
+La inscripción requiere un anticipo de **$80.000 por participante** y
+completar el [formulario de inscripción](https://docs.google.com/forms/d/e/1FAIpQLSdqWTERxJoZ3u1KkhRXiakFyzTjftLn70vEMsYu8vwLlW9zFQ/viewform?usp=header)
+antes del **15 de setiembre**, fecha en la que se comunicará a los
+restaurantes la cifra definitiva de asistentes.
+
+El costo de inscripción por persona (incluye comidas y actividades del
+Encuentro) es el siguiente:
+
+| Concepto (por persona) | 3 días (jue-sáb) | 2 días (vie-sáb) |
+|---|---|---|
+| Socios con cuota al día | $155.000 | $130.000 |
+| Acompañantes / no socios | $220.000 | $190.000 |
+| Menores hasta 12 años | $18.000 | $13.000 |
+
+Quienes solo puedan asistir un día (viernes o sábado, con almuerzo y
+merienda incluidos): $80.000 por persona.
+
 ## Programa
 
 *Versión preliminar, sin horarios definitivos — sujeta a confirmación.*
@@ -68,25 +87,6 @@ Como en cada edición, la ceremonia de bautismo —sello distintivo del
 Club— será uno de los momentos centrales: cada Ford T que se incorpora a
 la comunidad recibe allí su nombre oficial y su Documento Nacional de
 Identidad T (DNIT).
-
-## Inscripción
-
-La inscripción requiere un anticipo de **$80.000 por participante** y
-completar el [formulario de inscripción](https://docs.google.com/forms/d/e/1FAIpQLSdqWTERxJoZ3u1KkhRXiakFyzTjftLn70vEMsYu8vwLlW9zFQ/viewform?usp=header)
-antes del **15 de setiembre**, fecha en la que se comunicará a los
-restaurantes la cifra definitiva de asistentes.
-
-El costo de inscripción por persona (incluye comidas y actividades del
-Encuentro) es el siguiente:
-
-| Concepto (por persona) | 3 días (jue-sáb) | 2 días (vie-sáb) |
-|---|---|---|
-| Socios con cuota al día | $155.000 | $130.000 |
-| Acompañantes / no socios | $220.000 | $190.000 |
-| Menores hasta 12 años | $18.000 | $13.000 |
-
-Quienes solo puedan asistir un día (viernes o sábado, con almuerzo y
-merienda incluidos): $80.000 por persona.
 
 ## Alojamiento
 
