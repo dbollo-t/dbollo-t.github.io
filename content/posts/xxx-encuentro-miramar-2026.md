@@ -30,7 +30,7 @@ localidad.
 
 La inscripción requiere un anticipo de **$80.000 por participante** y
 completar este 
-## [formulario de inscripción](https://docs.google.com/forms/d/e/1FAIpQLSdqWTERxJoZ3u1KkhRXiakFyzTjftLn70vEMsYu8vwLlW9zFQ/viewform?usp=header)
+## <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqWTERxJoZ3u1KkhRXiakFyzTjftLn70vEMsYu8vwLlW9zFQ/viewform?usp=header" style="color:#0000EE; font-weight:bold;">formulario de inscripción</a>
 antes del **15 de setiembre**, fecha en la que se comunicará a los
 restaurantes la cifra definitiva de asistentes.
 
