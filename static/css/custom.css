@@ -271,7 +271,26 @@
 	font-size: 0.85em;
 }
 
-/* ==== Enlaces de "Quiero empezar con un Ford T" en azul ==== */
+/* ==== Links del contenido: azul en todo el sitio ====
+   El tema los pinta con highlightColor (rojo, definido en hugo.toml). Se
+   sobrescribe acá con el mismo azul que ya se usa en el resto del sitio
+   (footer, menú, tablas de encuentros), para que todos los links de texto
+   se vean siempre en azul, en cualquier página. */
+.content a,
+.warning a,
+.authorbox__description a {
+	color: #1a3c6e;
+}
+.content a:hover,
+.warning a:hover,
+.authorbox__description a:hover {
+	color: #12294d;
+	text-decoration: underline;
+}
+
+/* Enlaces de "Quiero empezar con un Ford T": ya quedan cubiertos por la
+   regla general de arriba; esta queda solo por si alguna vez se quisiera
+   un azul distinto solo para esa página. */
 .pagina-quiero-empezar .content a {
 	color: #1a3c6e;
 }
