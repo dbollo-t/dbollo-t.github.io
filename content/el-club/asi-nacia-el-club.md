@@ -62,3 +62,5 @@ En octubre llegó el [Segundo Encuentro](/encuentros/1998-ii/), con 22 autos y l
 ---
 
 *Fuente: libro de actas del Primer Club del Ford T de Argentina.*
+
+Para una historia más extensa, con las crónicas de todos los Encuentros y las historias de socios y autos, ver el [Libro de Oro del Ford T en la Argentina](/actividades/libro-de-oro/).
