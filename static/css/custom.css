@@ -271,26 +271,7 @@
 	font-size: 0.85em;
 }
 
-/* ==== Links del contenido: azul en todo el sitio ====
-   El tema los pinta con highlightColor (rojo, definido en hugo.toml). Se
-   sobrescribe acá con el mismo azul que ya se usa en el resto del sitio
-   (footer, menú, tablas de encuentros), para que todos los links de texto
-   se vean siempre en azul, en cualquier página. */
-.content a,
-.warning a,
-.authorbox__description a {
-	color: #1a3c6e;
-}
-.content a:hover,
-.warning a:hover,
-.authorbox__description a:hover {
-	color: #12294d;
-	text-decoration: underline;
-}
-
-/* Enlaces de "Quiero empezar con un Ford T": ya quedan cubiertos por la
-   regla general de arriba; esta queda solo por si alguna vez se quisiera
-   un azul distinto solo para esa página. */
+/* ==== Enlaces de "Quiero empezar con un Ford T" en azul ==== */
 .pagina-quiero-empezar .content a {
 	color: #1a3c6e;
 }
@@ -644,4 +625,35 @@
 }
 .emision-credencial__boton--compartir span {
 	font-size: 0.85rem;
+}
+
+/* ==== Documento de Identidad T (Socios) ==== */
+.emision-credencial select {
+	width: 100%;
+	padding: 9px 10px;
+	border: 1px solid #e2e2e2;
+	border-radius: 6px;
+	font-family: inherit;
+	font-size: 14px;
+	background: #fff;
+	color: #000;
+	box-sizing: border-box;
+}
+.dnit-campos {
+	background: #faf8f4;
+	border: 1px solid #e2e2e2;
+	border-radius: 6px;
+	padding: 10px 14px;
+	margin: 1rem 0;
+}
+.dnit-campos p {
+	margin: 0.25rem 0;
+}
+.dnit-fijo {
+	color: #666;
+}
+.dnit-nota {
+	font-size: 0.85rem;
+	color: #666;
+	font-style: italic;
 }
