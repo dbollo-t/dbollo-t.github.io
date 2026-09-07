@@ -175,10 +175,10 @@ document.getElementById('credencial-compartir-boton').addEventListener('click', 
   }
 });
 </script>
-<!-- ==== MÓDULO DEL DNI T — OCULTO HASTA EL LANZAMIENTO ====
-     No se borró nada. Para publicarlo, borrá esta línea de apertura
-     del div y su cierre, marcados con DNIT-OCULTO. -->
-<div id="dnit-modulo" style="display:none"><!-- DNIT-OCULTO: quitar este div para lanzarlo -->
+<!-- ==== MÓDULO DEL DNI T — PUBLICADO EL 7/9/2026 ====
+     Para volver a ocultarlo sin borrar nada, poner style="display:none"
+     en el div de abajo. -->
+<div id="dnit-modulo"><!-- DNIT-OCULTO: acá va style="display:none" para ocultarlo -->
 <hr class="emision-credencial__divisor">
 <div class="emision-credencial">
 <h2 class="emision-credencial__titulo">Emisión de Documento de Identidad T</h2>
