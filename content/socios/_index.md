@@ -54,6 +54,7 @@ description: "Consulta de cuotas, credencial de socio y Documento de Identidad T
 <a id="credencial-link-frente" href="#" target="_blank"><img id="credencial-img-frente" src="" alt="Frente de tu credencial"></a>
 <a id="credencial-link-dorso" href="#" target="_blank"><img id="credencial-img-dorso" src="" alt="Dorso de tu credencial"></a>
 </div>
+<p class="dnit-nota">Imprimí en papel fotográfico de 200 gramos o más, de ambos lados.</p>
 <button id="credencial-compartir-boton" class="emision-credencial__boton emision-credencial__boton--compartir">
 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"></line></svg>
 <span>Compartir</span>
@@ -201,6 +202,7 @@ document.getElementById('credencial-compartir-boton').addEventListener('click', 
 </div>
 <div id="dnit-formulario" style="display:none;">
 <p id="dnit-intro"></p>
+<p class="dnit-nota">¿No tenés ningún Ford T cargado, o querés agregar otro más? <a href="https://docs.google.com/forms/d/e/1FAIpQLSczrREceAOFbEosmX234nJ4pJDcQWbJ2C-nFsraahenxypFUw/viewform?usp=header" target="_blank" rel="noopener">Hacé clic acá</a>.</p>
 <div class="dnit-campos">
 <p><span class="dnit-fijo">Propietario:</span> <strong id="dnit-propietario"></strong></p>
 <p><span class="dnit-fijo">Socio Nº:</span> <strong id="dnit-socio"></strong></p>
@@ -248,6 +250,7 @@ document.getElementById('credencial-compartir-boton').addEventListener('click', 
 <a id="dnit-link-frente" href="#" target="_blank"><img id="dnit-img-frente" src="" alt="Anverso de tu DNI T"></a>
 <a id="dnit-link-dorso" href="#" target="_blank"><img id="dnit-img-dorso" src="" alt="Reverso de tu DNI T"></a>
 </div>
+<p class="dnit-nota">Imprimí en papel fotográfico de 200 gramos o más, de ambos lados.</p>
 <button id="dnit-compartir-boton" class="emision-credencial__boton emision-credencial__boton--compartir">
 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"></line><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"></line></svg>
 <span>Compartir</span>
@@ -255,12 +258,15 @@ document.getElementById('credencial-compartir-boton').addEventListener('click', 
 </div>
 </div>
 <p>Ejemplo</p>
-<div style="margin:1rem 0;text-align:center;">
-  <a href="/images/socios/dni-t-ejemplo.jpg" target="_blank" rel="noopener">
-    <img src="/images/socios/dni-t-ejemplo.jpg" alt="Ejemplo del Documento de Identidad T: tapa, interior izquierda, interior derecha y contratapa" style="max-width:100%;width:860px;border:1px solid #ddd;border-radius:8px;">
+<div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin:1rem 0;">
+  <a href="/images/socios/dni-t-ejemplo-interior.jpg" target="_blank" rel="noopener">
+    <img src="/images/socios/dni-t-ejemplo-interior.jpg" alt="Ejemplo del Documento de Identidad T, interior abierto" style="max-width:100%;width:420px;border:1px solid #ddd;border-radius:8px;">
   </a>
-  <p class="dnit-nota" style="margin-top:0.5rem;">Se emite como librito de cuatro caras. Los datos del ejemplo son del Ford T número quince millones, el último de la serie. Tocá la imagen para verla en grande.</p>
+  <a href="/images/socios/dni-t-ejemplo-tapa.jpg" target="_blank" rel="noopener">
+    <img src="/images/socios/dni-t-ejemplo-tapa.jpg" alt="Ejemplo del Documento de Identidad T, tapa y contratapa" style="max-width:100%;width:420px;border:1px solid #ddd;border-radius:8px;">
+  </a>
 </div>
+<p class="dnit-nota" style="margin-top:0.5rem;text-align:center;">Tocá la imagen para agrandar.</p>
 <script>
 var DNIT_URL = 'https://script.google.com/macros/s/AKfycbxg9jd9YqETDZcrL-PLgWncncTeuD8wwIZcSKOTYkls9dE361r57UNn3i1UzWWfEfpq/exec';
 var DNIT = {};
