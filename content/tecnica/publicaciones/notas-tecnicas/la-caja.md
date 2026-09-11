@@ -15,66 +15,66 @@ A efectos de entender el funcionamiento de la caja de cambios del Ford T, deber√
 
 <table style="float: right; margin: 0 0 1em 1em; width: 200px; border: none;">
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagenA.jpg" alt="Imagen A" style="width: 90px;">
-<img src="/images/img_varias/lacaja/imagenA2.jpg" alt="Imagen A2" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenA.jpg" data-full="/images/img_varias/lacaja/gran/imagenA.jpg"><img src="/images/img_varias/lacaja/imagenA.jpg" alt="Imagen A" style="width: 90px;"></a>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenA2.jpg" data-full="/images/img_varias/lacaja/gran/imagenA2.jpg"><img src="/images/img_varias/lacaja/imagenA2.jpg" alt="Imagen A2" style="width: 90px;"></a><br>
 <small>Imagen A &nbsp;&nbsp; Imagen A2</small>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagenB.jpg" alt="Imagen B" style="width: 90px;">
-<img src="/images/img_varias/lacaja/imagenC.jpg" alt="Imagen C" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenB.jpg" data-full="/images/img_varias/lacaja/gran/imagenB.jpg"><img src="/images/img_varias/lacaja/imagenB.jpg" alt="Imagen B" style="width: 90px;"></a>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenC.jpg" data-full="/images/img_varias/lacaja/gran/imagenC.jpg"><img src="/images/img_varias/lacaja/imagenC.jpg" alt="Imagen C" style="width: 90px;"></a><br>
 <small>Imagen B &nbsp;&nbsp; Imagen C</small>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagenD.jpg" alt="Imagen D" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD.jpg" data-full="/images/img_varias/lacaja/gran/imagenD.jpg"><img src="/images/img_varias/lacaja/imagenD.jpg" alt="Imagen D" style="width: 90px;"></a><br>
 <small>Imagen D</small><br>
 <video src="/images/img_varias/lacaja/Link-D.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagenD1.jpg" alt="Imagen D1-1" style="width: 90px;">
-<img src="/images/img_varias/lacaja/imagenD1-2.jpg" alt="Imagen D1-2" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD1.jpg" data-full="/images/img_varias/lacaja/gran/imagenD1.jpg"><img src="/images/img_varias/lacaja/imagenD1.jpg" alt="Imagen D1-1" style="width: 90px;"></a>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD1-2.jpg" data-full="/images/img_varias/lacaja/gran/imagenD1-2.jpg"><img src="/images/img_varias/lacaja/imagenD1-2.jpg" alt="Imagen D1-2" style="width: 90px;"></a><br>
 <small>Imagen D1-1 &nbsp; Imagen D1-2</small>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagenD2.jpg" alt="Imagen D2-1" style="width: 90px;">
-<img src="/images/img_varias/lacaja/imagenD2-2.jpg" alt="Imagen D2-2" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD2.jpg" data-full="/images/img_varias/lacaja/gran/imagenD2.jpg"><img src="/images/img_varias/lacaja/imagenD2.jpg" alt="Imagen D2-1" style="width: 90px;"></a>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD2-2.jpg" data-full="/images/img_varias/lacaja/gran/imagenD2-2.jpg"><img src="/images/img_varias/lacaja/imagenD2-2.jpg" alt="Imagen D2-2" style="width: 90px;"></a><br>
 <small>Imagen D2-1 &nbsp; Imagen D2-2</small>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagenD3.jpg" alt="Imagen D3-1" style="width: 90px;">
-<img src="/images/img_varias/lacaja/imagenD3-2.jpg" alt="Imagen D3-2" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD3.jpg" data-full="/images/img_varias/lacaja/gran/imagenD3.jpg"><img src="/images/img_varias/lacaja/imagenD3.jpg" alt="Imagen D3-1" style="width: 90px;"></a>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagenD3-2.jpg" data-full="/images/img_varias/lacaja/gran/imagenD3-2.jpg"><img src="/images/img_varias/lacaja/imagenD3-2.jpg" alt="Imagen D3-2" style="width: 90px;"></a><br>
 <small>Imagen D3-1 &nbsp; Imagen D3-2</small>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen01.jpg" alt="Imagen 01" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen01.jpg" data-full="/images/img_varias/lacaja/gran/imagen01.jpg"><img src="/images/img_varias/lacaja/imagen01.jpg" alt="Imagen 01" style="width: 90px;"></a><br>
 <small>Imagen 01</small>
 </td></tr>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen02.jpg" alt="Imagen 02" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen02.jpg" data-full="/images/img_varias/lacaja/gran/imagen02.jpg"><img src="/images/img_varias/lacaja/imagen02.jpg" alt="Imagen 02" style="width: 90px;"></a><br>
 <small>Imagen 02</small>
 <video src="/images/img_varias/lacaja/Link-N2.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen03.jpg" alt="Imagen 03" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen03.jpg" data-full="/images/img_varias/lacaja/gran/imagen03.jpg"><img src="/images/img_varias/lacaja/imagen03.jpg" alt="Imagen 03" style="width: 90px;"></a><br>
 <small>Imagen 03</small>
 <video src="/images/img_varias/lacaja/Link-N3.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen04.jpg" alt="Imagen 04" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen04.jpg" data-full="/images/img_varias/lacaja/gran/imagen04.jpg"><img src="/images/img_varias/lacaja/imagen04.jpg" alt="Imagen 04" style="width: 90px;"></a><br>
 <small>Imagen 04</small>
 <video src="/images/img_varias/lacaja/Link-N4.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen05.jpg" alt="Imagen 05" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen05.jpg" data-full="/images/img_varias/lacaja/gran/imagen05.jpg"><img src="/images/img_varias/lacaja/imagen05.jpg" alt="Imagen 05" style="width: 90px;"></a><br>
 <small>Imagen 05</small>
 <video src="/images/img_varias/lacaja/Link-N5.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen06.jpg" alt="Imagen 06" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen06.jpg" data-full="/images/img_varias/lacaja/gran/imagen06.jpg"><img src="/images/img_varias/lacaja/imagen06.jpg" alt="Imagen 06" style="width: 90px;"></a><br>
 <small>Imagen 06</small>
 <video src="/images/img_varias/lacaja/Link-N6.mp4" controls width="180"></video>
 </td></tr>
 <tr><td style="text-align: center;">
-<img src="/images/img_varias/lacaja/imagen07.jpg" alt="Imagen 07" style="width: 90px;"><br>
+<a class="lacaja__foto" href="/images/img_varias/lacaja/gran/imagen07.jpg" data-full="/images/img_varias/lacaja/gran/imagen07.jpg"><img src="/images/img_varias/lacaja/imagen07.jpg" alt="Imagen 07" style="width: 90px;"></a><br>
 <small>Imagen 07</small>
 <video src="/images/img_varias/lacaja/Link-N7.mp4" controls width="180"></video>
 </td></tr>
@@ -139,3 +139,26 @@ La palanca presenta otras dos posiciones: al medio, que quita la directa porque 
 ## Nota final
 
 Este art√≠culo pertenece al Primer Club del Ford T de Argentina.
+
+<div id="lacaja-overlay" style="display:none;position:fixed;inset:0;z-index:2000;align-items:center;justify-content:center;background:rgba(0,0,0,.85);cursor:pointer;padding:14px;">
+<img id="lacaja-overlay-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;">
+</div>
+<script>
+(function () {
+  var overlay = document.getElementById('lacaja-overlay');
+  if (!overlay) return;
+  var img = document.getElementById('lacaja-overlay-img');
+  var links = document.querySelectorAll('.lacaja__foto');
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      img.src = a.getAttribute('data-full');
+      overlay.style.display = 'flex';
+    });
+  });
+  overlay.addEventListener('click', function () {
+    overlay.style.display = 'none';
+    img.src = '';
+  });
+})();
+</script>
