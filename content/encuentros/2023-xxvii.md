@@ -8,6 +8,17 @@ motivo: "Ford T entre historias y sabores de Caroya"
 categories: ["Encuentros"]
 url: "/encuentros/2023-xxvii/"
 pager: false
+galeria:
+  - {thumb: "/images/encuentros/2023/thumb/foto-01.jpg", full: "/images/encuentros/2023/foto-01.jpg"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-02.jpg", full: "/images/encuentros/2023/foto-02.jpg"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-03.jpg", full: "/images/encuentros/2023/foto-03.jpg"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-04.png", full: "/images/encuentros/2023/foto-04.png"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-05.png", full: "/images/encuentros/2023/foto-05.png"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-06.png", full: "/images/encuentros/2023/foto-06.png"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-07.jpg", full: "/images/encuentros/2023/foto-07.jpg"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-08.jpg", full: "/images/encuentros/2023/foto-08.jpg"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-09.jpg", full: "/images/encuentros/2023/foto-09.jpg"}
+  - {thumb: "/images/encuentros/2023/thumb/foto-10.jpg", full: "/images/encuentros/2023/foto-10.jpg"}
 programa: |
   Lema: *"Ford T entre historias y sabores de Caroya"*. Se solicitó la participación con indumentaria de época durante todo el evento.
 
