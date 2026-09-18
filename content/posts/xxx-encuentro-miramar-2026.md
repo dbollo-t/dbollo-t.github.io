@@ -28,61 +28,11 @@ localidad.
 
 ## Inscripción
 
-La inscripción requiere un anticipo de **$80.000 por participante** y
-completar este **[formulario de inscripción](https://docs.google.com/forms/d/e/1FAIpQLSdqWTERxJoZ3u1KkhRXiakFyzTjftLn70vEMsYu8vwLlW9zFQ/viewform?usp=header)**
-antes del **15 de setiembre**, fecha en la que se comunicará a los
-restaurantes la cifra definitiva de asistentes.
-
-El costo de inscripción por persona (incluye comidas y actividades del
-Encuentro) es el siguiente:
-
-| Concepto (por persona) | 3 días (jue-sáb) | 2 días (vie-sáb) |
-|---|---|---|
-| Socios con cuota al día | $155.000 | $130.000 |
-| Acompañantes / no socios | $220.000 | $190.000 |
-| Menores hasta 12 años | $18.000 | $13.000 |
-
-Quienes solo puedan asistir un día (viernes o sábado, con almuerzo y
-merienda incluidos): $80.000 por persona.
+La inscripción al Encuentro ya se encuentra cerrada.
 
 ## Programa
 
-*Versión preliminar, sin horarios definitivos — sujeta a confirmación.*
-
-**Jueves 1 de octubre**
-
-- Recepción en el Hotel Miramar. Los tractores y trailers quedan en el corralón municipal.
-- Feria de Repuestos.
-- Participación en las fiestas patronales de la localidad.
-- Charla técnica de Alfredo De Lorenzo: *"La IA nunca podría haber diseñado al Ford Modelo T"*.
-- Cena en el restaurant Los Amigos.
-
-**Viernes 2 de octubre**
-
-- Reunión en la playa Copacabana para la foto grupal.
-- Traslado a Balnearia por caminos de tierra.
-- Exposición estática y almuerzo en el Club Sportivo Balnearia.
-- Por ruta provincial 17 hasta el Balneario El Puente, en Marull.
-- Recepción en la Municipalidad de Marull, exposición estática y merienda.
-- Regreso a Miramar de Ansenuza por ruta provincial 17 y caminos de tierra aledaños.
-- Exposición estática.
-- Cena en el restaurant Renacer Petit.
-
-**Sábado 3 de octubre**
-
-- Reunión en la playa Copacabana para el bautismo de los "guachitos".
-- Paseo a niños y/o ancianos de la localidad.
-- Recorrido por la costanera hacia el Hotel Viena.
-- Almuerzo en el Restaurant de campo Aurelio.
-- Visita al Centro de Interpretación Bahía de Ansenuza.
-- Localidad de La Para: exposición estática y merienda.
-- Regreso a Miramar de Ansenuza para la foto del atardecer en la laguna.
-- Cena de Gala en el restaurant El Galpón.
-
-**Domingo 4 de octubre**
-
-- Desayuno y despedida.
-
+*El programa en su versión actualizada se encuentra [aquí](https://docs.google.com/document/d/1thB0yuJX-4pX3jeLj9tXod_tjnvwPDcwt7d_FhXkeJg/edit?usp=sharing)
 Como en cada edición, la ceremonia de bautismo —sello distintivo del
 Club— será uno de los momentos centrales: cada Ford T que se incorpora a
 la comunidad recibe allí su nombre oficial y su Documento Nacional de
