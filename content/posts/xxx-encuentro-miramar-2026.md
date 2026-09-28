@@ -26,14 +26,10 @@ esta nota.
 Este año, además, el Encuentro coincide con las fiestas patronales de la
 localidad.
 
-## Inscripción
-
-La inscripción al Encuentro ya se encuentra cerrada.
-
 ## Programa
 
-*El programa en su versión actualizada se encuentra 
-## [aquí](https://docs.google.com/document/d/1thB0yuJX-4pX3jeLj9tXod_tjnvwPDcwt7d_FhXkeJg/edit?usp=sharing)
+{{< programa-xxx >}}
+
 Como en cada edición, la ceremonia de bautismo —sello distintivo del
 Club— será uno de los momentos centrales: cada Ford T que se incorpora a
 la comunidad recibe allí su nombre oficial y su Documento Nacional de
