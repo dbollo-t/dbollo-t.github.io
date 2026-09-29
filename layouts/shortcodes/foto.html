@@ -1,0 +1,8 @@
+{{- $ancho := .Get "ancho" | default "420px" -}}
+{{- $link := .Get "link" -}}
+<figure style="max-width:{{ $ancho }};margin:1.2em auto;text-align:center">
+{{- if $link }}<a href="{{ $link }}">{{ end -}}
+<img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy" style="width:100%;height:auto;display:block;border-radius:8px">
+{{- if $link }}</a>{{ end -}}
+{{- with .Get "caption" }}<figcaption style="font-size:.88em;color:#5b6775;margin-top:6px">{{ . }}</figcaption>{{ end }}
+</figure>
