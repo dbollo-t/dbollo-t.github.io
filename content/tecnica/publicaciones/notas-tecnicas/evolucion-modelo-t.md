@@ -1,7 +1,7 @@
 ---
-title: "Evolución del modelo T"
+title: "Evolución del Ford T año por año (1909–1927)"
 date: 2010-04-09
-description: "Cronología de los cambios del Ford T año por año, de 1909 a 1927. Por Daniel E. Bollo"
+description: "Guía año por año de los cambios del Ford T entre 1909 y 1927: qué cambió en motor, carrocería y detalles, útil para identificar el año de un auto."
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/evolucion-modelo-t/"
 pager: false

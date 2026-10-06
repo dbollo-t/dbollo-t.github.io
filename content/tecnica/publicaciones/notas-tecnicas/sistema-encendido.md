@@ -1,7 +1,7 @@
 ---
-title: "El sistema de encendido y sincronización de la chispa del Ford T"
+title: "Ajuste del encendido del Ford T: magneto y batería"
 date: 2012-01-01
-description: "Cómo funciona el sistema de encendido por magneto del Ford T — traducción de Ron Patterson y Steve Coniff"
+description: "Cómo funcionan el distribuidor, el magneto y la bobina del Ford T, y cómo sincronizar el encendido a batería o a magneto, paso a paso."
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/sistema-encendido/"
 pager: false
