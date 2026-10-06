@@ -8,7 +8,7 @@ theme = "mainroad"
   disableJS = true
 
 [params]
-  description = "Primer Club del Ford T de Argentina"
+  description = "Primer Club del Ford T de Argentina: ajuste, restauración, historia, y comunidad del Fordt / Model T desde 1996."
   copyright = "Club del Ford T de Argentina"
   opengraph = true
   readmore = true
