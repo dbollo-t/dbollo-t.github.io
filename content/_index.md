@@ -12,5 +12,3 @@ fijado:
 
 Bienvenidos al sitio del **Primer Club del Ford T de Argentina**, 
 una comunidad de apasionados por el Ford T desde hace más de 30 años.
-
-{{< foto src="/images/posts/xxx-encuentro-miramar.jpg" alt="Ford T reunidos frente al antiguo Gran Hotel Viena, sobre la laguna Mar Chiquita (Encuentro de 2012)" caption="Ford T reunidos frente al antiguo Gran Hotel Viena, sobre la laguna Mar Chiquita (Encuentro de 2012)" link="/posts/xxx-encuentro-miramar-2026/" >}}

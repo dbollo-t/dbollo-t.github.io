@@ -13,3 +13,5 @@ Finalizó el XXX Encuentro del Primer Club del Ford T de Argentina.
 Fueron días para volver a disfrutar de nuestros Ford T, de los paisajes de esta hermosa región y, fundamentalmente, del encuentro entre amigos.
 
 [Leer más →](/encuentros/2026-xxx/)
+
+<!--more-->
