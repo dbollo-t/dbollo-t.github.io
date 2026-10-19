@@ -1,7 +1,7 @@
 ---
 title: "Conocé a Celeste"
 date: 2026-10-19
-url: "/conoce-a-celeste/"
+url: "/celeste/"
 description: "Quién es Celeste, la asistente virtual del Primer Club del Ford T de Argentina, y en qué te puede ayudar."
 categories: ["El Club"]
 pager: false
