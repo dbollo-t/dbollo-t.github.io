@@ -1,0 +1,21 @@
+{{- /*
+  Índice JSON del sitio (ver layouts/index.json).
+
+  Recorre un directorio de forma recursiva y anota en un Scratch la ruta de cada
+  archivo .md que encuentra (se omiten los _index.md), bajo la clave "archivos".
+  Sirve para llegar a las páginas que Hugo oculta de las colecciones normales
+  (build.list: never / local), que no aparecen en site.AllPages ni en
+  site.RegularPages.
+
+  Contexto: dict con "dir" (por ejemplo, "content") y "acum" (un newScratch).
+*/ -}}
+{{- $dir := .dir -}}
+{{- $acum := .acum -}}
+{{- range os.ReadDir $dir -}}
+  {{- $ruta := printf "%s/%s" $dir .Name -}}
+  {{- if .IsDir -}}
+    {{- partial "indice-json/archivos.html" (dict "dir" $ruta "acum" $acum) -}}
+  {{- else if and (strings.HasSuffix .Name ".md") (ne .Name "_index.md") -}}
+    {{- $acum.Add "archivos" (slice $ruta) -}}
+  {{- end -}}
+{{- end -}}

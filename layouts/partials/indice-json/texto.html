@@ -1,0 +1,28 @@
+{{- /*
+  Índice JSON del sitio (ver layouts/index.json).
+
+  Convierte un fragmento HTML en texto plano legible, sin código ni elementos
+  de interfaz. Contexto: el HTML (string).
+
+  Quita: comentarios, <script>, <style>, <noscript>, botones, listas
+  desplegables, áreas de texto y la botonera de páginas de los visores de
+  manuales (nav.pub-index). Conserva los saltos de párrafo, de lista y de
+  fila de tabla.
+*/ -}}
+{{- $h := . | string -}}
+{{- $h = replaceRE `(?is)<!--.*?-->` " " $h -}}
+{{- $h = replaceRE `(?is)<script\b.*?</script>` " " $h -}}
+{{- $h = replaceRE `(?is)<style\b.*?</style>` " " $h -}}
+{{- $h = replaceRE `(?is)<noscript\b.*?</noscript>` " " $h -}}
+{{- $h = replaceRE `(?is)<nav\b[^>]*pub-index.*?</nav>` " " $h -}}
+{{- $h = replaceRE `(?is)<button\b.*?</button>` " " $h -}}
+{{- $h = replaceRE `(?is)<select\b.*?</select>` " " $h -}}
+{{- $h = replaceRE `(?is)<textarea\b.*?</textarea>` " " $h -}}
+{{- $h = replaceRE `(?i)<br\s*/?>` "\n" $h -}}
+{{- $h = replaceRE `(?i)</(?:p|div|li|h[1-6]|tr|blockquote|figcaption|figure|section|article|ul|ol|table|pre|dd|dt|header|footer|summary|details)>` "\n" $h -}}
+{{- $h = replaceRE `(?i)</t[dh]>` " | " $h -}}
+{{- $h = $h | plainify | htmlUnescape -}}
+{{- $h = replaceRE `[\x{00a0}\t\r\f\v ]+` " " $h -}}
+{{- $h = replaceRE ` ?\n ?` "\n" $h -}}
+{{- $h = replaceRE `\n{3,}` "\n\n" $h -}}
+{{- return (strings.Trim $h " \n\t\r") -}}
