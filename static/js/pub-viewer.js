@@ -59,14 +59,30 @@ function pubEnsureLightbox() {
   document.body.appendChild(lb);
   function hide() {
     lb.classList.remove('is-open', 'is-zoomed');
+    img.style.width = '';
     document.body.style.overflow = '';
   }
   close.addEventListener('click', hide);
   lb.addEventListener('click', function (e) {
     if (e.target === img) {
-      lb.classList.toggle('is-zoomed');
-      lb.scrollTop = 0;
-      lb.scrollLeft = 0;
+      // Zoom real: al doble del tamaño en que se ve (o al tamaño natural si es
+      // mayor), centrado en el punto donde se hizo clic. Antes pasaba al tamaño
+      // natural de la imagen (1024 px), que en pantallas grandes es el mismo
+      // tamaño con que ya se veía: parecía que la lupa no hacía nada.
+      if (!lb.classList.contains('is-zoomed')) {
+        var r = img.getBoundingClientRect();
+        var fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height;
+        var ancho = Math.max(img.naturalWidth || 0, r.width * 2);
+        lb.classList.add('is-zoomed');
+        img.style.width = ancho + 'px';
+        lb.scrollLeft = Math.max(0, ancho * fx - lb.clientWidth / 2);
+        lb.scrollTop = Math.max(0, img.offsetHeight * fy - lb.clientHeight / 2);
+      } else {
+        lb.classList.remove('is-zoomed');
+        img.style.width = '';
+        lb.scrollTop = 0;
+        lb.scrollLeft = 0;
+      }
     } else {
       hide();
     }
@@ -81,6 +97,7 @@ function pubOpenLightbox(src) {
   var lb = pubEnsureLightbox();
   document.getElementById('pub-lightbox-img').src = src;
   lb.classList.remove('is-zoomed');
+  document.getElementById('pub-lightbox-img').style.width = '';
   lb.classList.add('is-open');
   lb.scrollTop = 0;
   lb.scrollLeft = 0;
@@ -137,12 +154,25 @@ function pubPrev(prefix) {
         pubOpenLightbox(pageImg ? pageImg.src : link.href);
       });
     }
-    pubShowIndex(prefix, 0);
+    pubShowIndex(prefix, pubIndexFromHash(prefix));
+  }
+  // Enlace directo a una vista: .../manual/#manserv=150 abre esa vista.
+  // Lo usa el buscador del Manual de Servicio (y Celeste, en sus enlaces).
+  function pubIndexFromHash(prefix) {
+    var m = location.hash.match(new RegExp('[#&]' + prefix + '=(\\d+)'));
+    return m ? parseInt(m[1], 10) : 0;
   }
   function initAll() {
     var navs = document.querySelectorAll('nav.pub-index[id^="pub-index-"]');
     for (var i = 0; i < navs.length; i++) { build(navs[i]); }
   }
+  window.addEventListener('hashchange', function () {
+    var navs = document.querySelectorAll('nav.pub-index[id^="pub-index-"]');
+    for (var i = 0; i < navs.length; i++) {
+      var prefix = navs[i].id.replace('pub-index-', '');
+      if (location.hash.indexOf(prefix + '=') !== -1) { pubShowIndex(prefix, pubIndexFromHash(prefix)); }
+    }
+  });
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initAll);
   } else {

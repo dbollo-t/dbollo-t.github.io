@@ -168,6 +168,7 @@
 }
 
 .pub-lightbox.is-zoomed img {
+	flex: none;
 	max-width: none;
 	max-height: none;
 	width: auto;
@@ -657,3 +658,43 @@
 	color: #666;
 	font-style: italic;
 }
+
+/* ---- Buscador del Manual de Servicio ---- */
+.manual-buscador {
+	border: 1px solid #d7dde6;
+	border-radius: 6px;
+	padding: 1rem 1.2rem;
+	margin: 1.5rem 0;
+	background: #f7f9fc;
+}
+.manual-buscador h3 { margin-top: 0; }
+.manual-buscador form { display: flex; gap: .5rem; flex-wrap: wrap; }
+.manual-buscador input[type="search"] {
+	flex: 1 1 240px;
+	min-width: 0;
+	padding: .55rem .7rem;
+	font-size: 1rem;
+	border: 1px solid #b8c2d1;
+	border-radius: 4px;
+}
+.manual-buscador button {
+	background: #1a3c6e; color: #fff; border: 0; border-radius: 4px;
+	padding: .55rem 1.2rem; font-size: 1rem; cursor: pointer;
+}
+.manual-buscador__estado { margin: .8rem 0 .4rem; color: #555; font-size: .95rem; }
+.manual-buscador__resultados { padding-left: 1.2rem; margin: 0; }
+.manual-buscador__item { margin-bottom: 1.1rem; }
+.manual-buscador__ubic { display: inline-block; font-weight: bold; color: #1a3c6e; }
+a.manual-buscador__ubic { text-decoration: none; border-bottom: 1px solid #9fb3cf; }
+a.manual-buscador__ubic:hover { border-bottom-color: #1a3c6e; }
+.manual-buscador__cap { font-size: .85rem; color: #666; font-style: italic; }
+.manual-buscador__frag { margin: .3rem 0; line-height: 1.45; }
+.manual-buscador__frag mark { background: #ffe58a; padding: 0 1px; }
+.manual-buscador__mas { margin: .2rem 0 .8rem; }
+.manual-buscador .manual-buscador__mas button {
+	background: #fff; color: #1a3c6e; border: 1px solid #1a3c6e;
+	padding: .4rem 1rem; font-size: .95rem;
+}
+.manual-buscador .manual-buscador__mas button[hidden] { display: none; }
+hr.manual-separador { border: 0; border-top: 1px solid #c9d1dd; margin: 1.8rem 0; }
+.manual-buscador__aviso { font-size: .8rem; color: #777; font-style: italic; margin-bottom: 0; }
