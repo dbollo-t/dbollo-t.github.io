@@ -1,0 +1,132 @@
+{{- /*
+  Índice JSON del sitio (ver layouts/index.json).
+
+  Arma la entrada del índice para una página. Contexto: dict con la clave "page".
+  Devuelve un dict con dos claves:
+    - "razon":   texto no vacío si la página NO debe ir al índice (motivo de la exclusión).
+    - "entrada": dict con los datos de la página (solo cuando no se excluye).
+
+  El texto se arma como lo muestra el sitio: el cuerpo (.Content) más los campos
+  del encabezado que las plantillas de "encuentros" y "actividades" imprimen
+  (programa, participantes, inscriptos y pies de foto de la galería).
+*/ -}}
+{{- $p := .page -}}
+{{- $cfg := site.Params.indiceJSON | default (dict) -}}
+{{- $build := $p.Params.build | default (dict) -}}
+{{- $smap := $p.Params.sitemap | default (dict) -}}
+{{- $raw := $p.RawContent -}}
+{{- $esVisor := or (strings.Contains $raw "pubPages_") (strings.Contains $raw "pub-viewer") -}}
+
+{{- /* 1. Exclusiones por decisión del sitio o del autor */ -}}
+{{- $razon := "" -}}
+{{- if eq ($build.render | default "always") "never" -}}
+  {{- $razon = "no_se_publica" -}}
+{{- else if $smap.disable -}}
+  {{- $razon = "excluida_del_sitemap" -}}
+{{- else if $p.Params.excluir_indice -}}
+  {{- $razon = "excluida_por_el_autor" -}}
+{{- else if findRE `(?i)http-equiv=["']?refresh` $raw -}}
+  {{- $razon = "redireccion" -}}
+{{- end -}}
+
+{{- /* 2. HTML completo de lo que la página muestra */ -}}
+{{- $html := $p.Content | string -}}
+{{- $incluirParticipantes := true -}}
+{{- if isset $cfg "incluirparticipantes" -}}{{- $incluirParticipantes = index $cfg "incluirparticipantes" -}}{{- end -}}
+
+{{- if in (slice "encuentros" "actividades") $p.Section -}}
+  {{- with $p.Params.programa -}}
+    {{- $html = printf "%s\n<h2>%s</h2>\n%s" $html ($p.Params.programa_titulo | default "Programa" | htmlEscape) (. | markdownify | string) -}}
+  {{- end -}}
+  {{- if $incluirParticipantes -}}
+    {{- with $p.Params.participantes -}}
+      {{- $html = printf "%s\n<h2>Participantes</h2>\n%s" $html (. | markdownify | string) -}}
+    {{- end -}}
+    {{- with $p.Params.inscriptos -}}
+      {{- $html = printf "%s\n<h2>Inscriptos</h2>\n%s" $html (. | markdownify | string) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $p.Params.galeria -}}
+    {{- $pies := slice -}}
+    {{- range . -}}{{- with .pie -}}{{- $pies = $pies | append (. | htmlEscape) -}}{{- end -}}{{- end -}}
+    {{- if $pies -}}
+      {{- $html = printf "%s\n<h2>Pies de foto</h2>\n<ul><li>%s</li></ul>" $html (delimit $pies "</li><li>") -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if eq $p.Kind "section" -}}
+  {{- with $p.Params.enlaces -}}
+    {{- $items := slice -}}
+    {{- range . -}}
+      {{- $linea := .titulo | default "" | htmlEscape -}}
+      {{- with .descripcion -}}{{- $linea = printf "%s: %s" $linea (. | htmlEscape) -}}{{- end -}}
+      {{- with .url -}}{{- $linea = printf "%s (%s)" $linea (. | htmlEscape) -}}{{- end -}}
+      {{- $items = $items | append $linea -}}
+    {{- end -}}
+    {{- $html = printf "%s\n<h2>Enlaces</h2>\n<ul><li>%s</li></ul>" $html (delimit $items "</li><li>") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $texto := partial "indice-json/texto.html" $html -}}
+
+{{- /* 3. Documentos y elementos cuyo texto no se puede recuperar */ -}}
+{{- $pdfs := slice -}}
+{{- range findRESubmatch `(?i)(?:href|src|data)=["']([^"']+?\.pdf)(?:[#?][^"']*)?["']` $html -}}
+  {{- $u := replace (index . 1 | htmlUnescape) " " "%20" -}}
+  {{- if not (hasPrefix $u "http") -}}{{- $u = $u | absURL -}}{{- end -}}
+  {{- $pdfs = $pdfs | append $u -}}
+{{- end -}}
+{{- $pdfs = $pdfs | uniq -}}
+{{- $tieneIframe := gt (len (findRE `(?i)<iframe\b` $html)) 0 -}}
+
+{{- $lim := slice -}}
+{{- if $esVisor }}{{ $lim = $lim | append "visor_de_imagenes" }}{{ end -}}
+{{- if $pdfs }}{{ $lim = $lim | append "pdf_enlazado_sin_texto" }}{{ end -}}
+{{- if $tieneIframe }}{{ $lim = $lim | append "iframe_externo_sin_texto" }}{{ end -}}
+
+{{- /* 4. Páginas vacías */ -}}
+{{- if and (not $razon) (not $texto) (not $esVisor) (not $pdfs) (not $tieneIframe) -}}
+  {{- if eq $p.Kind "page" -}}{{- $razon = "sin_contenido" -}}{{- else -}}{{- $razon = "listado_sin_texto_propio" -}}{{- end -}}
+{{- end -}}
+
+{{- /* 5. Entrada */ -}}
+{{- $e := newScratch -}}
+{{- if not $razon -}}
+  {{- $sec := "inicio" -}}
+  {{- $secTitulo := "Inicio" -}}
+  {{- with $p.FirstSection -}}
+    {{- if not .IsHome -}}{{- $sec = .Section -}}{{- $secTitulo = .Title -}}{{- end -}}
+  {{- end -}}
+  {{- $jer := slice -}}
+  {{- range $p.Ancestors.Reverse -}}{{- if not .IsHome -}}{{- $jer = $jer | append .Title -}}{{- end -}}{{- end -}}
+  {{- $tipo := "pagina" -}}
+  {{- if $p.IsHome -}}{{- $tipo = "inicio" -}}{{- else if eq $p.Kind "section" -}}{{- $tipo = "seccion" -}}{{- end -}}
+
+  {{- $e.SetInMap "e" "titulo" $p.Title -}}
+  {{- $e.SetInMap "e" "url" $p.Permalink -}}
+  {{- $e.SetInMap "e" "tipo" $tipo -}}
+  {{- $e.SetInMap "e" "seccion" $sec -}}
+  {{- $e.SetInMap "e" "seccion_titulo" $secTitulo -}}
+  {{- $e.SetInMap "e" "jerarquia" $jer -}}
+  {{- $e.SetInMap "e" "categorias" ($p.Params.categories | default slice) -}}
+  {{- if not $p.Date.IsZero -}}{{- $e.SetInMap "e" "fecha_publicacion" ($p.Date.Format "2006-01-02") -}}{{- end -}}
+  {{- if not $p.Lastmod.IsZero -}}{{- $e.SetInMap "e" "fecha_modificacion" ($p.Lastmod.Format "2006-01-02") -}}{{- end -}}
+  {{- $e.SetInMap "e" "descripcion" ($p.Description | default "") -}}
+  {{- $e.SetInMap "e" "texto" $texto -}}
+  {{- $e.SetInMap "e" "longitud_texto" (strings.RuneCount $texto) -}}
+  {{- $e.SetInMap "e" "texto_disponible" (and (ne $texto "") (not $esVisor)) -}}
+  {{- $e.SetInMap "e" "limitaciones" $lim -}}
+  {{- $e.SetInMap "e" "enlaces_pdf" $pdfs -}}
+  {{- if $esVisor -}}
+    {{- $e.SetInMap "e" "paginas_imagen" (len (findRE `(?i)'[^'\s]+\.(?:jpe?g|png|webp|gif)'` $raw)) -}}
+  {{- end -}}
+
+  {{- $datos := newScratch -}}
+  {{- with $p.Params.lugar }}{{ $datos.SetInMap "d" "lugar" . }}{{ end -}}
+  {{- with $p.Params.anio }}{{ $datos.SetInMap "d" "anio" . }}{{ end -}}
+  {{- with $p.Params.numero }}{{ $datos.SetInMap "d" "numero" . }}{{ end -}}
+  {{- with $p.Params.motivo }}{{ $datos.SetInMap "d" "motivo" . }}{{ end -}}
+  {{- with $datos.Get "d" }}{{ $e.SetInMap "e" "datos" . }}{{ end -}}
+{{- end -}}
+{{- return (dict "razon" $razon "entrada" ($e.Get "e")) -}}

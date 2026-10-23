@@ -1,0 +1,99 @@
+{{- /*
+  ÍNDICE JSON DEL SITIO  →  se publica en /index.json
+
+  Pensado para consultas automáticas (por ejemplo, la asistente Celeste desde n8n),
+  sin depender de buscadores. Se genera en cada build junto con el resto del sitio.
+
+  Estructura:
+    esquema               número de versión del formato (1)
+    sitio                 título, URL base y descripción
+    generado              fecha y hora del build (UTC)
+    total_paginas         cantidad de páginas incluidas
+    resumen               con_texto / sin_texto y páginas excluidas por motivo
+    paginas[]             una entrada por página:
+        titulo, url (pública exacta), tipo (inicio | seccion | pagina),
+        seccion y seccion_titulo (sección de primer nivel), jerarquia[],
+        categorias[], fecha_publicacion, fecha_modificacion (si existen),
+        descripcion, texto, longitud_texto, texto_disponible,
+        limitaciones[], enlaces_pdf[], paginas_imagen (solo visores),
+        datos (lugar, anio, numero, motivo: solo encuentros y actividades)
+    documentos_sin_texto[] visores de manuales en imágenes y PDF enlazados, cuyo
+                          texto no puede recuperarse de las páginas
+
+  Qué NO entra: borradores (Hugo no los construye), páginas excluidas del sitemap,
+  redirecciones, páginas con build.render: never, páginas con
+  "excluir_indice: true" en su encabezado, listados sin texto propio (categorías,
+  etiquetas, secciones que solo enumeran páginas) y páginas sin contenido.
+
+  Participantes: las listas de participantes de cada encuentro se incluyen porque
+  ya están publicadas en el sitio. Para quitarlas, poner en hugo.toml:
+    [params.indiceJSON]
+      incluirParticipantes = false
+
+  fecha_modificacion: es el "lastmod" del encabezado si existe; si no, la fecha de
+  publicación. El workflow clona el repositorio de forma superficial, por lo que
+  no se puede usar la fecha de Git.
+*/ -}}
+{{- $sc := newScratch -}}
+
+{{- /* Candidatas: lo que Hugo recorre normalmente... */ -}}
+{{- $candidatas := slice -}}
+{{- range site.AllPages -}}
+  {{- if in (slice "page" "section" "home") .Kind -}}{{- $candidatas = $candidatas | append . -}}{{- end -}}
+{{- end -}}
+
+{{- /* ...más las páginas que Hugo oculta de las colecciones (build.list: never / local) */ -}}
+{{- $acum := newScratch -}}
+{{- partial "indice-json/archivos.html" (dict "dir" "content" "acum" $acum) -}}
+{{- range $acum.Get "archivos" | default slice -}}
+  {{- $ruta := . | strings.TrimPrefix "content/" | strings.TrimSuffix ".md" | strings.TrimSuffix "/index" -}}
+  {{- with site.GetPage (printf "/%s" $ruta) -}}
+    {{- if eq .Kind "page" -}}{{- $candidatas = $candidatas | append . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Se evitan duplicados por URL pública */ -}}
+{{- range $candidatas -}}
+  {{- $url := .Permalink -}}
+  {{- if not (index ($sc.Get "vistas" | default (dict)) $url) -}}
+    {{- $sc.SetInMap "vistas" $url true -}}
+    {{- $r := partial "indice-json/entrada.html" (dict "page" .) -}}
+    {{- if $r.razon -}}
+      {{- $sc.SetInMap "excluidas" $r.razon (add 1 (index ($sc.Get "excluidas" | default (dict)) $r.razon | default 0)) -}}
+    {{- else -}}
+      {{- $sc.Add "entradas" (slice $r.entrada) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $entradas := sort ($sc.Get "entradas" | default slice) "url" -}}
+
+{{- /* Documentos cuyo texto no se puede recuperar */ -}}
+{{- $docs := slice -}}
+{{- range $entradas -}}
+  {{- if in .limitaciones "visor_de_imagenes" -}}
+    {{- $docs = $docs | append (dict "tipo" "visor_de_imagenes" "titulo" .titulo "url" .url "paginas_imagen" .paginas_imagen) -}}
+  {{- end -}}
+  {{- $origen := .url -}}
+  {{- range .enlaces_pdf -}}
+    {{- $pdf := . -}}
+    {{- $previas := index ($sc.Get "pdfs" | default (dict)) $pdf | default slice -}}
+    {{- $sc.SetInMap "pdfs" $pdf ($previas | append $origen) -}}
+  {{- end -}}
+  {{- if .texto_disponible -}}{{- $sc.Add "con_texto" 1 -}}{{- else -}}{{- $sc.Add "sin_texto" 1 -}}{{- end -}}
+{{- end -}}
+{{- $pdfs := $sc.Get "pdfs" | default (dict) -}}
+{{- range $u, $paginas := $pdfs -}}
+  {{- $docs = $docs | append (dict "tipo" "pdf" "url" $u "enlazado_desde" $paginas) -}}
+{{- end -}}
+
+{{- $salida := dict
+  "esquema" 1
+  "sitio" (dict "titulo" site.Title "url" site.BaseURL "descripcion" site.Params.description)
+  "generado" (now.UTC.Format "2006-01-02T15:04:05Z")
+  "total_paginas" (len $entradas)
+  "resumen" (dict "con_texto" ($sc.Get "con_texto" | default 0) "sin_texto" ($sc.Get "sin_texto" | default 0) "excluidas" ($sc.Get "excluidas" | default (dict)))
+  "paginas" $entradas
+  "documentos_sin_texto" $docs
+-}}
+{{- $salida | jsonify -}}
