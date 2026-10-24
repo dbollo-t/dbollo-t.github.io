@@ -696,5 +696,8 @@ a.manual-buscador__ubic:hover { border-bottom-color: #1a3c6e; }
 	padding: .4rem 1rem; font-size: .95rem;
 }
 .manual-buscador .manual-buscador__mas button[hidden] { display: none; }
+.manual-buscador__mas { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.2rem; }
+.manual-buscador__foro[hidden] { display: none; }
+.manual-buscador__foro { font-size: .95rem; }
 hr.manual-separador { border: 0; border-top: 1px solid #c9d1dd; margin: 1.8rem 0; }
 .manual-buscador__aviso { font-size: .8rem; color: #777; font-style: italic; margin-bottom: 0; }

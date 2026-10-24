@@ -13,6 +13,8 @@
 (function () {
   var DATOS = '/datos/manual-servicio.json';
   var SINONIMOS = '/datos/manual-sinonimos.json'; // diccionario editable, compartido con Celeste
+  var INGLES = '/datos/manual-ingles.json';       // glosario para buscar opiniones de otros usuarios (foro en inglés)
+  var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var MAX = 5;
 
@@ -125,10 +127,11 @@
       estado.textContent = 'Cargando el texto del manual…';
       // El diccionario de sinónimos es opcional: si no carga, se busca igual sin él.
       var sinon = fetch(SINONIMOS).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+      var ingl = fetch(INGLES).then(function (r) { return r.ok ? r.json() : {}; }).then(function (g) { glosario = g || {}; }).catch(function () {});
       cargando = Promise.all([fetch(DATOS).then(function (r) {
         if (!r.ok) { throw new Error('HTTP ' + r.status); }
         return r.json();
-      }), sinon]).then(function (todo) {
+      }), sinon, ingl]).then(function (todo) {
         var d = todo[0];
         d.sinonimos = todo[1] || {};
         datos = d;
@@ -156,6 +159,25 @@
     }
 
     var mas = caja.querySelector('.manual-buscador__mas button');
+    var foro = caja.querySelector('.manual-buscador__foro');
+    var glosario = {};
+    // Traduce la búsqueda al inglés del Model T con el glosario (primero frases de
+    // dos o tres palabras como "arbol de levas"; después palabra por palabra).
+    function enIngles(q) {
+      var w = sinTildes(q).split(/[^a-z0-9ñ]+/).filter(Boolean), out = [];
+      for (var i = 0; i < w.length; i++) {
+        var t3 = w.slice(i, i + 3).join(' '), t2 = w.slice(i, i + 2).join(' ');
+        var hit = glosario[t3] ? [t3, 3] : glosario[t2] ? [t2, 2] : glosario[w[i]] ? [w[i], 1] : null;
+        if (hit) { if (out.indexOf(glosario[hit[0]]) === -1) { out.push(glosario[hit[0]]); } i += hit[1] - 1; }
+      }
+      return out.join(' ');
+    }
+    function enlaceForo(q) {
+      if (!foro) { return; }
+      var en = enIngles(q);
+      foro.hidden = !en;
+      if (en) { foro.href = FORO + encodeURIComponent(en).replace(/%20/g, '+'); }
+    }
     // El enlace a Celeste lleva escrito el comienzo del mensaje y, si hubo una
     // búsqueda, cuál fue: así el registro de sugerencias sabe de qué se trata.
     var celeste = caja.querySelector('.manual-buscador__celeste');
@@ -200,6 +222,7 @@
       salida.innerHTML = '';
       actuales = null;
       if (mas) { mas.hidden = true; }
+      if (foro) { foro.hidden = true; }
       if (q.length < 3) { estado.textContent = 'Escribí al menos una palabra de 3 letras.'; return; }
       cargar().then(function () {
         // 1) Palabras y sinónimos. Cada palabra forma un grupo con sus sinónimos
@@ -293,6 +316,7 @@
           modo === 'sin' ? ('«' + faltan.map(function (x) { return x.w; }).join('», «') + '» no figura en el manual; resultados con el resto de la búsqueda. ') :
           'Ninguna página tiene todas las palabras; estas tienen alguna. ';
         estado.textContent = aviso + (res.length === 1 ? '1 página encontrada:' : (res.length + ' páginas encontradas, de la más a la menos relevante:'));
+        enlaceForo(q);
         mostrados = 0;
         actuales = { res: res, porId: porId, palabras: grupos, frases: frases };
         mostrarMas();

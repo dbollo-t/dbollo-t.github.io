@@ -18,7 +18,7 @@ summary: "El Manual de Servicio Ford completo en castellano, página por página
   </form>
   <p class="manual-buscador__estado" aria-live="polite"></p>
   <ol class="manual-buscador__resultados"></ol>
-  <p class="manual-buscador__mas"><button type="button" hidden>Ver más resultados</button></p>
+  <p class="manual-buscador__mas"><button type="button" hidden>Ver más resultados</button> <a class="manual-buscador__foro" href="#" target="_blank" rel="noopener" hidden title="Las opiniones están en inglés: tu navegador puede ofrecerte traducirlas">Existen más opiniones de otros usuarios del Modelo T (en inglés) &rarr;</a></p>
   <p class="manual-buscador__aviso">Este buscador es una ayuda: el texto se obtuvo por reconocimiento automático. Verificá cifras y medidas en la imagen de la página. ¿Encontraste un error o no hallaste lo que buscabas? Contáselo a <a class="manual-buscador__celeste" href="https://wa.me/5493515330212?text=Sugerencia%20para%20el%20buscador%20del%20Manual%3A%20" target="_blank" rel="noopener">Celeste por WhatsApp</a>.</p>
 </div>
 <script src="/js/minisearch.min.js"></script>

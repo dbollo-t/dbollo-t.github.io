@@ -1,6 +1,8 @@
 {
   "_instrucciones": "Diccionario de sinónimos del buscador del Manual de Servicio (web y Celeste). Cada línea: \"palabra que usa la gente\": [\"palabra o comienzo de palabra que usa el manual\", ...]. Todo en minúsculas y sin tildes. Alcanza con el comienzo de la palabra: \"apriet\" encuentra apriétense y apriétese. Después de editar, revisar que las comas y comillas queden bien.",
   "tapa": ["culata"],
+  "banda": ["cinta"],
+  "bandas": ["cintas"],
   "tren": ["eje"],
   "puente": ["eje"],
   "armadura": ["inducido"],
