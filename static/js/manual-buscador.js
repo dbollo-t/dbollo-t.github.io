@@ -51,6 +51,8 @@
   var NO_ACCION = { carter: 1, collar: 1, lugar: 1, motor: 1, par: 1 };
   function esAccion(w) {
     if (NO_ACCION[w]) { return false; }
+    // armar / armado / desarme ("armadura" sola es la del generador: no es acción)
+    if (/^(des)?arm(ar|ado|ada|ados|adas|e|en|ese|ense|ando|arse|arlo|arla)$/.test(w) || /^desarm/.test(w)) { return true; }
     for (var i = 0; i < ACCIONES.length; i++) { if (w.indexOf(ACCIONES[i]) === 0 && w.length - ACCIONES[i].length <= 6) { return true; } }
     return /(ando|iendo|ense|anse|arse|erse|irse|ese)$/.test(w) && w.length > 6 || /(ar|er|ir)$/.test(w) && w.length >= 6;
   }
@@ -69,7 +71,7 @@
 
   // Fragmento de ~280 caracteres en la zona donde aparecen juntas más palabras
   // de la búsqueda (o sus sinónimos), con resaltado.
-  function fragmento(texto, grupos) {
+  function fragmento(texto, grupos, frases) {
     var plano = sinTildes(texto);
     var todas = [];
     grupos.forEach(function (g) { g.forEach(function (r) { if (r.length >= 3) { todas.push(r); } }); });
@@ -82,6 +84,8 @@
         if (n > mejorN) { mejorN = n; mejor = pos; }
       }
     });
+    // Si está la pieza compuesta ("eje delantero"), el fragmento se centra ahí.
+    (frases || []).some(function (re) { var m = re.exec(plano); if (m) { mejor = m.index; return true; } return false; });
     var desde = Math.max(0, mejor - 80);
     var hasta = Math.min(texto.length, desde + 280);
     var html = escapar(texto.slice(desde, hasta));
@@ -169,7 +173,7 @@
         : '<span class="manual-buscador__ubic">' + ubic + '</span>';
       return '<li class="manual-buscador__item">' + linea +
         (it.cap ? '<div class="manual-buscador__cap">' + escapar(it.cap) + '</div>' : '') +
-        '<p class="manual-buscador__frag">' + fragmento(it.texto, palabras) + '</p></li>';
+        '<p class="manual-buscador__frag">' + fragmento(it.texto, palabras, actuales && actuales.frases) + '</p></li>';
     }
 
     // Muestra los resultados de a MAX: "Ver más resultados" agrega los siguientes.
@@ -217,8 +221,12 @@
           if (w === 'de' || w === 'del') { pendienteDe = items.length > 0; continue; }
           if (w === 'la' || w === 'las' || w === 'los' || w === 'el') { continue; }
           if (w.length < 3 || vacias[w]) { pendienteDe = false; continue; }
+          var prevItem = items.length ? items[items.length - 1] : null;
+          var juntoAnterior = prevItem && crudas[c - 1] === prevItem.w;
           items.push({ w: w, g: grupoDe(w), accion: esAccion(w) });
-          if (pendienteDe) { compuestos.push([items.length - 2, items.length - 1]); }
+          // "tapa de cilindros" (con "de") o "eje delantero" (dos piezas seguidas)
+          if (pendienteDe) { compuestos.push([items.length - 2, items.length - 1, 'de']); }
+          else if (juntoAnterior && !prevItem.accion && !esAccion(w)) { compuestos.push([items.length - 2, items.length - 1, 'junto']); }
           pendienteDe = false;
         }
         if (!items.length) { items.push({ w: sinTildes(q), g: [sinTildes(q)], accion: false }); }
@@ -233,8 +241,19 @@
           return { combineWith: modo, queries: lista.map(function (x) { return x.g.length === 1 ? x.g[0] : { combineWith: 'OR', queries: x.g }; }) };
         }
         var res = motor.search(consulta(sujetos, 'AND'));
-        var modo = 'todas';
-        if (!res.length) { res = motor.search(consulta(items, 'OR')); modo = 'alguna'; }
+        var modo = 'todas', faltan = [];
+        if (!res.length) {
+          // Alguna pieza no figura en todo el manual ("tren"): se la deja de lado y
+          // se buscan las demás, avisando. Recién si eso tampoco da, cualquier palabra.
+          faltan = sujetos.filter(function (x) { return !motor.search(consulta([x], 'AND')).length; });
+          var quedan = sujetos.filter(function (x) { return faltan.indexOf(x) === -1; });
+          if (faltan.length && quedan.length) {
+            res = motor.search(consulta(quedan, 'AND'));
+            if (res.length) { modo = 'sin'; sujetos = quedan; }
+          }
+          if (!res.length) { res = motor.search(consulta(sujetos, 'OR')); modo = 'alguna'; }
+          if (!res.length) { res = motor.search(consulta(items, 'OR')); modo = 'alguna'; }
+        }
         if (!res.length) {
           estado.textContent = 'No encontramos «' + q + '» en el manual. Probá con otra palabra (por ejemplo, el nombre de la pieza).';
           return;
@@ -243,13 +262,19 @@
         for (var i = 0; i < datos.items.length; i++) { porId[datos.items[i].id] = datos.items[i]; }
         function alternativa(g) { return '(?:' + g.map(function (x) { return x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')[a-z0-9ñ]*'; }
         var frases = compuestos.map(function (par) {
-          return new RegExp(alternativa(items[par[0]].g) + '\\s+(?:de|del)\\s+(?:(?:la|las|los|el)\\s+)?' + alternativa(items[par[1]].g));
+          // "junto" admite hasta dos palabras en el medio: "eje o puente trasero"
+          var medio = par[2] === 'de' ? '\\s+(?:de|del)\\s+(?:(?:la|las|los|el)\\s+)?' : '(?:\\s+\\S+){0,2}?\\s+';
+          return new RegExp(alternativa(items[par[0]].g) + medio + alternativa(items[par[1]].g));
         });
-        // 4) Puntaje: frase compuesta presente ×4 cada una; todos los sujetos cerca
+        // 4) Puntaje: frase compuesta presente ×4 (hasta ×6 si se repite); todos los sujetos cerca
         //    (a ~60 caracteres) ×2; alguna acción presente ×1,3.
         res.forEach(function (r) {
           var t = sinTildes(porId[r.id].texto);
-          frases.forEach(function (re) { if (re.test(t)) { r.score *= 4; } });
+          frases.forEach(function (re) {
+            // ×4 si la pieza compuesta aparece; un poco más si aparece varias veces (tope ×6)
+            var n = (t.match(new RegExp(re.source, 'g')) || []).length;
+            if (n) { r.score *= Math.min(6, 3 + n); }
+          });
           if (sujetos.length > 1) {
             var cerca = sujetos[0].g.some(function (r0) {
               var p0 = -1;
@@ -264,10 +289,12 @@
           if (acciones.some(function (x) { return x.g.some(function (y) { return t.indexOf(y) !== -1; }); })) { r.score *= 1.3; }
         });
         res.sort(function (a, b) { return b.score - a.score; });
-        var aviso = (modo === 'todas' ? '' : 'Ninguna página tiene todas las palabras; estas tienen alguna. ');
+        var aviso = modo === 'todas' ? '' :
+          modo === 'sin' ? ('«' + faltan.map(function (x) { return x.w; }).join('», «') + '» no figura en el manual; resultados con el resto de la búsqueda. ') :
+          'Ninguna página tiene todas las palabras; estas tienen alguna. ';
         estado.textContent = aviso + (res.length === 1 ? '1 página encontrada:' : (res.length + ' páginas encontradas, de la más a la menos relevante:'));
         mostrados = 0;
-        actuales = { res: res, porId: porId, palabras: grupos };
+        actuales = { res: res, porId: porId, palabras: grupos, frases: frases };
         mostrarMas();
         try { history.replaceState(null, '', '#buscar=' + encodeURIComponent(q)); } catch (e) { /* no crítico */ }
       });

@@ -5,6 +5,7 @@ description: "Manual de Servicio Ford T en castellano, herramienta imprescindibl
 categories: ["Técnica"]
 url: "/tecnica/restauracion/manual-de-servicio/"
 pager: false
+summary: "El Manual de Servicio Ford completo en castellano, página por página, con un buscador para encontrar cualquier tema por palabra."
 ---
 
 <!--more-->
