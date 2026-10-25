@@ -20,7 +20,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : (typeof self !== 'undefined' ? self : this), function () {
   'use strict';
 
-  var VERSION = '2026-10-24.1';
+  var VERSION = '2026-10-25.1';
   var SITIO = 'https://fordt.org.ar';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
@@ -93,9 +93,13 @@
     return (rango.desde > 0 ? '… ' : '') + texto.slice(rango.desde, rango.hasta) + (rango.hasta < texto.length ? ' …' : '');
   }
 
-  // Solo hilos del foro del MTFCA: el actual (phpBB3) y el archivo viejo (discus).
+  // Solo hilos concretos del foro del MTFCA: el actual (phpBB3, con número de
+  // tema t= o de mensaje p=) y el archivo viejo (discus/messages/<n>/<n>.html).
+  // Una URL de viewtopic.php sin número no es un hilo (corregido en 2026-10-25.1).
   function esHiloForo(url) {
-    return /^https?:\/\/(www\.)?mtfca\.com\/(phpBB3\/viewtopic\.php|discus\/messages\/)/i.test(String(url || ''));
+    var u = String(url || '');
+    return /^https?:\/\/(www\.)?mtfca\.com\/phpBB3\/viewtopic\.php\?(?:[^#]*&)?[tp]=\d+(?:[&#]|$)/i.test(u) ||
+      /^https?:\/\/(www\.)?mtfca\.com\/discus\/messages\/\d+\/\d+\.html(?:[?#]|$)/i.test(u);
   }
 
   function crear(opc) {
