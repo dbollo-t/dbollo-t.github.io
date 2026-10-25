@@ -22,6 +22,7 @@ summary: "El Manual de Servicio Ford completo en castellano, página por página
   <p class="manual-buscador__aviso">Este buscador es una ayuda: el texto se obtuvo por reconocimiento automático. Verificá cifras y medidas en la imagen de la página. ¿Encontraste un error o no hallaste lo que buscabas? Contáselo a <a class="manual-buscador__celeste" href="https://wa.me/5493515330212?text=Sugerencia%20para%20el%20buscador%20del%20Manual%3A%20" target="_blank" rel="noopener">Celeste por WhatsApp</a>.</p>
 </div>
 <script src="/js/minisearch.min.js"></script>
+<script src="/js/manual-motor.js"></script>
 <script src="/js/manual-buscador.js"></script>
 
 <hr class="manual-separador">
