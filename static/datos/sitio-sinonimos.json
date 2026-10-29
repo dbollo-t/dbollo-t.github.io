@@ -13,5 +13,7 @@
   "reunion": ["encuentro"],
   "reuniones": ["encuentros"],
   "fotos": ["fotos", "galeria"],
-  "cancion": ["himno", "cambalauto"]
+  "cancion": ["himno", "cambalauto"],
+  "himno": ["himno", "cambalauto"],
+  "cambalauto": ["cambalauto", "himno"]
 }
