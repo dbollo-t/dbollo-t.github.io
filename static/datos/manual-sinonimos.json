@@ -40,5 +40,14 @@
   "botadores": ["levantavalvulas"],
   "holgura": ["juego", "luz"],
   "huelgo": ["juego", "luz"],
-  "manguera": ["manguera", "tubo"]
+  "manguera": ["manguera", "tubo"],
+  "regular": ["ajuste", "ajustar", "ajustado"],
+  "zumbador": ["vibrador"],
+  "zumbadores": ["vibradores"],
+  "tester": ["ensayador", "ensay"],
+  "probador": ["ensayador", "ensay"],
+  "distribuidor": ["conmutador", "distribuidor"],
+  "alternador": ["magneto"],
+  "masa": ["masa", "tierra"],
+  "negativo": ["negativo", "tierra"]
 }

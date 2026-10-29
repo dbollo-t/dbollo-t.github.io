@@ -9,6 +9,7 @@
  *   var m = ManualMotor.crear({ datos, sinonimos, glosario, MiniSearch });
  *   m.buscar('ajuste tapa de cilindros', { max: 5, desde: 0 });
  *   m.foro('ajuste de bandas de freno');
+ *   m.tema('regular bobina');                 // con opc.temas (/datos/manual-temas.json)
  *   ManualMotor.esHiloForo(url);
  *
  * Si cambia una regla, subir VERSION: n8n la compara para saber que el motor cambió.
@@ -20,7 +21,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : (typeof self !== 'undefined' ? self : this), function () {
   'use strict';
 
-  var VERSION = '2026-10-25.1';
+  var VERSION = '2026-10-28.2';
   var SITIO = 'https://fordt.org.ar';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
@@ -68,6 +69,18 @@
 
   function escaparRegex(x) { return x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
+  // Busca r como COMIENZO de palabra (no en medio): así "regular" no encuentra
+  // "irregular" ni "irregularidad" (corregido en 2026-10-28.1).
+  function posPalabra(t, r, desde) {
+    var p = desde || 0;
+    while ((p = t.indexOf(r, p)) !== -1) {
+      if (p === 0 || !/[a-z0-9ñ]/.test(t.charAt(p - 1))) { return p; }
+      p++;
+    }
+    return -1;
+  }
+  function tienePalabra(t, r) { return posPalabra(t, r, 0) !== -1; }
+
   // Zona de ~280 caracteres donde aparecen juntas más palabras de la búsqueda
   // (o sus sinónimos). Si está la pieza compuesta ("eje delantero"), se centra ahí.
   function rangoFragmento(texto, grupos, frases) {
@@ -77,9 +90,9 @@
     var mejor = 0, mejorN = -1;
     todas.forEach(function (r) {
       var pos = -1;
-      while ((pos = plano.indexOf(r, pos + 1)) !== -1) {
+      while ((pos = posPalabra(plano, r, pos + 1)) !== -1) {
         var v = plano.slice(Math.max(0, pos - 60), pos + 200);
-        var n = grupos.filter(function (g) { return g.some(function (x) { return v.indexOf(x) !== -1; }); }).length;
+        var n = grupos.filter(function (g) { return g.some(function (x) { return tienePalabra(v, x); }); }).length;
         if (n > mejorN) { mejorN = n; mejor = pos; }
       }
     });
@@ -111,13 +124,21 @@
     var sin = opc.sinonimos || {};
     var glosario = opc.glosario || {};
 
+    var vocab = {};
+    datos.items.forEach(function (it) {
+      [it.texto, (it.idx || []).join(' '), it.cap || ''].join(' ').split(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/).forEach(function (w) {
+        var p = w && procesar(w); if (p) { vocab[p] = true; }
+      });
+    });
     var indice = new MS({
       fields: ['texto', 'idx', 'cap'],
       storeFields: ['id'],
       processTerm: procesar,
       searchOptions: {
         boost: { idx: 3, cap: 1.5 },
-        fuzzy: function (t) { return t.length >= 5 ? 1 : 0; },
+        // Tolerancia a errores de tipeo solo para palabras que NO están en el
+        // manual: "bobina" existe, así que no trae "bocina" (2026-10-28.1).
+        fuzzy: function (t) { return t.length >= 5 && !vocab[t] ? 1 : 0; },
         prefix: function (t) { return t.length >= 4; },
         processTerm: procesar
       }
@@ -194,15 +215,15 @@
         if (sujetos.length > 1) {
           var cerca = sujetos[0].g.some(function (r0) {
             var p0 = -1;
-            while ((p0 = t.indexOf(r0, p0 + 1)) !== -1) {
+            while ((p0 = posPalabra(t, r0, p0 + 1)) !== -1) {
               var v = t.slice(Math.max(0, p0 - 60), p0 + 60 + r0.length);
-              if (sujetos.every(function (x) { return x.g.some(function (y) { return v.indexOf(y) !== -1; }); })) { return true; }
+              if (sujetos.every(function (x) { return x.g.some(function (y) { return tienePalabra(v, y); }); })) { return true; }
             }
             return false;
           });
           if (cerca) { r.score *= 2; }
         }
-        if (acciones.some(function (x) { return x.g.some(function (y) { return t.indexOf(y) !== -1; }); })) { r.score *= 1.3; }
+        if (acciones.some(function (x) { return x.g.some(function (y) { return tienePalabra(t, y); }); })) { r.score *= 1.3; }
       });
       res.sort(function (a, b) { return b.score - a.score; });
       return {
@@ -252,8 +273,55 @@
       return { terminos: terminos, sinTraducir: sinTraducir, url: FORO + encodeURIComponent(terminos).replace(/%20/g, '+') };
     }
 
+    // ---- Índice de temas (2026-10-28.2) ----
+    // Un tema aparece si TODAS las palabras de la consulta (o sus sinónimos) están
+    // en su título o en sus frases. Se compara por comienzo de palabra (raíz).
+    var temasLista = (opc.temas && (opc.temas.temas || opc.temas)) || [];
+    var temasVoc = temasLista.map(function (t) {
+      var txt = sinTildes([t.tema].concat(t.frases || []).join(' '));
+      var ws = txt.split(/[^a-z0-9ñ]+/).filter(function (w) { return w.length >= 3 && !vacias[w]; }).map(raiz);
+      var frases = (t.frases || []).map(function (f) { return palabrasConsulta(f).join(' '); });
+      return { ws: ws, frases: frases, primera: palabrasConsulta(t.tema)[0] || '' };
+    });
+    function palabrasConsulta(q) {
+      return sinTildes(q).split(/[^a-z0-9ñ]+/).filter(function (w) { return w.length >= 3 && !vacias[w] && w !== 'del'; }).map(raiz);
+    }
+    function coincide(a, b) {
+      if (a === b) { return true; }
+      var c = Math.min(a.length, b.length);
+      return c >= 4 && (a.indexOf(b) === 0 || b.indexOf(a) === 0);
+    }
+    function tema(q, o) {
+      o = o || {};
+      var max = o.max || 2;
+      var pq = palabrasConsulta(q);
+      if (!pq.length) { return []; }
+      var conj = pq.join(' ');
+      var res = [];
+      temasVoc.forEach(function (v, k) {
+        var ok = pq.every(function (w) {
+          var alts = [w].concat((sin[w] || []).map(function (x) { return raiz(sinTildes(x)); }));
+          return alts.some(function (a) { return v.ws.some(function (b) { return coincide(a, b); }); });
+        });
+        if (!ok) { return; }
+        // Una sola palabra ("bobina", "aceite") es muy general: solo si es una de
+        // las frases del tema o la primera palabra de su título.
+        if (pq.length === 1 && v.frases.indexOf(conj) === -1 && !coincide(pq[0], v.primera)) { return; }
+        var puntos = pq.length;
+        if (v.frases.indexOf(conj) !== -1) { puntos += 10; }
+        else if (v.frases.some(function (f) { return f.indexOf(conj) !== -1; })) { puntos += 5; }
+        res.push({ k: k, puntos: puntos - v.ws.length / 1000 });
+      });
+      res.sort(function (a, b) { return b.puntos - a.puntos; });
+      return res.slice(0, max).map(function (r) {
+        var t = temasLista[r.k];
+        return { tema: t.tema, visorPag: t.visorPag, parr: t.parr, url: t.url };
+      });
+    }
+
     return {
       version: VERSION,
+      tema: tema,
       analizar: analizar,
       buscar: buscar,
       foro: foro,

@@ -14,6 +14,7 @@
   var DATOS = '/datos/manual-servicio.json';
   var SINONIMOS = '/datos/manual-sinonimos.json'; // diccionario editable, compartido con Celeste
   var INGLES = '/datos/manual-ingles.json';       // glosario para buscar opiniones de otros usuarios (foro en inglés)
+  var TEMAS = '/datos/manual-temas.json';         // índice de temas del Manual (opcional)
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var MAX = 5;
 
@@ -33,7 +34,8 @@
   function fragmento(texto, rango) {
     var html = escapar(texto.slice(rango.desde, rango.hasta));
     rango.resaltar.forEach(function (r) {
-      html = html.replace(new RegExp('(' + patronResaltado(r) + '[\\wáéíóúüñ]*)', 'gi'), '<mark>$1</mark>');
+      // Solo al comienzo de palabra: "regular" no marca "irregular" (2026-10-28).
+      html = html.replace(new RegExp('(^|[^\\wáéíóúüñ])(' + patronResaltado(r) + '[\\wáéíóúüñ]*)', 'gi'), '$1<mark>$2</mark>');
     });
     html = html.replace(/<mark><mark>/g, '<mark>').replace(/<\/mark><\/mark>/g, '</mark>');
     return (rango.desde > 0 ? '… ' : '') + html + (rango.hasta < texto.length ? ' …' : '');
@@ -69,11 +71,12 @@
       // El diccionario de sinónimos y el glosario son opcionales: si no cargan, se busca igual.
       var sinon = fetch(SINONIMOS).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
       var ingl = fetch(INGLES).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
+      var tem = fetch(TEMAS).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       cargando = Promise.all([fetch(DATOS).then(function (r) {
         if (!r.ok) { throw new Error('HTTP ' + r.status); }
         return r.json();
-      }), sinon, ingl]).then(function (todo) {
-        motor = ManualMotor.crear({ datos: todo[0], sinonimos: todo[1] || {}, glosario: todo[2] || {}, MiniSearch: MiniSearch });
+      }), sinon, ingl, tem]).then(function (todo) {
+        motor = ManualMotor.crear({ datos: todo[0], sinonimos: todo[1] || {}, glosario: todo[2] || {}, temas: todo[3] || [], MiniSearch: MiniSearch });
         estado.textContent = '';
       }).catch(function (e) {
         estado.textContent = 'No se pudo cargar el texto del manual (' + e.message + '). Probá de nuevo en un rato.';
@@ -100,6 +103,24 @@
       celeste.href = 'https://wa.me/5493515330212?text=' + encodeURIComponent(txt);
     }
     var mostrados = 0, actuales = null;
+
+    // Recuadro "Tema del Manual", arriba de los resultados (índice de temas).
+    var temaCaja = document.createElement('div');
+    temaCaja.className = 'manual-buscador__tema';
+    temaCaja.hidden = true;
+    temaCaja.style.cssText = 'margin:.6em 0;padding:.5em .8em;border-left:4px solid #b8860b;background:rgba(184,134,11,.08)';
+    salida.parentNode.insertBefore(temaCaja, salida);
+    function mostrarTemas(q) {
+      var t = (motor && motor.tema) ? motor.tema(q, { max: 2 }) : [];
+      temaCaja.hidden = !t.length;
+      temaCaja.innerHTML = t.map(function (x) {
+        var ub = [];
+        if (x.parr && x.parr.length) { ub.push(x.parr[0] === x.parr[1] ? 'Párrafo ' + x.parr[0] : 'Párrafos ' + x.parr[0] + '–' + x.parr[1]); }
+        if (x.visorPag && x.visorPag.length) { ub.push(x.visorPag.join(', ')); }
+        return '<div>📌 <strong>Tema del Manual:</strong> <a href="' + escapar(x.url || '#') + '" style="font-weight:600;text-decoration:underline" title="Ver la página en el manual">' + escapar(x.tema) + ' &rarr;</a>' +
+          (ub.length ? ' <span style="opacity:.75">— ' + escapar(ub.join(' · ')) + '</span>' : '') + '</div>';
+      }).join('');
+    }
 
     function itemHtml(it) {
       var ubic = escapar(ubicacion(it));
@@ -136,8 +157,10 @@
       actuales = null;
       if (mas) { mas.hidden = true; }
       if (foro) { foro.hidden = true; }
+      temaCaja.hidden = true;
       if (q.length < 3) { estado.textContent = 'Escribí al menos una palabra de 3 letras.'; return; }
       cargar().then(function () {
+        mostrarTemas(q);
         var a = motor.analizar(q);
         if (a.modo === 'ninguno') {
           estado.textContent = 'No encontramos «' + q + '» en el manual. Probá con otra palabra (por ejemplo, el nombre de la pieza).';
