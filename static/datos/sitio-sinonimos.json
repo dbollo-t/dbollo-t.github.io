@@ -1,0 +1,17 @@
+{
+  "_instrucciones": "Sinónimos para la búsqueda en todo el sitio (Celeste y un futuro buscador general). Cada línea: \"palabra que usa la gente\": [\"palabras que usa la web\"]. Minúsculas, sin tildes. Se suma al diccionario del Manual. Lo editan Barba y Claude.",
+  "asociarme": ["socio"],
+  "asociarse": ["socio"],
+  "afiliarme": ["socio"],
+  "inscribirme": ["socio", "inscripcion"],
+  "hacerme": ["socio"],
+  "autoridades": ["comision", "directiva", "presidente"],
+  "cd": ["comision", "directiva"],
+  "nacimiento": ["nacio", "nacimiento"],
+  "nacio": ["nacio", "nacimiento"],
+  "fecha": ["fecha", "dia"],
+  "reunion": ["encuentro"],
+  "reuniones": ["encuentros"],
+  "fotos": ["fotos", "galeria"],
+  "cancion": ["himno", "cambalauto"]
+}

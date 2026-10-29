@@ -11,6 +11,8 @@
  *   m.foro('ajuste de bandas de freno');
  *   m.tema('regular bobina');                 // con opc.temas (/datos/manual-temas.json)
  *   ManualMotor.esHiloForo(url);
+ *   var w = ManualMotor.crearSitio({ indice, sinonimos, MiniSearch });  // /index.json del sitio
+ *   w.buscar('quién integra la comisión directiva', { max: 5 });
  *
  * Si cambia una regla, subir VERSION: n8n la compara para saber que el motor cambió.
  */
@@ -21,7 +23,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : (typeof self !== 'undefined' ? self : this), function () {
   'use strict';
 
-  var VERSION = '2026-10-28.2';
+  var VERSION = '2026-10-28.3';
   var SITIO = 'https://fordt.org.ar';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
@@ -330,9 +332,165 @@
     };
   }
 
+  // ===================== Búsqueda en todo el sitio (index.json, contrato C0) =====================
+  // Mismas reglas que el Manual (tildes, raíces, sinónimos, palabra entera, tolerancia a errores
+  // solo para palabras que no existen). Las páginas largas se parten en tramos de ~1200
+  // caracteres para que el fragmento salga del lugar correcto. Agregado en 2026-10-28.3.
+  var VACIAS_SITIO = ('quien quienes cual cuales cuanto cuanta cuantos cuantas ocurrio paso pasa hubo hay fue fueron ' +
+    'integra integran participo participaron tiene tienen dice dicen saber quiero quisiera necesito informacion info ' +
+    'podes puedo puede decime dime contame sobre acerca me te nos mi mis tu tus hago hacer hace sale cuesta vale').split(' ');
+  var vaciasSitio = {};
+  for (var vs = 0; vs < VACIAS_SITIO.length; vs++) { vaciasSitio[VACIAS_SITIO[vs]] = true; }
+
+  function tramos(texto, largo) {
+    var out = [], t = String(texto || '');
+    if (t.length <= largo * 1.3) { return [t]; }
+    var i = 0;
+    while (i < t.length) {
+      var fin = Math.min(t.length, i + largo);
+      if (fin < t.length) { var p = t.lastIndexOf('. ', fin); if (p > i + largo / 2) { fin = p + 1; } }
+      out.push(t.slice(i, fin).trim());
+      i = fin;
+    }
+    return out;
+  }
+
+  var UNID = ['', 'primer primero', 'segundo', 'tercer tercero', 'cuarto', 'quinto', 'sexto', 'septimo', 'octavo', 'noveno'];
+  var DEC = { 10: 'decimo', 20: 'vigesimo', 30: 'trigesimo' };
+  var ESP = { 11: 'undecimo decimoprimero', 12: 'duodecimo decimosegundo' };
+  function ordinal(n) {
+    if (ESP[n]) { return ESP[n]; }
+    var d = Math.floor(n / 10) * 10, u = n % 10;
+    if (!d) { return UNID[u]; }
+    if (!u) { return DEC[d]; }
+    return UNID[u].split(' ').map(function (x) { return DEC[d] + ' ' + x + ' ' + DEC[d] + x; }).join(' ');
+  }
+  function romano(r) {
+    var v = { I: 1, V: 5, X: 10, L: 50 }, n = 0;
+    for (var i = 0; i < r.length; i++) { var a = v[r[i]], b = v[r[i + 1]] || 0; n += a < b ? -a : a; }
+    return n;
+  }
+  // "XXX Encuentro Internacional" -> palabras "30 trigesimo 30º": así se encuentra con
+  // "trigésimo encuentro", "encuentro 30" o "primer encuentro".
+  function edicion(titulo) {
+    var m = /^([IVXL]+)\s+Encuentro/i.exec(titulo || '');
+    if (!m) { return ''; }
+    var n = romano(m[1].toUpperCase());
+    return n > 0 && n < 40 ? n + ' ' + ordinal(n) + ' ' + m[1].toLowerCase() : '';
+  }
+
+  function crearSitio(opc) {
+    opc = opc || {};
+    var MS = opc.MiniSearch, ind = opc.indice;
+    if (!ind || !ind.paginas) { throw new Error('ManualMotor.crearSitio: falta el índice del sitio (index.json)'); }
+    if (!MS) { throw new Error('ManualMotor.crearSitio: falta MiniSearch'); }
+    var sin = {};
+    [].concat(opc.sinonimos || []).forEach(function (dic) { for (var k in dic) { if (k.charAt(0) !== '_') { sin[k] = (sin[k] || []).concat(dic[k]); } } });
+    var docs = [], paginas = ind.paginas;
+    paginas.forEach(function (pg, k) {
+      var ts = pg.texto_disponible === false ? [''] : tramos(pg.texto, 1200);
+      ts.forEach(function (t, j) {
+        docs.push({ id: k + ':' + j, pag: k, titulo: pg.titulo || '', desc: pg.descripcion || '', ed: edicion(pg.titulo),
+          jer: (pg.jerarquia || []).concat(pg.categorias || []).join(' · '), texto: t });
+      });
+    });
+    function procesarS(term) {
+      var t = sinTildes(term);
+      if (t.length < 2 || vacias[t] || vaciasSitio[t]) { return null; }
+      if (/^\d+$/.test(t)) { return t; }
+      return raiz(t);
+    }
+    var vocabS = {};
+    docs.forEach(function (d) {
+      [d.titulo, d.desc, d.jer, d.ed, d.texto].join(' ').split(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/).forEach(function (w) {
+        var p = w && procesarS(w); if (p) { vocabS[p] = true; }
+      });
+    });
+    var porDoc = {};
+    docs.forEach(function (d) { porDoc[d.id] = d; });
+    var idx = new MS({
+      fields: ['titulo', 'desc', 'jer', 'ed', 'texto'],
+      storeFields: ['id'],
+      processTerm: procesarS,
+      searchOptions: {
+        boost: { titulo: 4, ed: 5, desc: 2, jer: 1.5 },
+        fuzzy: function (t) { return t.length >= 5 && !vocabS[t] ? 1 : 0; },
+        prefix: function (t) { return t.length >= 4; },
+        processTerm: procesarS
+      }
+    });
+    idx.addAll(docs);
+
+    function palabras(q) {
+      return sinTildes(q).split(/[^a-z0-9ñ]+/).filter(function (w) {
+        return w.length >= 2 && !vacias[w] && !vaciasSitio[w] && w !== 'del';
+      });
+    }
+    function grupo(w) {
+      var g = [raiz(w)];
+      (sin[w] || sin[raiz(w)] || []).forEach(function (x) {
+        sinTildes(x).split(/\s+/).forEach(function (y) { var r = raiz(y); if (r && g.indexOf(r) === -1) { g.push(r); } });
+      });
+      return g;
+    }
+    function consulta(gs, modo) {
+      return { combineWith: modo, queries: gs.map(function (g) { return g.length === 1 ? g[0] : { combineWith: 'OR', queries: g }; }) };
+    }
+    function fragmentoDe(texto, gs) {
+      var plano = sinTildes(texto), mejor = 0, mejorN = -1;
+      var todas = [];
+      gs.forEach(function (g) { g.forEach(function (r) { if (r.length >= 3) { todas.push(r); } }); });
+      todas.forEach(function (r) {
+        var pos = -1;
+        while ((pos = posPalabra(plano, r, pos + 1)) !== -1) {
+          var v = plano.slice(Math.max(0, pos - 80), pos + 220);
+          var n = gs.filter(function (g) { return g.some(function (x) { return tienePalabra(v, x); }); }).length;
+          if (n > mejorN) { mejorN = n; mejor = pos; }
+        }
+      });
+      var desde = Math.max(0, mejor - 100), hasta = Math.min(texto.length, desde + 320);
+      return (desde > 0 ? '… ' : '') + texto.slice(desde, hasta).trim() + (hasta < texto.length ? ' …' : '');
+    }
+
+    function buscar(q, o) {
+      o = o || {};
+      var max = o.max || 5;
+      var ws = palabras(q);
+      var vacio = { version: VERSION, consulta: q, modo: 'ninguno', faltan: [], total: 0, resultados: [] };
+      if (!ws.length) { return vacio; }
+      var gs = ws.map(grupo), modo = 'todas', faltan = [];
+      var res = idx.search(consulta(gs, 'AND'));
+      if (!res.length) {
+        var quedan = [];
+        gs.forEach(function (g, i) { if (idx.search(consulta([g], 'AND')).length) { quedan.push(g); } else { faltan.push(ws[i]); } });
+        if (faltan.length && quedan.length) { res = idx.search(consulta(quedan, 'AND')); if (res.length) { modo = 'sin'; gs = quedan; } }
+        if (!res.length) { res = idx.search(consulta(gs, 'OR')); modo = 'alguna'; }
+      }
+      if (!res.length) { vacio.faltan = faltan; return vacio; }
+      var mejorPorPag = {}, orden = [];
+      res.forEach(function (r) {
+        var d = porDoc[r.id];
+        if (!mejorPorPag.hasOwnProperty(d.pag)) { mejorPorPag[d.pag] = r; orden.push(d.pag); }
+      });
+      var resultados = orden.slice(0, max).map(function (k) {
+        var pg = paginas[k], d = porDoc[mejorPorPag[k].id];
+        return {
+          titulo: pg.titulo, url: pg.url, seccion: pg.seccion_titulo || pg.seccion || '',
+          descripcion: pg.descripcion || '', fecha_modificacion: pg.fecha_modificacion || '',
+          limitaciones: pg.limitaciones || [],
+          fragmento: d.texto ? fragmentoDe(d.texto, gs) : '',
+          puntaje: Math.round(mejorPorPag[k].score * 1000) / 1000
+        };
+      });
+      return { version: VERSION, consulta: q, modo: modo, faltan: faltan, total: orden.length, resultados: resultados };
+    }
+    return { version: VERSION, buscar: buscar, generado: ind.generado || '' };
+  }
+
   return {
     VERSION: VERSION,
     crear: crear,
+    crearSitio: crearSitio,
     esHiloForo: esHiloForo,
     sinTildes: sinTildes,
     raiz: raiz
