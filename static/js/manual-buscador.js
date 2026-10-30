@@ -3,7 +3,8 @@
  * Busca en /datos/manual-servicio.json (Manual de Servicio, texto obtenido por OCR,
  * un registro por página del PDF de alta definición) y en /datos/manual-dueno.json
  * (Manual del Dueño, versión El Óvalo Azul, un registro por respuesta), juntos y
- * sin prioridad de uno sobre otro (2026-10-29), con MiniSearch.
+ * sin prioridad de uno sobre otro (2026-10-29), con MiniSearch. Desde el 30/10/2026 también
+ * en las notas técnicas de /datos/buscador-notas.json, con el texto de /index.json.
  * El mismo JSON lo usa Celeste desde n8n: si cambian los nombres de campo
  * hay que avisar (ver ficha 03 de la documentación del Club).
  *
@@ -18,6 +19,8 @@
   var INGLES = '/datos/manual-ingles.json';       // glosario para buscar opiniones de otros usuarios (foro en inglés)
   var TEMAS = '/datos/manual-temas.json';         // índice de temas del Manual (opcional)
   var DUENO = '/datos/manual-dueno.json';         // Manual del Dueño (opcional: si no carga, se busca solo en el de Servicio)
+  var NOTAS = '/datos/buscador-notas.json';       // notas técnicas que entran en el buscador (opcional)
+  var INDICE = '/index.json';                     // texto de las notas (índice del sitio, se regenera en cada publicación)
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var MAX = 5;
 
@@ -70,17 +73,19 @@
 
     function cargar() {
       if (cargando) { return cargando; }
-      estado.textContent = 'Cargando el texto de los manuales…';
+      estado.textContent = 'Cargando los manuales y las notas…';
       // El diccionario de sinónimos y el glosario son opcionales: si no cargan, se busca igual.
       var sinon = fetch(SINONIMOS).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
       var ingl = fetch(INGLES).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
       var tem = fetch(TEMAS).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       var due = fetch(DUENO).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      var not = fetch(NOTAS).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      var ind = fetch(INDICE).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       cargando = Promise.all([fetch(DATOS).then(function (r) {
         if (!r.ok) { throw new Error('HTTP ' + r.status); }
         return r.json();
-      }), sinon, ingl, tem, due]).then(function (todo) {
-        motor = ManualMotor.crear({ datos: todo[0], dueno: todo[4], sinonimos: todo[1] || {}, glosario: todo[2] || {}, temas: todo[3] || [], MiniSearch: MiniSearch });
+      }), sinon, ingl, tem, due, not, ind]).then(function (todo) {
+        motor = ManualMotor.crear({ datos: todo[0], dueno: todo[4], notas: todo[5], indice: todo[6], sinonimos: todo[1] || {}, glosario: todo[2] || {}, temas: todo[3] || [], MiniSearch: MiniSearch });
         estado.textContent = '';
       }).catch(function (e) {
         estado.textContent = 'No se pudo cargar el texto del manual (' + e.message + '). Probá de nuevo en un rato.';
@@ -128,6 +133,10 @@
 
     function itemHtml(id) {
       var it = motor.registro(id);
+      if (motor.fuente && motor.fuente(id) === 'nota') {
+        return '<li class="manual-buscador__item"><a class="manual-buscador__ubic" href="' + escapar(it.url) + '" title="Leer la nota">' + escapar('Nota técnica · ' + it.titulo) + ' &rarr;</a>' +
+          '<p class="manual-buscador__frag">' + fragmento(it.texto, motor.rangoFragmento(it.texto, actuales.grupos, actuales.frases)) + '</p></li>';
+      }
       if (motor.fuente && motor.fuente(id) === 'dueno') {
         var ub = 'Manual del Dueño' + (it.resp ? ' · Respuesta N.º ' + it.resp : '') + ' · Pág. ' + it.pag;
         return '<li class="manual-buscador__item"><a class="manual-buscador__ubic" href="' + escapar(it.url) + '" title="Ver la página en el Manual del Dueño">' + escapar(ub) + ' &rarr;</a>' +
@@ -175,12 +184,12 @@
         mostrarTemas(q);
         var a = motor.analizar(q);
         if (a.modo === 'ninguno') {
-          estado.textContent = 'No encontramos «' + q + '» en los manuales. Probá con otra palabra (por ejemplo, el nombre de la pieza).';
+          estado.textContent = 'No encontramos «' + q + '» en los manuales ni en las notas. Probá con otra palabra (por ejemplo, el nombre de la pieza).';
           return;
         }
         var n = a.ordenados.length;
         var aviso = a.modo === 'todas' ? '' :
-          a.modo === 'sin' ? ('«' + a.faltan.join('», «') + '» no figura en los manuales; resultados con el resto de la búsqueda. ') :
+          a.modo === 'sin' ? ('«' + a.faltan.join('», «') + '» no figura en los manuales ni en las notas; resultados con el resto de la búsqueda. ') :
           'Ningún resultado tiene todas las palabras; estos tienen alguna. ';
         estado.textContent = aviso + (n === 1 ? '1 resultado:' : (n + ' resultados, del más al menos relevante:'));
         enlaceForo(q);

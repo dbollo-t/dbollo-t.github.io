@@ -1,0 +1,17 @@
+{
+  "_instrucciones": "Notas técnicas que entran en el buscador de la página Técnica (web y Celeste), además del Manual de Servicio y el Manual del Dueño. Una dirección por línea, tal como figura en el sitio. El texto de cada nota se toma de /index.json, así que si se edita una nota no hay que tocar nada acá. Para sumar o sacar una nota, agregar o borrar su línea y revisar comas y comillas.",
+  "notas": [
+    "/tecnica/publicaciones/notas-tecnicas/sistema-encendido/",
+    "/tecnica/publicaciones/notas-tecnicas/trucos-y-manas/",
+    "/tecnica/publicaciones/notas-tecnicas/pintura-modelos-t/",
+    "/tecnica/publicaciones/notas-tecnicas/carburador-holley/",
+    "/tecnica/publicaciones/notas-tecnicas/sistema-electrico/",
+    "/tecnica/publicaciones/notas-tecnicas/la-caja/",
+    "/tecnica/restauracion/guia/introduccion/",
+    "/tecnica/restauracion/guia/desarmar/",
+    "/tecnica/restauracion/guia/chasis/",
+    "/tecnica/restauracion/guia/carroceria/",
+    "/tecnica/restauracion/guia/motor/",
+    "/tecnica/restauracion/guia/ruedas/"
+  ]
+}

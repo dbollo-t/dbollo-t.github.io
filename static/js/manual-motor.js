@@ -9,6 +9,9 @@
  *   var m = ManualMotor.crear({ datos, dueno, sinonimos, glosario, MiniSearch });
  *     datos = /datos/manual-servicio.json; dueno = /datos/manual-dueno.json (opcional, 2026-10-29.1):
  *     los dos manuales se buscan juntos y compiten por relevancia, sin prioridad de uno sobre otro.
+ *   Notas técnicas (opcional, 2026-10-30.1): opc.indice = /index.json del sitio y opc.notas =
+ *     /datos/buscador-notas.json (lista de direcciones). El texto sale del índice del sitio, así que
+ *     si se edita una nota, el buscador la toma en la próxima publicación.
  *   m.buscar('ajuste tapa de cilindros', { max: 5, desde: 0 });
  *   m.foro('ajuste de bandas de freno');
  *   m.tema('regular bobina');                 // con opc.temas (/datos/manual-temas.json)
@@ -25,7 +28,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : (typeof self !== 'undefined' ? self : this), function () {
   'use strict';
 
-  var VERSION = '2026-10-29.1';
+  var VERSION = '2026-10-30.1';
   var SITIO = 'https://fordt.org.ar';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
@@ -69,6 +72,14 @@
     if (/^(des)?arm(ar|ado|ada|ados|adas|e|en|ese|ense|ando|arse|arlo|arla)$/.test(w) || /^desarm/.test(w)) { return true; }
     for (var i = 0; i < ACCIONES.length; i++) { if (w.indexOf(ACCIONES[i]) === 0 && w.length - ACCIONES[i].length <= 6) { return true; } }
     return /(ando|iendo|ense|anse|arse|erse|irse|ese)$/.test(w) && w.length > 6 || /(ar|er|ir)$/.test(w) && w.length >= 6;
+  }
+
+  // Raíces de una acción para compararla con títulos: la palabra, sus sinónimos y la raíz
+  // de ACCIONES que le corresponde ("quitar" -> "quit", así encuentra "quita").
+  function raicesAccion(x) {
+    var out = x.g.slice();
+    for (var i = 0; i < ACCIONES.length; i++) { if (x.w.indexOf(ACCIONES[i]) === 0 && out.indexOf(ACCIONES[i]) === -1) { out.push(ACCIONES[i]); } }
+    return out;
   }
 
   function escaparRegex(x) { return x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -132,8 +143,25 @@
     // en el mismo campo que el índice del libro del Manual de Servicio (idx), así
     // los dos manuales tienen el mismo peso y gana el que mejor coincide.
     var duenoItems = (opc.dueno && opc.dueno.items) || [];
+    // Notas técnicas: cada nota se parte en tramos de ~1200 caracteres (como las páginas largas del
+    // sitio); el título va en idx. En los resultados queda solo el mejor tramo de cada nota.
+    var notasItems = [];
+    var listaNotas = (opc.notas && (opc.notas.notas || opc.notas)) || [];
+    if (opc.indice && opc.indice.paginas && listaNotas.length) {
+      var quiero = {};
+      listaNotas.forEach(function (u) { if (typeof u === 'string') { quiero[u.replace(/^https?:\/\/[^/]+/, '')] = true; } });
+      opc.indice.paginas.forEach(function (pg, k) {
+        var ruta = String(pg.url || '').replace(/^https?:\/\/[^/]+/, '');
+        if (!quiero[ruta] || pg.texto_disponible === false || !pg.texto) { return; }
+        tramos(pg.texto, 1200).forEach(function (t, j) {
+          notasItems.push({ id: 'N' + k + ':' + j, nota: ruta, titulo: pg.titulo || '', idx: [pg.titulo || ''],
+            cap: pg.seccion_titulo || '', url: pg.url, fecha_modificacion: pg.fecha_modificacion || '', texto: t });
+        });
+      });
+    }
     var todos = datos.items.map(function (it) { return { it: it, fuente: 'servicio' }; })
-      .concat(duenoItems.map(function (it) { return { it: it, fuente: 'dueno' }; }));
+      .concat(duenoItems.map(function (it) { return { it: it, fuente: 'dueno' }; }))
+      .concat(notasItems.map(function (it) { return { it: it, fuente: 'nota' }; }));
     function textoDe(it) { return it.pregunta ? it.pregunta + ' ' + it.texto : it.texto; }
 
     var vocab = {};
@@ -237,9 +265,26 @@
           });
           if (cerca) { r.score *= 2; }
         }
-        if (acciones.some(function (x) { return x.g.some(function (y) { return tienePalabra(t, y); }); })) { r.score *= 1.3; }
+        // Acción presente: ×1,3. Si la pregunta del Dueño o una entrada del índice del libro
+        // tiene la acción Y alguna pieza buscada («¿Cómo se limpia el radiador?»), ×2,5 (2026-10-29.2).
+        var it0 = porId[r.id];
+        var titulos = [it0.pregunta || ''].concat(it0.idx || []).map(sinTildes);
+        var enTitulo = titulos.some(function (ti) {
+          return ti && acciones.some(function (x) { return raicesAccion(x).some(function (y) { return tienePalabra(ti, y); }); }) &&
+            sujetos.some(function (x) { return x.g.some(function (y) { return tienePalabra(ti, y); }); });
+        });
+        if (enTitulo) { r.score *= 2.5; }
+        else if (acciones.some(function (x) { return x.g.some(function (y) { return tienePalabra(t, y); }); })) { r.score *= 1.3; }
       });
       res.sort(function (a, b) { return b.score - a.score; });
+      // De cada nota técnica, solo su mejor tramo.
+      var notaVista = {};
+      res = res.filter(function (r) {
+        var n = porId[r.id].nota;
+        if (!n) { return true; }
+        if (notaVista[n]) { return false; }
+        notaVista[n] = true; return true;
+      });
       return {
         consulta: q,
         modo: modo,
@@ -258,6 +303,19 @@
       var resultados = a.ordenados.slice(desde, desde + max).map(function (r) {
         var it = porId[r.id];
         var rango = rangoFragmento(it.texto, a.grupos, a.frases);
+        if (fuenteDe[r.id] === 'nota') {
+          return {
+            id: it.id,
+            fuente: 'nota',
+            manual: 'Nota técnica',
+            titulo: it.titulo,
+            cap: it.cap || '',
+            url: it.url,
+            fecha_modificacion: it.fecha_modificacion,
+            fragmento: fragmentoTexto(it.texto, rango),
+            puntaje: Math.round(r.puntaje * 1000) / 1000
+          };
+        }
         if (fuenteDe[r.id] === 'dueno') {
           return {
             id: it.id,

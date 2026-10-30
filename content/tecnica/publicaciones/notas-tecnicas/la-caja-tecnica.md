@@ -5,6 +5,9 @@ description: "Versión ampliada y más técnica de la explicación del funcionam
 categories: ["Técnica"]
 url: "/tecnica/publicaciones/notas-tecnicas/la-caja-tecnica/"
 pager: false
+# Oculta de los listados (duplica a «La Caja de Cambios del Ford T»); se llega por el enlace al final de esa nota (29/10/2026).
+build:
+  list: never
 ---
 
 **Por el Ing. Jorge Baez**

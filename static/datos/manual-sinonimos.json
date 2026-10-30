@@ -51,5 +51,7 @@
   "masa": ["masa", "tierra"],
   "negativo": ["negativo", "tierra"],
   "lavar": ["lava", "lave", "limpi"],
-  "lavado": ["lava", "lave", "limpi"]
+  "lavado": ["lava", "lave", "limpi"],
+  "limpiar": ["limpi"],
+  "limpieza": ["limpi"]
 }

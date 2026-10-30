@@ -8,10 +8,10 @@ enlaces:
 ---
 
 <div class="manual-buscador">
-  <h3>Buscar en los manuales</h3>
-  <p style="margin-top:-.4em;opacity:.8">Busca a la vez en el <a href="/tecnica/restauracion/manual-de-servicio/">Manual de Servicio</a> y en el <a href="/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/">Manual del Dueño</a>.</p>
+  <h3>Buscar en manuales y notas técnicas</h3>
+  <p style="margin-top:-.4em;opacity:.8">Busca a la vez en el <a href="/tecnica/restauracion/manual-de-servicio/">Manual de Servicio</a>, el <a href="/tecnica/publicaciones/manuales/manual-del-dueno-ovalo-azul/">Manual del Dueño</a> y las <a href="/tecnica/publicaciones/notas-tecnicas/">notas técnicas</a> del Club.</p>
   <form role="search">
-    <input type="search" name="q" placeholder="Por ejemplo: tornillos de latón de los imanes" aria-label="Buscar en el Manual de Servicio y en el Manual del Dueño" autocomplete="off">
+    <input type="search" name="q" placeholder="Por ejemplo: tornillos de latón de los imanes" aria-label="Buscar en los manuales y en las notas técnicas" autocomplete="off">
     <button type="submit">Buscar</button>
   </form>
   <p class="manual-buscador__estado" aria-live="polite"></p>

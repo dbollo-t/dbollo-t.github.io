@@ -11,7 +11,7 @@ summary: "El Manual de Servicio Ford completo en castellano, página por página
 <!--more-->
 
 <p style="text-align:center;margin:1.5rem 0;">
-  <a href="/tecnica/" style="background:#1a3c6e;color:#fff;text-decoration:none;padding:.6rem 1.4rem;border-radius:4px;font-size:1rem;display:inline-block;">Buscar en los manuales (Servicio y Dueño) &rarr;</a>
+  <a href="/tecnica/" style="background:#1a3c6e;color:#fff;text-decoration:none;padding:.6rem 1.4rem;border-radius:4px;font-size:1rem;display:inline-block;">Buscar en manuales y notas técnicas &rarr;</a>
 </p>
 <script>
   // El buscador se mudó a la página Técnica (29/10/2026): los enlaces viejos con #buscar= siguen funcionando.
