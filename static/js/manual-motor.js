@@ -19,7 +19,8 @@
  *   var w = ManualMotor.crearSitio({ indice, sinonimos, MiniSearch });  // /index.json del sitio
  *   w.buscar('quién integra la comisión directiva', { max: 5 });
  *
- * Si cambia una regla, subir VERSION: n8n la compara para saber que el motor cambió.
+ * Si cambia una regla, subir VERSION. Antes de publicar, aviso previo a ChatGPT (canal P2) y copia fija
+ * /js/manual-motor-<VERSION>.js. Ver API más abajo.
  */
 (function (raizGlobal, fabrica) {
   var api = fabrica();
@@ -28,7 +29,13 @@
 })(typeof globalThis !== 'undefined' ? globalThis : (typeof self !== 'undefined' ? self : this), function () {
   'use strict';
 
-  var VERSION = '2026-10-30.1';
+  var VERSION = '2026-10-30.2';
+  // Compatibilidad (2026-10-30.2): API sube solo si se quita o renombra un campo o cambia un parámetro.
+  // Agregar campos o funciones no la cambia. Celeste (n8n) valida API, no VERSION. Cada VERSION queda
+  // publicada también como /js/manual-motor-<VERSION>.js (versión fija), y producción usa una fija.
+  // API 1 = hasta 2026-10-28.3 (solo Manual de Servicio, sin la constante). API 2 = desde 2026-10-29.1:
+  // los resultados pueden ser del Manual de Servicio, del Dueño o de una nota (campo fuente).
+  var API = 2;
   var SITIO = 'https://fordt.org.ar';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
@@ -409,6 +416,7 @@
 
     return {
       version: VERSION,
+      api: API,
       tema: tema,
       analizar: analizar,
       buscar: buscar,
@@ -571,11 +579,12 @@
       });
       return { version: VERSION, consulta: q, modo: modo, faltan: faltan, total: orden.length, resultados: resultados };
     }
-    return { version: VERSION, buscar: buscar, generado: ind.generado || '' };
+    return { version: VERSION, api: API, buscar: buscar, generado: ind.generado || '' };
   }
 
   return {
     VERSION: VERSION,
+    API: API,
     crear: crear,
     crearSitio: crearSitio,
     esHiloForo: esHiloForo,
