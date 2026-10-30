@@ -49,5 +49,7 @@
   "distribuidor": ["conmutador", "distribuidor"],
   "alternador": ["magneto"],
   "masa": ["masa", "tierra"],
-  "negativo": ["negativo", "tierra"]
+  "negativo": ["negativo", "tierra"],
+  "lavar": ["lava", "lave", "limpi"],
+  "lavado": ["lava", "lave", "limpi"]
 }
