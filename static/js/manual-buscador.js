@@ -1,7 +1,9 @@
-/* Buscador del Manual de Servicio Ford T — Club del Ford T de Argentina.
+/* Buscador de los manuales Ford T — Club del Ford T de Argentina.
  *
- * Busca en /datos/manual-servicio.json (texto del manual obtenido por OCR,
- * un registro por página del PDF de alta definición) con MiniSearch.
+ * Busca en /datos/manual-servicio.json (Manual de Servicio, texto obtenido por OCR,
+ * un registro por página del PDF de alta definición) y en /datos/manual-dueno.json
+ * (Manual del Dueño, versión El Óvalo Azul, un registro por respuesta), juntos y
+ * sin prioridad de uno sobre otro (2026-10-29), con MiniSearch.
  * El mismo JSON lo usa Celeste desde n8n: si cambian los nombres de campo
  * hay que avisar (ver ficha 03 de la documentación del Club).
  *
@@ -15,6 +17,7 @@
   var SINONIMOS = '/datos/manual-sinonimos.json'; // diccionario editable, compartido con Celeste
   var INGLES = '/datos/manual-ingles.json';       // glosario para buscar opiniones de otros usuarios (foro en inglés)
   var TEMAS = '/datos/manual-temas.json';         // índice de temas del Manual (opcional)
+  var DUENO = '/datos/manual-dueno.json';         // Manual del Dueño (opcional: si no carga, se busca solo en el de Servicio)
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var MAX = 5;
 
@@ -67,16 +70,17 @@
 
     function cargar() {
       if (cargando) { return cargando; }
-      estado.textContent = 'Cargando el texto del manual…';
+      estado.textContent = 'Cargando el texto de los manuales…';
       // El diccionario de sinónimos y el glosario son opcionales: si no cargan, se busca igual.
       var sinon = fetch(SINONIMOS).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
       var ingl = fetch(INGLES).then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; });
       var tem = fetch(TEMAS).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      var due = fetch(DUENO).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
       cargando = Promise.all([fetch(DATOS).then(function (r) {
         if (!r.ok) { throw new Error('HTTP ' + r.status); }
         return r.json();
-      }), sinon, ingl, tem]).then(function (todo) {
-        motor = ManualMotor.crear({ datos: todo[0], sinonimos: todo[1] || {}, glosario: todo[2] || {}, temas: todo[3] || [], MiniSearch: MiniSearch });
+      }), sinon, ingl, tem, due]).then(function (todo) {
+        motor = ManualMotor.crear({ datos: todo[0], dueno: todo[4], sinonimos: todo[1] || {}, glosario: todo[2] || {}, temas: todo[3] || [], MiniSearch: MiniSearch });
         estado.textContent = '';
       }).catch(function (e) {
         estado.textContent = 'No se pudo cargar el texto del manual (' + e.message + '). Probá de nuevo en un rato.';
@@ -117,13 +121,21 @@
         var ub = [];
         if (x.parr && x.parr.length) { ub.push(x.parr[0] === x.parr[1] ? 'Párrafo ' + x.parr[0] : 'Párrafos ' + x.parr[0] + '–' + x.parr[1]); }
         if (x.visorPag && x.visorPag.length) { ub.push(x.visorPag.join(', ')); }
-        return '<div>📌 <strong>Tema del Manual:</strong> <a href="' + escapar(x.url || '#') + '" style="font-weight:600;text-decoration:underline" title="Ver la página en el manual">' + escapar(x.tema) + ' &rarr;</a>' +
+        return '<div>📌 <strong>Tema del Manual de Servicio:</strong> <a href="' + escapar(x.url || '#') + '" style="font-weight:600;text-decoration:underline" title="Ver la página en el manual">' + escapar(x.tema) + ' &rarr;</a>' +
           (ub.length ? ' <span style="opacity:.75">— ' + escapar(ub.join(' · ')) + '</span>' : '') + '</div>';
       }).join('');
     }
 
-    function itemHtml(it) {
-      var ubic = escapar(ubicacion(it));
+    function itemHtml(id) {
+      var it = motor.registro(id);
+      if (motor.fuente && motor.fuente(id) === 'dueno') {
+        var ub = 'Manual del Dueño' + (it.resp ? ' · Respuesta N.º ' + it.resp : '') + ' · Pág. ' + it.pag;
+        return '<li class="manual-buscador__item"><a class="manual-buscador__ubic" href="' + escapar(it.url) + '" title="Ver la página en el Manual del Dueño">' + escapar(ub) + ' &rarr;</a>' +
+          (it.cap ? '<div class="manual-buscador__cap">' + escapar(it.cap) + '</div>' : '') +
+          (it.resp ? '<div class="manual-buscador__preg" style="font-weight:600">' + escapar(it.pregunta) + '</div>' : '') +
+          '<p class="manual-buscador__frag">' + fragmento(it.texto, motor.rangoFragmento(it.texto, actuales.grupos, actuales.frases)) + '</p></li>';
+      }
+      var ubic = escapar('Manual de Servicio · ' + ubicacion(it));
       var linea = (it.visor !== null && it.visor !== undefined)
         ? '<a class="manual-buscador__ubic" href="' + VISOR + '#manserv=' + it.visor + '" title="Ver la página en el manual">' + ubic + ' &rarr;</a>'
         : '<span class="manual-buscador__ubic">' + ubic + '</span>';
@@ -138,7 +150,7 @@
       var html = '';
       var hasta = Math.min(actuales.ordenados.length, mostrados + MAX);
       for (var k = mostrados; k < hasta; k++) {
-        html += itemHtml(motor.registro(actuales.ordenados[k].id));
+        html += itemHtml(actuales.ordenados[k].id);
       }
       salida.insertAdjacentHTML('beforeend', html);
       mostrados = hasta;
@@ -163,14 +175,14 @@
         mostrarTemas(q);
         var a = motor.analizar(q);
         if (a.modo === 'ninguno') {
-          estado.textContent = 'No encontramos «' + q + '» en el manual. Probá con otra palabra (por ejemplo, el nombre de la pieza).';
+          estado.textContent = 'No encontramos «' + q + '» en los manuales. Probá con otra palabra (por ejemplo, el nombre de la pieza).';
           return;
         }
         var n = a.ordenados.length;
         var aviso = a.modo === 'todas' ? '' :
-          a.modo === 'sin' ? ('«' + a.faltan.join('», «') + '» no figura en el manual; resultados con el resto de la búsqueda. ') :
-          'Ninguna página tiene todas las palabras; estas tienen alguna. ';
-        estado.textContent = aviso + (n === 1 ? '1 página encontrada:' : (n + ' páginas encontradas, de la más a la menos relevante:'));
+          a.modo === 'sin' ? ('«' + a.faltan.join('», «') + '» no figura en los manuales; resultados con el resto de la búsqueda. ') :
+          'Ningún resultado tiene todas las palabras; estos tienen alguna. ';
+        estado.textContent = aviso + (n === 1 ? '1 resultado:' : (n + ' resultados, del más al menos relevante:'));
         enlaceForo(q);
         mostrados = 0;
         actuales = a;

@@ -6,7 +6,9 @@
  * (Drive > Claude > Club Ford T > Celeste – contratos).
  *
  * Uso:
- *   var m = ManualMotor.crear({ datos, sinonimos, glosario, MiniSearch });
+ *   var m = ManualMotor.crear({ datos, dueno, sinonimos, glosario, MiniSearch });
+ *     datos = /datos/manual-servicio.json; dueno = /datos/manual-dueno.json (opcional, 2026-10-29.1):
+ *     los dos manuales se buscan juntos y compiten por relevancia, sin prioridad de uno sobre otro.
  *   m.buscar('ajuste tapa de cilindros', { max: 5, desde: 0 });
  *   m.foro('ajuste de bandas de freno');
  *   m.tema('regular bobina');                 // con opc.temas (/datos/manual-temas.json)
@@ -23,7 +25,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : (typeof self !== 'undefined' ? self : this), function () {
   'use strict';
 
-  var VERSION = '2026-10-28.3';
+  var VERSION = '2026-10-29.1';
   var SITIO = 'https://fordt.org.ar';
   var VISOR = '/tecnica/restauracion/manual-de-servicio/manual/';
   var FORO = 'https://search.brave.com/search?q=' + encodeURIComponent('site:mtfca.com') + '+';
@@ -126,9 +128,18 @@
     var sin = opc.sinonimos || {};
     var glosario = opc.glosario || {};
 
+    // Manual del Dueño (2026-10-29.1): cada respuesta es un registro. La pregunta va
+    // en el mismo campo que el índice del libro del Manual de Servicio (idx), así
+    // los dos manuales tienen el mismo peso y gana el que mejor coincide.
+    var duenoItems = (opc.dueno && opc.dueno.items) || [];
+    var todos = datos.items.map(function (it) { return { it: it, fuente: 'servicio' }; })
+      .concat(duenoItems.map(function (it) { return { it: it, fuente: 'dueno' }; }));
+    function textoDe(it) { return it.pregunta ? it.pregunta + ' ' + it.texto : it.texto; }
+
     var vocab = {};
-    datos.items.forEach(function (it) {
-      [it.texto, (it.idx || []).join(' '), it.cap || ''].join(' ').split(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/).forEach(function (w) {
+    todos.forEach(function (x) {
+      var it = x.it;
+      [textoDe(it), (it.idx || []).join(' '), it.pregunta || '', it.cap || ''].join(' ').split(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/).forEach(function (w) {
         var p = w && procesar(w); if (p) { vocab[p] = true; }
       });
     });
@@ -145,11 +156,12 @@
         processTerm: procesar
       }
     });
-    indice.addAll(datos.items.map(function (it) {
-      return { id: it.id, texto: it.texto, idx: (it.idx || []).join(' · '), cap: it.cap || '' };
+    indice.addAll(todos.map(function (x) {
+      var it = x.it;
+      return { id: it.id, texto: textoDe(it), idx: x.fuente === 'dueno' ? (it.pregunta || '') : (it.idx || []).join(' · '), cap: it.cap || '' };
     }));
-    var porId = {};
-    for (var i = 0; i < datos.items.length; i++) { porId[datos.items[i].id] = datos.items[i]; }
+    var porId = {}, fuenteDe = {};
+    todos.forEach(function (x) { porId[x.it.id] = x.it; fuenteDe[x.it.id] = x.fuente; });
 
     function grupoDe(w) {
       var g = [raiz(w)];
@@ -209,7 +221,7 @@
       // 4) Puntaje: frase compuesta ×4 (hasta ×6 si se repite); sujetos cerca (~60 caracteres) ×2;
       //    alguna acción presente ×1,3.
       res.forEach(function (r) {
-        var t = sinTildes(porId[r.id].texto);
+        var t = sinTildes(textoDe(porId[r.id]));
         frases.forEach(function (re) {
           var n = (t.match(new RegExp(re.source, 'g')) || []).length;
           if (n) { r.score *= Math.min(6, 3 + n); }
@@ -246,8 +258,24 @@
       var resultados = a.ordenados.slice(desde, desde + max).map(function (r) {
         var it = porId[r.id];
         var rango = rangoFragmento(it.texto, a.grupos, a.frases);
+        if (fuenteDe[r.id] === 'dueno') {
+          return {
+            id: it.id,
+            fuente: 'dueno',
+            manual: 'Manual del Dueño',
+            resp: it.resp || null,
+            pregunta: it.pregunta || '',
+            pag: it.pag,
+            cap: it.cap || '',
+            url: it.url || null,
+            fragmento: fragmentoTexto(it.texto, rango),
+            puntaje: Math.round(r.puntaje * 1000) / 1000
+          };
+        }
         return {
           id: it.id,
+          fuente: 'servicio',
+          manual: 'Manual de Servicio',
           visorPag: it.visorPag || null,
           parr: it.parr || [],
           figs: it.figs || [],
@@ -328,6 +356,7 @@
       buscar: buscar,
       foro: foro,
       registro: function (id) { return porId[id] || null; },
+      fuente: function (id) { return fuenteDe[id] || null; },
       rangoFragmento: rangoFragmento
     };
   }
